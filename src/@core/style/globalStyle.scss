@@ -9,14 +9,20 @@
 :root {
   --bgColor: #f1f5f9;
   --mainBtnColor: #336cfb;
-  --footerBg: rgb(184, 181, 181);
+  --footerBg: rgb(223, 216, 216);
   --headerBg: rgb(182, 191, 238);
   --loginBg: #e7f1fb;
+  --boxShadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --radiusCard: 6px;
+  --mainPaddingX: 1rem;
+  --mainPaddingY: 1rem;
 }
 
 body {
   width: 100%;
+  max-width: 1980px;
   height: 100%;
+  margin: 0 auto;
 }
 
 /* usable classes */
@@ -140,6 +146,31 @@ body {
 }
 .m-y-4 {
   margin: 26px 0;
+}
+
+.m-t-1 {
+  margin-top: 8px;
+}
+.m-t-2 {
+  margin-top: 15px;
+}
+.m-t-3 {
+  margin-top: 22px;
+}
+.m-t-4 {
+  margin-top: 26px;
+}
+.m-b-1 {
+  margin-top: 8px;
+}
+.m-b-2 {
+  margin-top: 15px;
+}
+.m-b-3 {
+  margin-top: 22px;
+}
+.m-b-4 {
+  margin-top: 26px;
 }
 
 .w-100 {

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import '@/@core/style/globalStyle.css'
+import '@/@core/style/globalStyle.scss'
 // style for toast
 import 'react-toastify/dist/ReactToastify.min.css'
 

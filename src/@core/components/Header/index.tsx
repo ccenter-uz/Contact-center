@@ -3,7 +3,7 @@ import './style.scss'
 
 const Header: FC = () => {
   return (
-    <header>
+    <header className='d-flex align-center'>
       <h1>Header</h1>
     </header>
   )
