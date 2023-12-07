@@ -3,12 +3,18 @@ import { FC, FormEvent } from 'react'
 import { Card } from '@/@core/components/Card'
 import { Button, Form, Input } from 'antd'
 import './style.scss'
+import { useRouter } from 'next/navigation'
+import { getCookie, setCookie } from '@/@core/service/helper'
 
 const LoginPage: FC = () => {
   const [form] = Form.useForm()
+  const router = useRouter()
+
   // handleLogin
   const handleLogin = (e: FormEvent<HTMLFormElement>) => {
     console.log(e, 'e')
+    setCookie('access_token', 'true', { path: '/' })
+    router.push('/dashboard')
   }
 
   return (
