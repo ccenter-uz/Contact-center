@@ -16,7 +16,7 @@ export function getCookie(name) {
 /**
  *
  * @param {string} name -key
- * @param {string} value -value
+ * @param {string | boolean} value -value
  * @param {object} options -options like expires and max-age
  */
 export function setCookie(name, value, options = {}) {

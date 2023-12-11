@@ -4,15 +4,16 @@ export function middleware(req: NextRequest) {
   const token = req.cookies.get('access_token')
 
   if (!token) {
-    const loginUrl = new URL('/login', req.url)
-    loginUrl.searchParams.set('from', req.nextUrl.pathname)
+    const url = new URL('/login', req.url)
+    url.searchParams.set('from', req.nextUrl.pathname)
 
-    return NextResponse.redirect(loginUrl)
+    return NextResponse.redirect(url)
   }
 
+  // Allow access to the page
   return NextResponse.next()
 }
 
 export const config = {
-  matcher: ['/dashboard']
+  matcher: '/dashboard'
 }
