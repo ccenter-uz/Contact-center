@@ -1,12 +1,6 @@
 import LoginPage from '@/@core/components/pages/login'
 import { FC } from 'react'
 
-const Login: FC = () => {
-  return (
-    <main>
-      <LoginPage />
-    </main>
-  )
-}
+const Login: FC = () => <LoginPage />
 
 export default Login
