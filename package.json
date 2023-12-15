@@ -14,6 +14,7 @@
     "@types/antd": "^1.0.0",
     "axios": "^1.6.2",
     "next": "14.0.3",
+    "next-intl": "^3.3.2",
     "react": "^18",
     "react-dom": "^18",
     "react-toastify": "^9.1.3",
