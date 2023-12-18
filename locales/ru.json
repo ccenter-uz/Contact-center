@@ -1,5 +1,15 @@
 {
-  "header-title": "Header на русском",
-  "footer-title": "Footer на русском",
-  "NOT_FOUND": "Страница не найдено !"
+  "NOT_FOUND": "Страница не найдено !",
+  "services": "Услуги",
+  "out-team": "Наша команда",
+  "partners": "Партнёры",
+  "achievements-title": "Достижения в цифрах",
+  "achievements-pretitle": "Радуем вас и улучшаем наш сервис всегда",
+  "users": "Пользователей",
+  "service": "Услуг",
+  "other-service": "Дополнительные услуги",
+  "collective": "Наша  Дружный Коллектив",
+  "out-team-join": "Хочеш в нашу команду?",
+  "left-application": "Оставить заявку",
+  "follow-last-news": "Следите за свежими новостями"
 }

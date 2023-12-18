@@ -1,23 +1,31 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   scroll-behavior: smooth;
   list-style: none;
   text-decoration: none;
+  box-sizing: border-box;
+  h1,
+  p,
+  span,
+  a {
+    color: var(--textColor);
+  }
 }
 
 /* variables */
 :root {
-  --bgColor: #f1f5f9;
-  --mainBtnColor: #336cfb;
-  --footerBg: rgb(223, 216, 216);
-  --headerBg: rgb(182, 191, 238);
+  --bgColor: #f5f8fc;
+  --primary: #193bda;
+  --white: #fff;
+  --textColor: #192348;
+  --btnColor: linear-gradient(180deg, #0066ff 0%, #444cfc 100%);
   --loginBg: #e7f1fb;
-  --boxShadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-  --radiusCard: 6px;
+  --boxShadow: 0px 20px 50px 0px #0000001a;
+  --radiusCard: 10px, 10px, 0px, 0px;
   --mainPaddingX: 1rem;
   --mainPaddingY: 1rem;
+  --paddingSection: 1.5em 3em;
 }
 
 body {
@@ -25,6 +33,7 @@ body {
   max-width: 1980px;
   height: 100%;
   margin: 0 auto;
+  background: var(--bgColor);
 }
 
 /* usable classes */
@@ -163,16 +172,16 @@ body {
   margin-top: 26px;
 }
 .m-b-1 {
-  margin-top: 8px;
+  margin-bottom: 8px;
 }
 .m-b-2 {
-  margin-top: 15px;
+  margin-bottom: 15px;
 }
 .m-b-3 {
-  margin-top: 22px;
+  margin-bottom: 22px;
 }
 .m-b-4 {
-  margin-top: 26px;
+  margin-bottom: 26px;
 }
 
 .w-100 {

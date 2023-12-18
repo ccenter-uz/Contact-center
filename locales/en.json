@@ -1,5 +1,15 @@
 {
-  "header-title": "Header in english",
-  "footer-title": "Footer in english",
-  "NOT_FOUND": "Page is not Found !"
+  "NOT_FOUND": "Page is not Found !",
+  "services": "Services",
+  "out-team": "Out team",
+  "partners": "Partners",
+  "achievements-title": "Achievements in numbers",
+  "achievements-pretitle": "We always make you happy and improve our service",
+  "users": "Users",
+  "service": "Service",
+  "other-service": "Additional services",
+  "collective": "Our Friendly Team",
+  "out-team-join": "Do you want to join our team?",
+  "left-application": "Submit your application",
+  "follow-last-news": "Follow the latest news"
 }

@@ -1,10 +1,13 @@
 import { FC } from 'react'
 import './style.scss'
+import { CarouselComp } from '../../Carousel'
+import { Achievements } from '../../Achievement'
 
 const Main: FC = () => {
   return (
     <main className='main-page'>
-      <h1>Main page</h1>
+      <CarouselComp />
+      <Achievements />
     </main>
   )
 }

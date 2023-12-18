@@ -1,7 +1,7 @@
+@use '/src/@core/style/media';
+
 header {
-  height: 12dvh;
+  min-height: 12dvh;
   background: var(--headerBg);
-  box-shadow: var(--boxShadow);
-  border-radius: var(--radiusCard);
-  padding: var(--mainPaddingX);
+  padding: var(--paddingSection);
 }

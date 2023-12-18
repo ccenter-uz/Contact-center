@@ -1,0 +1,41 @@
+/* Mobile Styles (up to 767px) */
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 20px;
+  }
+  p,
+  a {
+    font-size: 12px;
+  }
+  header {
+    padding: 1rem 0.5rem !important;
+    gap: 0.2em;
+    ul,
+    .switcher {
+      display: none !important;
+    }
+  }
+}
+
+/* Tablet Styles (768px to 1023px) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  h1 {
+    font-size: 24px;
+  }
+  p,
+  a {
+    font-size: 14px;
+  }
+  header {
+    padding: 1rem 2rem !important;
+  }
+  // carousel
+  #carousel-item {
+    background-size: contain !important;
+  }
+}
+
+/* Desktop Styles (1024px and above) */
+@media only screen and (min-width: 1024px) {
+  /* Your desktop styles here */
+}

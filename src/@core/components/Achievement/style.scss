@@ -1,0 +1,24 @@
+.achievements {
+  min-height: 355px;
+  background: var(--white);
+  box-shadow: var(--boxShadow);
+  margin-top: 4rem;
+  padding: var(--paddingSection);
+  .title-wrapper {
+    flex-basis: 200px;
+    .achievements-title {
+      font-size: 74px;
+    }
+  }
+  .box-wrapper {
+    flex-grow: 300px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    .box-item {
+      h1 {
+        font-size: 44px;
+      }
+    }
+  }
+}
