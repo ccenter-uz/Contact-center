@@ -44,11 +44,11 @@ export const Stories: FC = () => {
   return (
     <section id='stories'>
       <p style={{ fontSize: '12px' }}>{t('follow-last-news')}</p>
-      <div className='circles-wrapper d-flex align-center justify-evenly m-t-1 gap-1'>
+      <div className='circles-wrapper d-flex align-center justify-between m-t-2 gap-x-3 p-x-4'>
         {data?.map(item => {
           return (
             <div key={item.id} className='d-flex flex-column justify-center align-center'>
-              <div className='circle-item d-flex align-center justify-center'></div>
+              <div className='circle-item d-flex align-center justify-center m-b-2'></div>
               <p>{item.title}</p>
             </div>
           )

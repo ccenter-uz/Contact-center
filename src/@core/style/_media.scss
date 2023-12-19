@@ -1,41 +1,147 @@
 /* Mobile Styles (up to 767px) */
 @media only screen and (max-width: 767px) {
   h1 {
-    font-size: 20px;
+    font-size: 20px !important;
   }
   p,
   a {
-    font-size: 12px;
+    font-size: 12px !important;
   }
+  // header
   header {
     padding: 1rem 0.5rem !important;
     gap: 0.2em;
+    .circles-wrapper {
+      padding: 0 !important;
+      .circle-item {
+        margin-bottom: 8px !important;
+      }
+    }
+    #logo {
+      width: 170px;
+    }
     ul,
     .switcher {
       display: none !important;
     }
+  }
+  // achievements
+  .achievements {
+    padding: 2rem !important;
+    flex-direction: column;
+    gap: 2rem 0;
+    .title-wrapper {
+      width: 100%;
+      text-align: center;
+      .achievements-title {
+        width: 100% !important;
+      }
+    }
+    .box-wrapper {
+      width: 100%;
+      gap: 2rem !important;
+      .box-item {
+        margin: auto auto;
+      }
+    }
+  }
+  //services
+  .services {
+    padding: 2rem !important;
+    margin-top: 0.5rem !important;
+    .service-content {
+      margin-top: 2rem !important;
+      .content-left {
+        width: 95% !important;
+        margin: 0 !important;
+        .card-item-left {
+          width: 100% !important;
+          height: fit-content !important;
+        }
+      }
+      .content-right {
+        width: 95% !important;
+        margin: 0 !important;
+        .card-item {
+          width: 100% !important;
+          height: fit-content !important;
+          .btn {
+            margin: 2rem 0 0 0 !important;
+          }
+        }
+      }
+    }
+  }
+  // other-section
+  .other-section {
+    padding: 2rem !important;
+    margin-top: 0.5rem !important;
   }
 }
 
 /* Tablet Styles (768px to 1023px) */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   h1 {
-    font-size: 24px;
+    font-size: 24px !important;
   }
   p,
   a {
-    font-size: 14px;
+    font-size: 14px !important;
   }
+  // header
   header {
     padding: 1rem 2rem !important;
+    ul {
+      flex: 0.7 !important;
+    }
   }
   // carousel
   #carousel-item {
     background-size: contain !important;
+  }
+  // achievements
+  .achievements {
+    padding: 2rem !important;
+    flex-direction: column;
+    gap: 2rem 0;
+    .title-wrapper {
+      width: 100%;
+      text-align: center;
+      .achievements-title {
+        width: 100% !important;
+        font-size: 35px !important;
+      }
+    }
+    .box-wrapper {
+      width: 100%;
+      gap: 2rem !important;
+      .box-item {
+        margin: auto auto;
+      }
+    }
+  }
+  ///services
+  .services {
+    padding: 2rem !important;
+    .service-content {
+      margin-top: 2rem !important;
+      .content-left {
+        width: 100% !important;
+        margin: 0 !important;
+        .card-item-left {
+          width: 558px !important;
+          height: fit-content !important;
+        }
+      }
+    }
   }
 }
 
 /* Desktop Styles (1024px and above) */
 @media only screen and (min-width: 1024px) {
   /* Your desktop styles here */
+  p,
+  a {
+    font-size: 16px;
+  }
 }

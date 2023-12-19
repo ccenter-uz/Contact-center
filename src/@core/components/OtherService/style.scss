@@ -1,0 +1,45 @@
+.other-section {
+  margin-top: 3rem;
+  min-height: 533px;
+  background: var(--primary);
+  box-shadow: var(--boxShadow);
+  padding: var(--paddingSection);
+  .other-title {
+    h1 {
+      color: #fff;
+      font-size: 36px;
+    }
+  }
+  .other-card {
+    width: 319px;
+    height: 318px;
+
+    &:hover .other-img img {
+      animation: cardAnimate 1.5s ease;
+    }
+  }
+  .other-img {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 1rem;
+  }
+  #present {
+    bottom: -0.4rem !important;
+    right: 0;
+  }
+}
+
+@keyframes cardAnimate {
+  0% {
+    transform: rotate(0) scale(1);
+  }
+  50% {
+    transform: rotate(-10deg) scale(1.2);
+  }
+  75% {
+    transform: rotate(10deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(0) scale(1);
+  }
+}

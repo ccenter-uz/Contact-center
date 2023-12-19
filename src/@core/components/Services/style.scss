@@ -1,0 +1,46 @@
+.services {
+  padding: var(--paddingSection);
+  margin-top: 3rem;
+  .services-title {
+    h1 {
+      font-size: 36px;
+    }
+  }
+  .service-content {
+    margin-top: 3rem;
+    width: 100%;
+    .content-left {
+      margin-right: 4em;
+      .card-title {
+        h1 {
+          color: #fff;
+        }
+      }
+      .line-bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+      }
+      .card-item-left {
+        width: 477px;
+        height: 564px;
+      }
+    }
+    .content-right {
+      .card-item {
+        width: 558px;
+        height: 261px;
+        .btn {
+          margin: 2rem 0 0 0;
+        }
+        .line-bottom {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
