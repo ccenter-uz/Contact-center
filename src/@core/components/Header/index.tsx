@@ -13,14 +13,14 @@ const Header: FC = () => {
     <header id='header' className='d-flex flex-column justify-center align-between '>
       <div className='d-flex justify-between align-center m-b-3'>
         <img id='logo' src={'/assets/logo.svg'} alt='logo' />
-        <ul className='w-30 d-flex align-center justify-between'>
+        <ul className='header-links w-30 d-flex align-center justify-between'>
           <li>
             <Link href={`#services`} locale={locale}>
               {t('services')}
             </Link>
           </li>
           <li>
-            <Link href={`#our-team`} locale={locale}>
+            <Link href={`#community`} locale={locale}>
               {t('out-team')}
             </Link>
           </li>

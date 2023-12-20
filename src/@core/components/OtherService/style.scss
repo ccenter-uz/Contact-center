@@ -15,7 +15,7 @@
     height: 318px;
 
     &:hover .other-img img {
-      animation: cardAnimate 1.5s ease;
+      animation: cardAnimate 1s forwards;
     }
   }
   .other-img {
@@ -31,15 +31,16 @@
 
 @keyframes cardAnimate {
   0% {
-    transform: rotate(0) scale(1);
+    transform: scale(1);
   }
+
   50% {
-    transform: rotate(-10deg) scale(1.2);
+    transform: rotate(-10deg) scale(1.1);
   }
   75% {
-    transform: rotate(10deg) scale(1.2);
+    transform: rotate(10deg);
   }
   100% {
-    transform: rotate(0) scale(1);
+    transform: rotate(0);
   }
 }

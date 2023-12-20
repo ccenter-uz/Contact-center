@@ -34,6 +34,7 @@ body {
   height: 100%;
   margin: 0 auto;
   background: var(--bgColor);
+  scroll-behavior: smooth;
 }
 
 /* usable classes */
@@ -115,6 +116,9 @@ body {
 .gap-y-4 {
   gap: 26px 0;
 }
+.gap-y-5 {
+  gap: 32px 0;
+}
 .float-right {
   float: right;
 }
@@ -161,7 +165,9 @@ body {
 .m-y-4 {
   margin: 26px 0;
 }
-
+.m-t-auto {
+  margin-top: auto;
+}
 .m-t-1 {
   margin-top: 8px;
 }

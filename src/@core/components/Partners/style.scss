@@ -1,0 +1,19 @@
+.partners {
+  margin-top: 4rem;
+  padding: var(--paddingSection);
+  background: var(--white);
+  box-shadow: var(--boxShadow);
+  min-height: 362px;
+  .partners-title {
+    margin-bottom: 1rem;
+    h1 {
+      font-size: 36px;
+    }
+  }
+  .partners-images {
+    img {
+      width: 100%;
+      max-width: 160px;
+    }
+  }
+}

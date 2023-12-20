@@ -1,3 +1,21 @@
+@media only screen and (max-width: 575px) {
+  .footer {
+    &::before {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      transform: scaleX(-1);
+    }
+    .footer-copyright {
+      z-index: 9999;
+      padding: 0.5rem;
+      background: var(--white);
+      border-radius: 5px;
+      box-shadow: var(--boxShadow);
+    }
+  }
+}
+
 /* Mobile Styles (up to 767px) */
 @media only screen and (max-width: 767px) {
   h1 {
@@ -77,6 +95,75 @@
     padding: 2rem !important;
     margin-top: 0.5rem !important;
   }
+  // community
+  .community {
+    margin-top: 3rem !important;
+    padding: 2rem !important;
+    .community-content {
+      flex-direction: column !important;
+      .content-text {
+        flex-basis: auto !important;
+
+        p {
+          font-size: 14px !important;
+        }
+        span {
+          font-size: 12px !important;
+        }
+      }
+      .content-images {
+        justify-content: center;
+      }
+    }
+  }
+  // join
+  .join {
+    padding: 2rem !important;
+    margin-top: 2rem !important;
+    .card-item {
+      h1 {
+        font-size: 22px !important;
+      }
+      .ant-card-body {
+        padding: 2rem !important;
+      }
+    }
+    .join-image {
+      img {
+        max-width: 100% !important;
+      }
+    }
+    .card-link {
+      h3 {
+        font-size: 14px !important;
+      }
+    }
+  }
+  // partners
+  .partners {
+    padding: 2rem !important;
+    margin-top: 2rem !important;
+    .partners-title {
+      h1 {
+        font-size: 24px !important;
+      }
+    }
+    .partners-images {
+      justify-content: center !important;
+      img {
+        width: 100px !important;
+      }
+    }
+  }
+  // footer
+  .footer {
+    padding: 2rem !important;
+    margin-top: 2rem !important;
+
+    .footer-right {
+      flex-direction: column;
+    }
+  }
 }
 
 /* Tablet Styles (768px to 1023px) */
@@ -135,6 +222,62 @@
       }
     }
   }
+  // community
+  .community {
+    padding: 2rem !important;
+    .community-content {
+      .content-text {
+        p {
+          font-size: 14px !important;
+        }
+        span {
+          font-size: 12px !important;
+        }
+      }
+    }
+  }
+  // join
+  .join {
+    padding: 2rem !important;
+    margin-top: 2rem !important;
+    .card-item {
+      h1 {
+        font-size: 28px !important;
+      }
+      .ant-card-body {
+        padding: 3rem !important;
+      }
+    }
+    .join-image {
+      img {
+        max-width: 100% !important;
+      }
+    }
+    .card-link {
+      h3 {
+        font-size: 14px !important;
+      }
+    }
+  }
+  // partners
+  .partners {
+    padding: 2rem !important;
+    margin-top: 2rem !important;
+    .partners-title {
+      h1 {
+        font-size: 28px !important;
+      }
+    }
+  }
+  // footer
+  .footer {
+    padding: 2rem !important;
+    margin-top: 2rem !important;
+
+    .footer-right {
+      flex-direction: column;
+    }
+  }
 }
 
 /* Desktop Styles (1024px and above) */
@@ -142,6 +285,6 @@
   /* Your desktop styles here */
   p,
   a {
-    font-size: 16px;
+    font-size: 17px;
   }
 }

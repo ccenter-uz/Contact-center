@@ -14,7 +14,7 @@ export const Services: FC = () => {
   const { t } = useLang()
 
   return (
-    <section className='services w-100'>
+    <section id='services' className='services w-100'>
       <div className='services-title d-flex justify-center '>
         <h1>{t('services')}</h1>
       </div>
