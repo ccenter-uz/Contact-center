@@ -3,26 +3,38 @@ import './style.scss'
 import Link from 'next/link'
 import { useLang } from '@/@core/service/hooks/useLang'
 import LanguageSwitcher from '../SwitchLng'
+import { Stories } from '../Stories'
+import { Col, Row } from 'antd'
 
 const Header: FC = () => {
   const { t, locale } = useLang()
 
   return (
-    <header className='d-flex align-center justify-between'>
-      <h1>{t('header-title')}</h1>
-      <LanguageSwitcher />
-      <ul className='d-flex align-center gap-x-3'>
-        <li>
-          <Link href={`/${locale}/login`} locale={locale}>
-            Login
-          </Link>
-        </li>
-        <li>
-          <Link href={`/${locale}/dashboard`} locale={locale}>
-            Dashboard
-          </Link>
-        </li>
-      </ul>
+    <header id='header' className='d-flex flex-column justify-center align-between '>
+      <div className='d-flex justify-between align-center m-b-3'>
+        <img id='logo' src={'/assets/logo.svg'} alt='logo' />
+        <ul className='header-links w-30 d-flex align-center justify-between'>
+          <li>
+            <Link href={`#services`} locale={locale}>
+              {t('services')}
+            </Link>
+          </li>
+          <li>
+            <Link href={`#community`} locale={locale}>
+              {t('out-team')}
+            </Link>
+          </li>
+          <li>
+            <Link href={`#partners`} locale={locale}>
+              {t('partners')}
+            </Link>
+          </li>
+        </ul>
+        <div className='switcher'>
+          <LanguageSwitcher />
+        </div>
+      </div>
+      <Stories />
     </header>
   )
 }

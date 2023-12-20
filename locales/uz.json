@@ -1,5 +1,15 @@
 {
-  "header-title": "Header Uzbekchada",
-  "footer-title": "Footer Uzbekcha",
-  "NOT_FOUND": "Sahifa topilmadi !"
+  "NOT_FOUND": "Sahifa topilmadi !",
+  "services": "Xizmatlar",
+  "out-team": "Bizning jamoa",
+  "partners": "Hamkorlar",
+  "achievements-title": "Raqamlardagi yutuqlar",
+  "achievements-pretitle": "Biz sizni xursand qilamiz va har doim xizmatimizni yaxshilaymiz",
+  "users": "Foydalanuvchilar",
+  "service": "Xizmat",
+  "other-service": "Qo'shimcha xizmatlar",
+  "collective": "Bizning Do'stona Jamoamiz",
+  "out-team-join": "Bizning jamoamizga qo'shilishni xohlaysizmi?",
+  "left-application": "Ariza yuborish",
+  "follow-last-news": "Yangiliklarni kuzatib boring"
 }

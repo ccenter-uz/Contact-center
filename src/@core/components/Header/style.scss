@@ -1,7 +1,12 @@
-header {
-  height: 12dvh;
+#header {
+  min-height: 12dvh;
   background: var(--headerBg);
-  box-shadow: var(--boxShadow);
-  border-radius: var(--radiusCard);
-  padding: var(--mainPaddingX);
+  padding: var(--paddingSection);
+  .header-links li a {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
 }
