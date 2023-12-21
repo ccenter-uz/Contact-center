@@ -102,8 +102,7 @@
     .community-content {
       flex-direction: column !important;
       .content-text {
-        flex-basis: auto !important;
-
+        width: 100% !important;
         p {
           font-size: 14px !important;
         }
@@ -112,6 +111,7 @@
         }
       }
       .content-images {
+        width: 100% !important;
         justify-content: center;
       }
     }

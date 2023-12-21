@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import './style.scss'
 import { useLang } from '@/@core/service/hooks/useLang'
-import { Card, Col, Row } from 'antd'
+import { Card } from 'antd'
 
 export const OtherService: FC = () => {
   const { t } = useLang()

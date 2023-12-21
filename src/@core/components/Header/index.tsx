@@ -1,10 +1,11 @@
-import { FC } from 'react'
+import { FC, Suspense } from 'react'
 import './style.scss'
 import Link from 'next/link'
 import { useLang } from '@/@core/service/hooks/useLang'
 import LanguageSwitcher from '../SwitchLng'
 import { Stories } from '../Stories'
-import { Col, Row } from 'antd'
+import Loading from '@/app/[locale]/loading'
+import ShapeLoading from '../ShapeLoading'
 
 const Header: FC = () => {
   const { t, locale } = useLang()
@@ -34,7 +35,9 @@ const Header: FC = () => {
           <LanguageSwitcher />
         </div>
       </div>
-      <Stories />
+      <Suspense fallback={<ShapeLoading width='60px ' height='60' radius='50%' />}>
+        <Stories />
+      </Suspense>
     </header>
   )
 }
