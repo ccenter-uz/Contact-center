@@ -4,11 +4,12 @@ import './style.scss'
 type IButton = {
   children: ReactNode
   onclick?: () => void
+  form?: string
 }
 
-export const Button: FC<IButton> = ({ children, onclick }) => {
+export const Button: FC<IButton> = ({ children, onclick, form }) => {
   return (
-    <button onClick={onclick} className='btn-reusable'>
+    <button form={form} onClick={onclick} className='btn-reusable'>
       {children}
     </button>
   )

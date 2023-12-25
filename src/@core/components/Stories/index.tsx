@@ -1,59 +1,39 @@
-import { useLang } from '@/@core/service/hooks/useLang'
-import { FC } from 'react'
+'use client'
+import { FC, useState } from 'react'
 import './style.scss'
+import ReactInstaStories from 'react-insta-stories'
 
-export const Stories: FC = () => {
-  const { t } = useLang()
-
-  // mock-data
-  const data = [
-    {
-      id: 1,
-      title: 'Nimadur'
-    },
-    {
-      id: 2,
-      title: 'Nimadur'
-    },
-    {
-      id: 3,
-      title: 'Nimadur'
-    },
-    {
-      id: 4,
-      title: 'Nimadur'
-    },
-    {
-      id: 5,
-      title: 'Nimadur'
-    },
-    {
-      id: 6,
-      title: 'Nimadur'
-    },
-    {
-      id: 7,
-      title: 'Nimadur'
-    },
-    {
-      id: 8,
-      title: 'Nimadur'
-    }
-  ]
+type IStories = {
+  id: number
+  title: string
+  story?: any
+}
+// story
+const storyContent = {
+  width: 'auto',
+  maxWidth: '100%',
+  maxHeight: '100%',
+  margin: 'auto'
+}
+export const StoriesComponent: FC<IStories> = ({ id, title, story }) => {
+  const [state, setState] = useState<boolean>(false)
 
   return (
     <section id='stories'>
-      <p style={{ fontSize: '12px' }}>{t('follow-last-news')}</p>
-      <div className='circles-wrapper d-flex align-center justify-between m-t-2 gap-x-3 p-x-4'>
-        {data?.map(item => {
-          return (
-            <div key={item.id} className='d-flex flex-column justify-center align-center'>
-              <div className='circle-item d-flex align-center justify-center m-b-2'></div>
-              <p>{item.title}</p>
-            </div>
-          )
-        })}
+      <div key={id} className='d-flex flex-column align-center'>
+        <div className='circle-item d-flex align-center justify-center m-b-2' onClick={() => setState(true)}></div>
+        <p>{title}</p>
       </div>
+      {state && (
+        <ReactInstaStories
+          stories={story}
+          defaultInterval={1500}
+          width={'100%'}
+          height={'100%'}
+          loop={false}
+          storyStyles={storyContent}
+        />
+      )}
     </section>
   )
 }

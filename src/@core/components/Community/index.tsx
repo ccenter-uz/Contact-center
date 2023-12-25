@@ -7,7 +7,7 @@ export const Community: FC = () => {
   const { t } = useLang()
 
   return (
-    <section id='community' className='community d-flex flex-column align-center '>
+    <section id='community' className='w-100 community d-flex flex-column align-center '>
       <div className='community-title d-flex justify-center m-b-4'>
         <h1>{t('collective')}</h1>
       </div>
@@ -22,10 +22,9 @@ export const Community: FC = () => {
             longer admire do barton vanity itself do in it.
           </span>
         </div>
-        <div className='content-images d-flex align-center justify-center flex-wrap'>
+        <div className='content-images '>
           <ImageSwiper
             images={[
-              '/assets/collective/community.svg',
               '/assets/collective/community.svg',
               '/assets/collective/community.svg',
               '/assets/collective/community.svg',

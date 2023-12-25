@@ -1,43 +1,74 @@
 'use client'
 import { FC } from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react'
-// slides import
-import 'swiper/swiper-bundle.css'
+import './style.scss'
+import { Carousel } from 'antd'
 
 type ISwiper = {
   images: string[]
 }
 
+const setting = {
+  infinite: true,
+  autoplay: true,
+  slidesToShow: 3,
+  speed: 500,
+  draggable: true,
+  dots: false,
+  autoplaySpeed: 2500,
+  initialSlide: 0,
+  responsive: [
+    {
+      breakpoint: 1440,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+}
+
 const ImageSwiper: FC<ISwiper> = ({ images }) => {
   return (
-    <Swiper
-      autoplay={{
-        delay: 0
-      }}
-      loop
-      breakpoints={{
-        0: {
-          slidesPerView: 1
-        },
-        768: {
-          slidesPerView: 1
-        },
-        1024: {
-          slidesPerView: 2
-        },
-        1400: {
-          slidesPerView: 3
-        }
-      }}
-      spaceBetween={20}
-      slidesPerView={3}
-    >
-      {images.map((image, index) => (
-        <SwiperSlide key={index}>
-          <img src={image} alt={`Slide ${index}`} width={'100%'} />
-        </SwiperSlide>
-      ))}
-    </Swiper>
+    <Carousel {...setting} className='slide-container'>
+      {images.map((image, index) => {
+        return <img key={index} src={image} alt='image' />
+      })}
+    </Carousel>
   )
 }
 

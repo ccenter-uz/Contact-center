@@ -8,7 +8,7 @@ type IShapeLoading = {
 }
 
 const ShapeLoading: FC<IShapeLoading> = ({ width, height, radius }) => {
-  return <div className='shape-loading' style={{ width, height, borderRadius: radius }}></div>
+  return <div className='shape-loading' style={{ width: width, height: height, borderRadius: radius }}></div>
 }
 
 export default ShapeLoading

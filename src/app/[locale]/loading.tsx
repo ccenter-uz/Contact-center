@@ -15,7 +15,7 @@ const Loading: FC<ILoading> = ({ style }) => {
       style={style || { height: '100dvh' }}
     >
       <Spin size='large' />
-      <em style={{ fontSize: '24px', letterSpacing: '2.5px' }}>{t('Loading')}</em>
+      <em style={{ fontSize: '18px', letterSpacing: '2.5px' }}>{t('Loading')}</em>
     </section>
   )
 }

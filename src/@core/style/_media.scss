@@ -35,6 +35,9 @@
         margin-bottom: 8px !important;
       }
     }
+    .menu-burger {
+      display: block !important;
+    }
     #logo {
       width: 170px;
     }
@@ -132,6 +135,10 @@
       img {
         max-width: 100% !important;
       }
+      .count-users {
+        width: 50% !important;
+        font-size: 14px !important;
+      }
     }
     .card-link {
       h3 {
@@ -154,6 +161,11 @@
         width: 100px !important;
       }
     }
+  }
+  // comment
+  .comment {
+    padding: 2rem !important;
+    margin-top: 2rem !important;
   }
   // footer
   .footer {
@@ -258,6 +270,11 @@
         font-size: 14px !important;
       }
     }
+  }
+  // comment
+  .comment {
+    padding: 2rem !important;
+    margin-top: 2rem !important;
   }
   // partners
   .partners {

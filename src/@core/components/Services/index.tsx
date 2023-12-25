@@ -1,10 +1,11 @@
 'use client'
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import './style.scss'
 import { useLang } from '@/@core/service/hooks/useLang'
 import { Card, Col, Row } from 'antd'
 import { Button } from '../reusables/Button'
 import { motion } from 'framer-motion'
+import { ModalService } from '../Comment/Modal'
 
 const headerConfig = {
   background: '#193BDA',
@@ -14,6 +15,12 @@ const headerConfig = {
 }
 export const Services: FC = () => {
   const { t } = useLang()
+  const [modalOpen, setModalOpen] = useState<boolean>(false)
+
+  // openModal
+  const openModal = () => {
+    setModalOpen(true)
+  }
 
   return (
     <section id='services' className='services w-100'>
@@ -24,6 +31,7 @@ export const Services: FC = () => {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
           transition={{ type: 'spring', delay: 0.3, duration: 1 }}
           className='content-left d-flex justify-center'
         >
@@ -39,7 +47,7 @@ export const Services: FC = () => {
             bodyStyle={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
             className='card-item-left'
           >
-            <Button>{t('left-application')}</Button>
+            <Button onclick={openModal}>{t('left-application')}</Button>
             <img className='line-bottom' src='/assets/service/BottomLineMainCard.svg' alt='svg' />
           </Card>
         </motion.div>
@@ -49,6 +57,7 @@ export const Services: FC = () => {
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
                 transition={{ type: 'spring', delay: 0.4, duration: 2 }}
               >
                 <Card headStyle={headerConfig} title='Aloqa Operator' className='card-item'>
@@ -61,14 +70,15 @@ export const Services: FC = () => {
                     </Col>
                   </Row>
                   <div className='btn d-flex justify-center align-center '>
-                    <Button>{t('left-application')}</Button>
+                    <Button onclick={openModal}>{t('left-application')}</Button>
                   </div>
-                  <img className='line-bottom' src='/assets/service/BottomLineMainCard.svg' alt='svg' />
+                  <img className='line-bottom' src='/assets/service/BottomLineOtherCards.svg' alt='svg' />
                 </Card>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
                 transition={{ type: 'spring', delay: 0.5, duration: 3 }}
               >
                 <Card headStyle={headerConfig} title='Aloqa Operator' className='card-item'>
@@ -81,9 +91,9 @@ export const Services: FC = () => {
                     </Col>
                   </Row>
                   <div className='btn d-flex justify-center align-center '>
-                    <Button>{t('left-application')}</Button>
+                    <Button onclick={openModal}>{t('left-application')}</Button>
                   </div>
-                  <img className='line-bottom' src='/assets/service/BottomLineMainCard.svg' alt='svg' />
+                  <img className='line-bottom' src='/assets/service/BottomLineOtherCards.svg' alt='svg' />
                 </Card>
               </motion.div>
             </div>
@@ -92,6 +102,7 @@ export const Services: FC = () => {
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
                 transition={{ type: 'spring', delay: 0.6, duration: 4 }}
               >
                 <Card headStyle={headerConfig} title='Aloqa Operator' className='card-item'>
@@ -104,14 +115,15 @@ export const Services: FC = () => {
                     </Col>
                   </Row>
                   <div className='btn d-flex justify-center align-center '>
-                    <Button>{t('left-application')}</Button>
+                    <Button onclick={openModal}>{t('left-application')}</Button>
                   </div>
-                  <img className='line-bottom' src='/assets/service/BottomLineMainCard.svg' alt='svg' />
+                  <img className='line-bottom' src='/assets/service/BottomLineOtherCards.svg' alt='svg' />
                 </Card>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
                 transition={{ type: 'spring', delay: 0.7, duration: 5 }}
               >
                 <Card headStyle={headerConfig} title='Aloqa Operator' className='card-item'>
@@ -124,15 +136,17 @@ export const Services: FC = () => {
                     </Col>
                   </Row>
                   <div className='btn d-flex justify-center align-center '>
-                    <Button>{t('left-application')}</Button>
+                    <Button onclick={openModal}>{t('left-application')}</Button>
                   </div>
-                  <img className='line-bottom' src='/assets/service/BottomLineMainCard.svg' alt='svg' />
+                  <img className='line-bottom' src='/assets/service/BottomLineOtherCards.svg' alt='svg' />
                 </Card>
               </motion.div>
             </div>
           </div>
         </div>
       </div>
+      {/* modal */}
+      {modalOpen && <ModalService open={modalOpen} close={setModalOpen} />}
     </section>
   )
 }

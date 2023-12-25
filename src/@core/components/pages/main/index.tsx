@@ -8,6 +8,7 @@ import { Community } from '../../Community'
 import { JoinOurTeam } from '../../JoinOutTeam'
 import { Partners } from '../../Partners'
 import Loading from '@/app/[locale]/loading'
+import { Comment } from '../../Comment'
 
 const Main: FC = () => {
   return (
@@ -27,6 +28,9 @@ const Main: FC = () => {
       </Suspense>
       <JoinOurTeam />
       <Partners />
+      <Suspense fallback={<Loading />}>
+        <Comment />
+      </Suspense>
     </main>
   )
 }

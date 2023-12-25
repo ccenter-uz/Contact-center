@@ -1,0 +1,11 @@
+.comment {
+  margin-top: 4rem;
+  padding: var(--paddingSection);
+  .ant-card {
+    width: 95% !important;
+    min-height: 420px;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+}
