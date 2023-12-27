@@ -12,5 +12,21 @@
   "out-team-join": "Do you want to join our team?",
   "left-application": "Submit your application",
   "follow-last-news": "Follow the latest news",
-  "Loading": "Loading..."
+  "Loading": "Loading...",
+  "service-first-card-title": "Outsourcing service",
+  "service-other-card-title": "Communication Operator",
+  "service-other-card-paragraph": "Something important text goes here...",
+  "service-modal-title": "Send a request",
+  "service-modal-type": "Service type",
+  "service-modal-organization": "Organization name",
+  "service-modal-fio": "L.F.P of the applicant",
+  "service-modal-phone": "Phone of the applicant",
+  "service-modal-comment": "Note:",
+  "community-title": "Our community",
+  "community-paragraph": "Built Wicket longer admire do barton vanity itself do in it. Built Wicket longer admire do barton vanity itself do in it. Built Wicket longer admire do barton vanity itself do in it. Built Wicket longer admire do barton vanity itself do in it. Built Wicket longer admire do barton vanity itself do in it. Built Wicket longer admire do barton vanity itself do in it.",
+  "join-users": "of users",
+  "join-paragraph": "Built Wicket longer admire do barton vanity itself do in it. Built Wicket longer admire do barton vanity itself do in it. Built Wicket longer admire do barton vanity itself do in it. Built Wicket longer admire do barton vanity itself do in it. Built Wicket longer admire do barton vanity itself do in it. Built Wicket longer admire do barton vanity itself do in it.",
+  "join-btn": "Leave a Request About Yourself Here",
+  "footer-address": "Our address:",
+  "footer-mail": "Mail:"
 }

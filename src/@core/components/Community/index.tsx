@@ -13,14 +13,9 @@ export const Community: FC = () => {
       </div>
       <div className='community-content d-flex align-start gap-3 m-t-4'>
         <div className='content-text'>
-          <p>Built Wicket longer admire</p>
+          <p>{t('community-title')}</p>
           <br />
-          <span>
-            Built Wicket longer admire do barton vanity itself do in it. Built Wicket longer admire do barton vanity
-            itself do in it. Built Wicket longer admire do barton vanity itself do in it. Built Wicket longer admire do
-            barton vanity itself do in it. Built Wicket longer admire do barton vanity itself do in it. Built Wicket
-            longer admire do barton vanity itself do in it.
-          </span>
+          <span>{t('community-paragraph')}</span>
         </div>
         <div className='content-images '>
           <ImageSwiper

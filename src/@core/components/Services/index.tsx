@@ -39,7 +39,7 @@ export const Services: FC = () => {
             headStyle={headerConfig}
             title={
               <div className='card-title d-flex align-center justify-between'>
-                <h1>Autsorsing xizmati</h1>
+                <h1>{t('service-first-card-title')}</h1>
                 <img src='/assets/service/Rocket.svg' alt='rocket' />
               </div>
             }
@@ -60,10 +60,10 @@ export const Services: FC = () => {
                 viewport={{ once: true }}
                 transition={{ type: 'spring', delay: 0.4, duration: 2 }}
               >
-                <Card headStyle={headerConfig} title='Aloqa Operator' className='card-item'>
+                <Card headStyle={headerConfig} title={t('service-other-card-title')} className='card-item'>
                   <Row justify={'space-between'}>
                     <Col xs={10} sm={10} md={10} lg={7} xl={7}>
-                      <p>Built Wicket longer admire do barton vanity itself do in it.</p>
+                      <p>{t('service-other-card-paragraph')}</p>
                     </Col>
                     <Col xs={10} sm={10} md={10} lg={7} xl={7} push={3}>
                       <img src='/assets/service/Profile.svg' alt='logo' />
@@ -81,10 +81,10 @@ export const Services: FC = () => {
                 viewport={{ once: true }}
                 transition={{ type: 'spring', delay: 0.5, duration: 3 }}
               >
-                <Card headStyle={headerConfig} title='Aloqa Operator' className='card-item'>
+                <Card headStyle={headerConfig} title={t('service-other-card-title')} className='card-item'>
                   <Row justify={'space-between'}>
                     <Col xs={10} sm={10} md={10} lg={7} xl={7}>
-                      <p>Built Wicket longer admire do barton vanity itself do in it.</p>
+                      <p>{t('service-other-card-paragraph')}</p>
                     </Col>
                     <Col xs={10} sm={10} md={10} lg={7} xl={7} push={2}>
                       <img src='/assets/service/StepsChart.svg' alt='logo' />
@@ -105,10 +105,10 @@ export const Services: FC = () => {
                 viewport={{ once: true }}
                 transition={{ type: 'spring', delay: 0.6, duration: 4 }}
               >
-                <Card headStyle={headerConfig} title='Aloqa Operator' className='card-item'>
+                <Card headStyle={headerConfig} title={t('service-other-card-title')} className='card-item'>
                   <Row justify={'space-between'}>
                     <Col xs={10} sm={10} md={10} lg={7} xl={7}>
-                      <p>Built Wicket longer admire do barton vanity itself do in it.</p>
+                      <p>{t('service-other-card-paragraph')}</p>
                     </Col>
                     <Col xs={10} sm={10} md={10} lg={7} xl={7} push={3}>
                       <img src='/assets/service/Map.svg' alt='logo' />
@@ -126,10 +126,10 @@ export const Services: FC = () => {
                 viewport={{ once: true }}
                 transition={{ type: 'spring', delay: 0.7, duration: 5 }}
               >
-                <Card headStyle={headerConfig} title='Aloqa Operator' className='card-item'>
+                <Card headStyle={headerConfig} title={t('service-other-card-title')} className='card-item'>
                   <Row justify={'space-between'}>
                     <Col xs={10} sm={10} md={10} lg={7} xl={7}>
-                      <p>Built Wicket longer admire do barton vanity itself do in it.</p>
+                      <p>{t('service-other-card-paragraph')}</p>
                     </Col>
                     <Col xs={10} sm={10} md={10} lg={7} xl={7} push={2}>
                       <img src='/assets/service/Chat.svg' alt='logo' />

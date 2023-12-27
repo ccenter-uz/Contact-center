@@ -37,7 +37,7 @@ export const JoinOurTeam: FC = () => {
         className='join-image'
       >
         <img src='/assets/mainPic.svg' alt='join' />
-        <div className='count-users'>1 млн пользователей</div>
+        <div className='count-users'>1 млн {t('join-users')}</div>
       </motion.div>
       <motion.div
         initial={{ y: 100, opacity: 0.5 }}
@@ -49,12 +49,7 @@ export const JoinOurTeam: FC = () => {
         <Card headStyle={headerConfig} title={<h1>{t('out-team-join')}</h1>} className='card-item'>
           <Row justify={'space-between'}>
             <Col xs={24} sm={24} md={18} lg={18} xl={18} xxl={18}>
-              <p>
-                Built Wicket longer admire do barton vanity itself do in it. Built Wicket longer admire do barton vanity
-                itself do in it. Built Wicket longer admire do barton vanity itself do in it. Built Wicket longer admire
-                do barton vanity itself do in it. Built Wicket longer admire do barton vanity itself do in it. Built
-                Wicket longer admire do barton vanity itself do in it.
-              </p>
+              <p>{t('join-paragraph')}</p>
             </Col>
             <Col className='d-flex flex-column align-center' xs={24} sm={24} md={5} lg={4} xl={4} xxl={4}>
               <QRCode size={140} value='https://hr-bot-admin-panel.ccenter.uz' />
@@ -63,7 +58,7 @@ export const JoinOurTeam: FC = () => {
           </Row>
           <div key='links' className='card-link '>
             <h3 className='d-flex align-center gap-x-1'>
-              Оставь Заявку О себе здесь <ArrowRight className='arrow-icon' />
+              {t('join-btn')} <ArrowRight className='arrow-icon' />
             </h3>
           </div>
         </Card>

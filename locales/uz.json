@@ -12,5 +12,21 @@
   "out-team-join": "Bizning jamoamizga qo'shilishni xohlaysizmi?",
   "left-application": "Ariza yuborish",
   "follow-last-news": "Yangiliklarni kuzatib boring",
-  "Loading": "Yuklanmoqda..."
+  "Loading": "Yuklanmoqda...",
+  "service-first-card-title": "Autsorsing xizmati",
+  "service-other-card-title": "Aloqa Operatori",
+  "service-other-card-paragraph": "Nimadur manoli narsa ketvotide shetda...",
+  "service-modal-title": "Murojat yuborish",
+  "service-modal-type": "Xizmat turi:",
+  "service-modal-organization": "Tashkilot nomi:",
+  "service-modal-fio": "Ariza beruvchining F.I.Sh:",
+  "service-modal-phone": "Ariza beruvchining telefon raqami:",
+  "service-modal-comment": "Izoh:",
+  "community-title": "Bizning jamoa",
+  "community-paragraph": "O'rnatilgan Wicket uzoq vaqt hayratda, barton vanityning o'zi unda qiladi. O'rnatilgan Wicket uzoq vaqt hayratda, barton vanityning o'zi unda qiladi. O'rnatilgan Wicket uzoq vaqt hayratda, barton vanityning o'zi unda qiladi. O'rnatilgan Wicket uzoq vaqt hayratda, barton vanityning o'zi unda qiladi. O'rnatilgan Wicket uzoq vaqt hayratda, barton vanityning o'zi unda qiladi. O'rnatilgan Wicket uzoq vaqt hayratda, barton vanityning o'zi unda qiladi.",
+  "join-users": "foydalanuvchilar",
+  "join-paragraph": "O'rnatilgan Wicket uzoq vaqt hayratda, barton vanityning o'zi unda qiladi. O'rnatilgan Wicket uzoq vaqt hayratda, barton vanityning o'zi unda qiladi. O'rnatilgan Wicket uzoq vaqt hayratda, barton vanityning o'zi unda qiladi. O'rnatilgan Wicket uzoq vaqt hayratda, barton vanityning o'zi unda qiladi. O'rnatilgan Wicket uzoq vaqt hayratda, barton vanityning o'zi unda qiladi. O'rnatilgan Wicket uzoq vaqt hayratda, barton vanityning o'zi unda qiladi.",
+  "join-btn": "Bu yerda o'zingiz haqingizda so'rov qoldiring",
+  "footer-address": "Bizning manzil:",
+  "footer-mail": "Pochta:"
 }

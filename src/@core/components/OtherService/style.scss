@@ -4,6 +4,10 @@
   background: var(--primary);
   box-shadow: var(--boxShadow);
   padding: var(--paddingSection);
+  .other-carousel {
+    width: 85%;
+    margin: 0 auto;
+  }
   .other-title {
     h1 {
       color: #fff;

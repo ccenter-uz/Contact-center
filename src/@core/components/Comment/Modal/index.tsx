@@ -47,7 +47,7 @@ export const ModalService: FC<IModal> = ({ open, close }) => {
       className='modal-service'
       title={
         <div className='modal-title d-flex align-center justify-center'>
-          <h1>Murojaat yuborish</h1>
+          <h1>{t('service-modal-title')}</h1>
         </div>
       }
       open={open}
@@ -63,7 +63,7 @@ export const ModalService: FC<IModal> = ({ open, close }) => {
           <Col xs={24} sm={24} md={11} lg={11} xl={11} xxl={11}>
             <Form.Item
               name={'service_type'}
-              label={'Xizmat turi:'}
+              label={t('service-modal-type')}
               rules={[{ required: true, message: 'Xizmat turini tanlang!' }]}
             >
               <Select options={serviceOptions} />
@@ -72,7 +72,7 @@ export const ModalService: FC<IModal> = ({ open, close }) => {
           <Col xs={24} sm={24} md={12} lg={12} xl={12} xxl={12}>
             <Form.Item
               name={'organization_name'}
-              label={'Tashkilot nomi:'}
+              label={t('service-modal-organization')}
               rules={[{ required: true, message: 'Tashkilot nomini kiriting!' }]}
             >
               <Input />
@@ -83,7 +83,7 @@ export const ModalService: FC<IModal> = ({ open, close }) => {
           <Col xs={24} sm={24} md={11} lg={11} xl={11} xxl={11}>
             <Form.Item
               name={'fio'}
-              label={'Ariza beruvchinig F.I.Sh:'}
+              label={t('service-modal-fio')}
               rules={[{ required: true, message: 'F.I.Sh ni kiriting' }]}
             >
               <Input />
@@ -92,7 +92,7 @@ export const ModalService: FC<IModal> = ({ open, close }) => {
           <Col xs={24} sm={24} md={12} lg={12} xl={12} xxl={12}>
             <Form.Item
               name={'applicant_phone'}
-              label={'Ariza beruvchining telefon raqami:'}
+              label={t('service-modal-phone')}
               rules={[{ required: true, message: 'Telefon raqam kiriting' }]}
             >
               <Input />
@@ -101,7 +101,7 @@ export const ModalService: FC<IModal> = ({ open, close }) => {
         </Row>
         <Row>
           <Col span={24}>
-            <Form.Item name={'comment'} label={'Izoh:'}>
+            <Form.Item name={'comment'} label={t('service-modal-comment')}>
               <Input.TextArea rows={4} />
             </Form.Item>
           </Col>

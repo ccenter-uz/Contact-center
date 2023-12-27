@@ -28,13 +28,13 @@ const Footer: FC = () => {
             <li className='d-flex align-center gap-3'>
               <img src='/assets/footer/map.svg' alt='map' />
               <p>
-                Наш адрес: <br /> Toshkent sh. Furqat 23 A
+                {t('footer-address')} <br /> Toshkent sh. Furqat 23 A
               </p>
             </li>
             <li className='d-flex align-center gap-3'>
               <img src='/assets/footer/message.svg' alt='message' />
               <p>
-                Почта для связи: <br /> infoedugately@gmail.com
+                {t('footer-mail')} <br /> infoedugately@gmail.com
               </p>
             </li>
             <li className='d-flex align-center gap-3'>

@@ -1,7 +1,63 @@
 import { FC } from 'react'
 import './style.scss'
 import { useLang } from '@/@core/service/hooks/useLang'
+import { Carousel } from 'antd'
 
+const setting = {
+  infinite: true,
+  autoplay: true,
+  centerMode: true,
+  slidesToShow: 5,
+  speed: 800,
+  draggable: true,
+  dots: false,
+  autoplaySpeed: 3500,
+  initialSlide: 0,
+  responsive: [
+    {
+      breakpoint: 1440,
+      settings: {
+        slidesToShow: 5,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+}
 export const Partners: FC = () => {
   const { t } = useLang()
 
@@ -10,13 +66,16 @@ export const Partners: FC = () => {
       <div className='partners-title d-flex justify-center'>
         <h1>{t('partners')}</h1>
       </div>
-      <div className='partners-images m-b-3 d-flex align-center justify-between flex-wrap gap-3'>
+      <Carousel {...setting} className='partners-images m-b-3 d-flex align-center justify-between gap-3'>
         <img src='/assets/partners/clickup.svg' alt='click' />
         <img src='/assets/partners/dropbox_blue.svg' alt='dropbox' />
         <img src='/assets/partners/elastic.svg' alt='elastic' />
         <img src='/assets/partners/google.svg' alt='google' />
         <img src='/assets/partners/freshbooks.svg' alt='freshbooks' />
-      </div>
+        <img src='/assets/partners/freshbooks.svg' alt='freshbooks' />
+        <img src='/assets/partners/freshbooks.svg' alt='freshbooks' />
+        <img src='/assets/partners/freshbooks.svg' alt='freshbooks' />
+      </Carousel>
     </section>
   )
 }

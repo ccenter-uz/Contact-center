@@ -17,6 +17,7 @@
     "next": "14.0.3",
     "next-intl": "^3.3.2",
     "react": "^18",
+    "react-animated-numbers": "^0.17.1",
     "react-dom": "^18",
     "react-feather": "^2.0.10",
     "react-insta-stories": "^2.6.2",

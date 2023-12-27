@@ -9,8 +9,13 @@ import { JoinOurTeam } from '../../JoinOutTeam'
 import { Partners } from '../../Partners'
 import Loading from '@/app/[locale]/loading'
 import { Comment } from '../../Comment'
+import { getData } from './actions'
 
-const Main: FC = () => {
+const Main: FC = async () => {
+  const data = await getData()
+
+  console.log(data, 'data')
+
   return (
     <main className='main-page'>
       <CarouselComp />
