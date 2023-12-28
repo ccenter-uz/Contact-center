@@ -2,6 +2,9 @@
   min-height: 12dvh;
   background: var(--headerBg);
   padding: var(--paddingSection);
+  .block {
+    display: none;
+  }
   .header-links li a {
     cursor: pointer;
     transition: all 0.2s ease-in-out;

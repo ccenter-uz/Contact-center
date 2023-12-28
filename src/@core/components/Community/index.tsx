@@ -2,8 +2,9 @@ import { FC } from 'react'
 import './style.scss'
 import { useLang } from '@/@core/service/hooks/useLang'
 import ImageSwiper from '../reusables/Slider'
+import { IGlobalDataType } from '@/@core/utils/type'
 
-export const Community: FC = () => {
+export const Community: FC<IGlobalDataType> = ({ data }) => {
   const { t } = useLang()
 
   return (
@@ -18,15 +19,7 @@ export const Community: FC = () => {
           <span>{t('community-paragraph')}</span>
         </div>
         <div className='content-images '>
-          <ImageSwiper
-            images={[
-              '/assets/collective/community.svg',
-              '/assets/collective/community.svg',
-              '/assets/collective/community.svg',
-              '/assets/collective/community.svg',
-              '/assets/collective/community.svg'
-            ]}
-          />
+          <ImageSwiper images={data.TeamImages} />
         </div>
       </div>
     </section>

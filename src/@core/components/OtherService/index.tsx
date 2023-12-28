@@ -4,45 +4,8 @@ import './style.scss'
 import { useLang } from '@/@core/service/hooks/useLang'
 import { Card, Carousel } from 'antd'
 import { motion } from 'framer-motion'
+import { BASIC_LINK, IGlobalDataType, IService } from '@/@core/utils/type'
 
-const cardData = [
-  {
-    id: 1,
-    title: 'Axborot va ma’lumot xizmati',
-    image: '/assets/otherService/chip.svg',
-    alt: 'chip'
-  },
-  {
-    id: 2,
-    title: 'Tabriklash xizmati',
-    image: '/assets/otherService/present.svg',
-    alt: 'present'
-  },
-  {
-    id: 3,
-    title: '1064 xizmati',
-    image: '/assets/otherService/earphones.svg',
-    alt: 'earphones'
-  },
-  {
-    id: 4,
-    title: '1086 xizmati',
-    image: '/assets/otherService/earphones.svg',
-    alt: 'earphones'
-  },
-  {
-    id: 5,
-    title: 'Axborot va ma’lumot xizmati',
-    image: '/assets/otherService/chip.svg',
-    alt: 'earphones'
-  },
-  {
-    id: 6,
-    title: 'Axborot va ma’lumot xizmati',
-    image: '/assets/otherService/present.svg',
-    alt: 'earphones'
-  }
-]
 // settings
 const settings = {
   infinite: true,
@@ -79,7 +42,7 @@ const settings = {
   ]
 }
 
-export const OtherService: FC = () => {
+export const OtherService: FC<IGlobalDataType> = ({ data }) => {
   const { t } = useLang()
 
   return (
@@ -88,10 +51,10 @@ export const OtherService: FC = () => {
         <h1>{t('other-service')}</h1>
       </div>
       <Carousel {...settings} className='other-carousel'>
-        {cardData?.map(card => {
+        {data.Servise.map((card: IService, index: number) => {
           return (
             <motion.div
-              key={card.id}
+              key={index}
               initial={{ y: -100 }}
               viewport={{ once: true }}
               whileInView={{ y: 0 }}
@@ -100,7 +63,7 @@ export const OtherService: FC = () => {
               <Card hoverable className='other-card'>
                 <h1>{card.title}</h1>
                 <div className='other-img d-flex align-end justify-end'>
-                  <motion.img whileHover={{ scale: 1.1 }} src={card.image} alt={card.alt} />
+                  <motion.img whileHover={{ scale: 1.1 }} src={BASIC_LINK + '' + card.image_link} alt={'card-image'} />
                 </div>
               </Card>
             </motion.div>

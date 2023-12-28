@@ -35,8 +35,8 @@
         margin-bottom: 8px !important;
       }
     }
-    .menu-burger {
-      display: block !important;
+    .block {
+      display: flex !important;
     }
     #logo {
       width: 170px;
@@ -130,6 +130,9 @@
       .ant-card-body {
         padding: 2rem !important;
       }
+    }
+    .join-card {
+      width: 100% !important;
     }
     .join-image {
       img {

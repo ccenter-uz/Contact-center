@@ -4,12 +4,13 @@ import './style.scss'
 import { useLang } from '@/@core/service/hooks/useLang'
 import { motion } from 'framer-motion'
 import dynamic from 'next/dynamic'
+import { IGlobalDataType, IStatistic } from '@/@core/utils/type'
 
 const AnimatedNumbers = dynamic(() => import('react-animated-numbers'), {
   ssr: false
 })
 
-export const Achievements: FC = () => {
+export const Achievements: FC<IGlobalDataType> = ({ data }) => {
   const { t } = useLang()
 
   return (
@@ -31,20 +32,24 @@ export const Achievements: FC = () => {
       >
         <div className='box-item d-flex align-start gap-x-1 '>
           <img src='/assets/achievements/IconUsers.svg' alt='svg' />
-          <div>
-            <h1 className='d-flex align-center '>
-              <AnimatedNumbers
-                includeComma
-                transitions={index => ({
-                  type: 'tween',
-                  duration: index + 0.3
-                })}
-                animateToNumber={1000000}
-              />
-              +
-            </h1>
-            <p>{t('users')}</p>
-          </div>
+          {data.statistic.map((state: IStatistic, index: number) => {
+            return (
+              <div key={index}>
+                <h1 className='d-flex align-center '>
+                  <AnimatedNumbers
+                    includeComma
+                    transitions={index => ({
+                      type: 'tween',
+                      duration: index + 0.3
+                    })}
+                    animateToNumber={+state.statistic || 100000}
+                  />
+                  +
+                </h1>
+                <p>{state.title}</p>
+              </div>
+            )
+          })}
         </div>
         <div className='box-item d-flex align-start gap-x-1 '>
           <img src='/assets/achievements/IconUser2.svg' alt='svg' />

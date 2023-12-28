@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import './style.scss'
 import { Card, Carousel } from 'antd'
+import { BASIC_LINK, IGlobalDataType, IPartners } from '@/@core/utils/type'
 
 const settings = {
   infinite: true,
@@ -58,79 +59,20 @@ const settings = {
   ]
 }
 
-export const Comment: FC = () => {
-  const data = [
-    {
-      id: 1,
-      image: '/assets/partners/clickup.svg',
-      text: `Built Wicket longer admire do barton vanity itself do in it. Built Wicket longer admire do barton vanity
-      itself do in it. Built Wicket longer admire do barton vanity itself do in it. Built Wicket longer admire do
-      barton vanity itself do in it. Built Wicket longer admire do barton vanity itself do in it. Built Wicket
-      longer admire do barton vanity itself do in it.`
-    },
-    {
-      id: 2,
-      image: '/assets/partners/clickup.svg',
-      text: `Built Wicket longer admire do barton vanity itself do in it. Built Wicket longer admire do barton vanity
-      itself do in it. Built Wicket longer admire do barton vanity itself do in it. Built Wicket longer admire do
-      barton vanity itself do in it. Built Wicket longer admire do barton vanity itself do in it. Built Wicket
-      longer admire do barton vanity itself do in it.`
-    },
-    {
-      id: 3,
-      image: '/assets/partners/clickup.svg',
-      text: `Built Wicket longer admire do barton vanity itself do in it. Built Wicket longer admire do barton vanity
-      itself do in it. Built Wicket longer admire do barton vanity itself do in it. Built Wicket longer admire do
-      barton vanity itself do in it. Built Wicket longer admire do barton vanity itself do in it. Built Wicket
-      longer admire do barton vanity itself do in it.`
-    },
-    {
-      id: 4,
-      image: '/assets/partners/clickup.svg',
-      text: `Built Wicket longer admire do barton vanity itself do in it. Built Wicket longer admire do barton vanity
-      itself do in it. Built Wicket longer admire do barton vanity itself do in it. Built Wicket longer admire do
-      barton vanity itself do in it. Built Wicket longer admire do barton vanity itself do in it. Built Wicket
-      longer admire do barton vanity itself do in it.`
-    },
-    {
-      id: 5,
-      image: '/assets/partners/clickup.svg',
-      text: `Built Wicket longer admire do barton vanity itself do in it. Built Wicket longer admire do barton vanity
-      itself do in it. Built Wicket longer admire do barton vanity itself do in it. Built Wicket longer admire do
-      barton vanity itself do in it. Built Wicket longer admire do barton vanity itself do in it. Built Wicket
-      longer admire do barton vanity itself do in it.`
-    },
-    {
-      id: 6,
-      image: '/assets/partners/clickup.svg',
-      text: `Built Wicket longer admire do barton vanity itself do in it. Built Wicket longer admire do barton vanity
-      itself do in it. Built Wicket longer admire do barton vanity itself do in it. Built Wicket longer admire do
-      barton vanity itself do in it. Built Wicket longer admire do barton vanity itself do in it. Built Wicket
-      longer admire do barton vanity itself do in it.`
-    },
-    {
-      id: 7,
-      image: '/assets/partners/clickup.svg',
-      text: `Built Wicket longer admire do barton vanity itself do in it. Built Wicket longer admire do barton vanity
-      itself do in it. Built Wicket longer admire do barton vanity itself do in it. Built Wicket longer admire do
-      barton vanity itself do in it. Built Wicket longer admire do barton vanity itself do in it. Built Wicket
-      longer admire do barton vanity itself do in it.`
-    }
-  ]
-
+export const Comment: FC<IGlobalDataType> = ({ data }) => {
   return (
     <Carousel {...settings} className='comment d-flex align-center justify-center'>
-      {data?.map(card => {
+      {data.partners.map((partner: IPartners) => {
         return (
           <Card
-            key={card.id}
+            key={partner.id}
             title={
               <div className='comment-card-title d-flex align-center justify-center p-y-2 '>
-                <img src={card.image} alt='clickup' />
+                <img src={BASIC_LINK + '' + partner.image_link} alt='clickup' height={80} />
               </div>
             }
           >
-            <p>{card.text}</p>
+            <p>{partner.camment}</p>
           </Card>
         )
       })}

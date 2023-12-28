@@ -9,32 +9,20 @@ import { JoinOurTeam } from '../../JoinOutTeam'
 import { Partners } from '../../Partners'
 import Loading from '@/app/[locale]/loading'
 import { Comment } from '../../Comment'
-import { getData } from './actions'
+import { IGlobalDataType } from '@/@core/utils/type'
 
-const Main: FC = async () => {
-  const data = await getData()
-
-  console.log(data, 'data')
-
+const Main: FC<IGlobalDataType> = async ({ data }) => {
   return (
     <main className='main-page'>
-      <CarouselComp />
       <Suspense fallback={<Loading />}>
-        <Achievements />
-      </Suspense>
-      <Suspense fallback={<Loading />}>
+        <CarouselComp data={data} />
+        <Achievements data={data} />
         <Services />
-      </Suspense>
-      <Suspense fallback={<Loading />}>
-        <OtherService />
-      </Suspense>
-      <Suspense fallback={<Loading />}>
-        <Community />
-      </Suspense>
-      <JoinOurTeam />
-      <Partners />
-      <Suspense fallback={<Loading />}>
-        <Comment />
+        <OtherService data={data} />
+        <Community data={data} />
+        <JoinOurTeam />
+        <Partners data={data} />
+        <Comment data={data} />
       </Suspense>
     </main>
   )

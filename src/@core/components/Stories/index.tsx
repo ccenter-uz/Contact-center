@@ -1,38 +1,58 @@
-'use client'
-import { FC } from 'react'
+import { BASIC_LINK, IHistory } from '@/@core/utils/type'
+import { Spin } from 'antd'
 import Stories from 'react-insta-stories'
 
-type InsideStoryType = {
-  url: string
-  type: string
-  duration: number
-}
-
 type IStories = {
-  stories: InsideStoryType[]
+  stories: IHistory
   onAllStoriesEndHandler: () => void
 }
+// styles for story
+// content
+const storyContent = {
+  width: '768px',
+  maxWidth: '100%',
+  maxHeight: '100%',
+  margin: 'auto'
+}
+// innerContainer
+const innerContainer = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center'
+}
+// container
+const container = {
+  position: 'fixed',
+  inset: 0,
+  width: '100%',
+  height: '100dvh',
+  zIndex: 999,
+  overFlow: 'hidden'
+}
 
-export const StoriesComponent: FC<IStories> = ({ stories, onAllStoriesEndHandler }) => {
-  const storyContent = {
-    width: 'auto',
-    maxWidth: '100%',
-    maxHeight: '100%',
-    margin: 'auto'
-  }
+export function StoriesComponent({ stories, onAllStoriesEndHandler }: IStories) {
+  const story = [
+    {
+      url: BASIC_LINK + '' + stories.image_link,
+      type: 'image',
+      duration: 5000
+    }
+  ]
 
   return (
-    <>
-      <Stories
-        stories={stories}
-        defaultInterval={3000}
-        width={'100%'}
-        height={'80dvh'}
-        storyStyles={storyContent}
-        loop={false}
-        keyboardNavigation={true}
-        onAllStoriesEnd={onAllStoriesEndHandler}
-      />
-    </>
+    <Stories
+      loader={<Spin size='large' />}
+      preventDefault={true}
+      storyInnerContainerStyles={innerContainer}
+      storyContainerStyles={container}
+      stories={story}
+      defaultInterval={5000}
+      width={'100%'}
+      height={'100%'}
+      storyStyles={storyContent}
+      loop={false}
+      keyboardNavigation={true}
+      onAllStoriesEnd={onAllStoriesEndHandler}
+    />
   )
 }

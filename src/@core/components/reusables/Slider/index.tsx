@@ -2,9 +2,10 @@
 import { FC } from 'react'
 import './style.scss'
 import { Carousel } from 'antd'
+import { BASIC_LINK, ITeamImages } from '@/@core/utils/type'
 
 type ISwiper = {
-  images: string[]
+  images: ITeamImages[]
 }
 
 const setting = {
@@ -66,7 +67,7 @@ const ImageSwiper: FC<ISwiper> = ({ images }) => {
   return (
     <Carousel {...setting} className='slide-container'>
       {images.map((image, index) => {
-        return <img key={index} src={image} alt='image' />
+        return <img key={index} src={BASIC_LINK + '' + image?.image_link} alt='image' />
       })}
     </Carousel>
   )
