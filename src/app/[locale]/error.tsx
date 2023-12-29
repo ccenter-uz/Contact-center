@@ -9,16 +9,10 @@ export default function Error({ error, reset }: { error: Error & { digest?: stri
   }, [error])
 
   return (
-    <div>
-      <h2>Something went wrong!</h2>
-      <button
-        onClick={
-          // Attempt to recover by trying to re-render the segment
-          () => reset()
-        }
-      >
-        Try again
-      </button>
+    <div className='error d-flex align-center justify-center flex-column gap-3'>
+      <h1>Ooops, something went wrong, </h1>
+      <p>{error.message}</p>
+      <button onClick={() => reset()}>Try again</button>
     </div>
   )
 }

@@ -3,12 +3,44 @@ import { FC } from 'react'
 import './style.scss'
 import Link from 'next/link'
 import { useLang } from '@/@core/service/hooks/useLang'
-import LanguageSwitcher from '../SwitchLng'
 import { SideBar } from '../Sidebar'
-import { ParentStory } from './parentStory'
 import { Globe } from 'react-feather'
 import { Popover, Space } from 'antd'
 import { IGlobalDataType } from '@/@core/utils/type'
+import dynamic from 'next/dynamic'
+import ShapeLoading from '../ShapeLoading'
+
+const ParentStory = dynamic(() => import('./parentStory'), {
+  ssr: false,
+  loading: () => (
+    <div className='d-flex align-center justify-between'>
+      <div className='m-y-2 d-flex flex-column gap-y-1'>
+        <ShapeLoading width='60px' height='60px' radius='50%' />
+        <ShapeLoading width='60px' height='15px' radius='5px' />
+      </div>
+      <div className='m-y-2 d-flex flex-column gap-y-1'>
+        <ShapeLoading width='60px' height='60px' radius='50%' />
+        <ShapeLoading width='60px' height='15px' radius='5px' />
+      </div>
+      <div className='m-y-2 d-flex flex-column gap-y-1'>
+        <ShapeLoading width='60px' height='60px' radius='50%' />
+        <ShapeLoading width='60px' height='15px' radius='5px' />
+      </div>
+      <div className='m-y-2 d-flex flex-column gap-y-1'>
+        <ShapeLoading width='60px' height='60px' radius='50%' />
+        <ShapeLoading width='60px' height='15px' radius='5px' />
+      </div>
+      <div className='m-y-2 d-flex flex-column gap-y-1'>
+        <ShapeLoading width='60px' height='60px' radius='50%' />
+        <ShapeLoading width='60px' height='15px' radius='5px' />
+      </div>
+    </div>
+  )
+})
+const LanguageSwitcher = dynamic(() => import('@/@core/components/SwitchLng'), {
+  ssr: false,
+  loading: () => <ShapeLoading width='80px' height='20px' radius='8px' />
+})
 
 const content = (
   <Space className='d-flex flex-column'>

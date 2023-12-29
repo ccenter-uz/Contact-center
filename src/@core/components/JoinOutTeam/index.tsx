@@ -1,7 +1,7 @@
 'use client'
 import { FC } from 'react'
 import './style.scss'
-import { Card, Col, QRCode, Row } from 'antd'
+import { Card, Col, Row } from 'antd'
 import { useLang } from '@/@core/service/hooks/useLang'
 import { ArrowRight } from 'react-feather'
 import { motion } from 'framer-motion'
@@ -52,7 +52,7 @@ export const JoinOurTeam: FC = () => {
               <p>{t('join-paragraph')}</p>
             </Col>
             <Col className='d-flex flex-column align-center' xs={24} sm={24} md={5} lg={4} xl={4} xxl={4}>
-              <QRCode size={140} value='https://hr-bot-admin-panel.ccenter.uz' />
+              <img src='/assets/QRcode.svg' alt='qrcode' width={120} />
               <p>SCAN ME</p>
             </Col>
           </Row>

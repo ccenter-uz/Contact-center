@@ -5,11 +5,12 @@ type IButton = {
   children: ReactNode
   onclick?: () => void
   form?: string
+  disabled?: boolean
 }
 
-export const Button: FC<IButton> = ({ children, onclick, form }) => {
+export const Button: FC<IButton> = ({ children, onclick, form, disabled }) => {
   return (
-    <button form={form} onClick={onclick} className='btn-reusable'>
+    <button disabled={disabled} form={form} onClick={onclick} className='btn-reusable'>
       {children}
     </button>
   )

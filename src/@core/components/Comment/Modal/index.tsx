@@ -3,6 +3,8 @@ import './style.scss'
 import { Col, Form, Input, Modal, Row, Select } from 'antd'
 import { useLang } from '@/@core/service/hooks/useLang'
 import { Button } from '../../reusables/Button'
+import { api } from '@/@core/utils/api'
+import { toast } from 'react-toastify'
 
 type IModal = {
   open: boolean
@@ -19,15 +21,15 @@ type valuesForm = {
 const serviceOptions = [
   {
     label: 'Nimadurni 1-turi',
-    value: 1
+    value: 'Nimadurni 1-turi'
   },
   {
     label: 'Nimadurni 2-turi',
-    value: 2
+    value: 'Nimadurni 2-turi'
   },
   {
     label: 'Nimadurni 3-turi',
-    value: 3
+    value: 'Nimadurni 3-turi'
   }
 ]
 
@@ -36,9 +38,24 @@ export const ModalService: FC<IModal> = ({ open, close }) => {
   const [form] = Form.useForm()
 
   // handleFinish
-  const handleFinish = (values: valuesForm) => {
-    console.log(values, 'values')
-    form.resetFields()
+  const handleFinish = async (values: valuesForm) => {
+    try {
+      const body = {
+        type_of_service: values.service_type + '',
+        organization_name: values.organization_name,
+        name: values.fio,
+        number: values.applicant_phone,
+        comment: values.comment
+      }
+      const res = await api.post('Application/create', body)
+
+      res.status === 201 && toast.success('Отправлено', { position: 'bottom-right' })
+    } catch (err) {
+      console.log(err, 'err')
+    } finally {
+      form.resetFields()
+      close(false)
+    }
   }
 
   return (

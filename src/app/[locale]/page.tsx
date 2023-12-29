@@ -2,11 +2,12 @@ import Header from '@/@core/components/Header'
 import Footer from '@/@core/components/Footer'
 import { Metadata } from 'next'
 import Loading from './loading'
-import Main from '@/@core/components/pages/main'
 import { Suspense } from 'react'
 import { getLocale } from 'next-intl/server'
 import { getData } from '@/@core/components/pages/main/actions'
-import { IGlobalDataType } from '@/@core/utils/type'
+import dynamic from 'next/dynamic'
+
+const Main = dynamic(() => import('@/@core/components/pages/main'), { ssr: false, loading: () => <Loading /> })
 
 export const metadata: Metadata = {
   title: 'Home page'

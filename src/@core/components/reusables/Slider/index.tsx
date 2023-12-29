@@ -66,8 +66,16 @@ const setting = {
 const ImageSwiper: FC<ISwiper> = ({ images }) => {
   return (
     <Carousel {...setting} className='slide-container'>
-      {images.map((image, index) => {
-        return <img key={index} src={BASIC_LINK + '' + image?.image_link} alt='image' />
+      {images?.map((image, index) => {
+        return (
+          <img
+            key={index}
+            src={BASIC_LINK + '' + image?.our_team_image_link}
+            alt='image'
+            width={'462px'}
+            height={'336px'}
+          />
+        )
       })}
     </Carousel>
   )

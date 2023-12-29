@@ -24,7 +24,7 @@ export type IService = {
   image_link: string
 }
 export type ITeamImages = {
-  image_link: string
+  our_team_image_link: string
 }
 export type IPartners = {
   id: string

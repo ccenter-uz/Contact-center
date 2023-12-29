@@ -15,7 +15,7 @@ const CarouselComp: FC<IGlobalDataType> = ({ data }) => {
           return <img key={image.id} src={BASIC_LINK + '' + image.haeder_image_link} alt='item' id='carousel-item' />
         })}
       </Carousel>
-      <div className='d-flex justify-center align-center gap-x-2'>
+      <div className='d-flex justify-center m-t-2 align-center gap-x-2'>
         <button
           className='carousel-btn btn-prev d-flex align-center justify-center'
           onClick={() => carouselRef.current.prev()}

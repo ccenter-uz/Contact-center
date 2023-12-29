@@ -32,7 +32,7 @@ export const Services: FC = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ type: 'spring', delay: 0.3, duration: 1 }}
+          transition={{ type: 'spring', duration: 1 }}
           className='content-left d-flex justify-center'
         >
           <Card
@@ -58,7 +58,7 @@ export const Services: FC = () => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ type: 'spring', delay: 0.4, duration: 2 }}
+                transition={{ type: 'spring', duration: 1 }}
               >
                 <Card headStyle={headerConfig} title={t('service-other-card-title')} className='card-item'>
                   <Row justify={'space-between'}>
@@ -79,7 +79,7 @@ export const Services: FC = () => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ type: 'spring', delay: 0.5, duration: 3 }}
+                transition={{ type: 'spring', duration: 1 }}
               >
                 <Card headStyle={headerConfig} title={t('service-other-card-title')} className='card-item'>
                   <Row justify={'space-between'}>
@@ -103,7 +103,7 @@ export const Services: FC = () => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ type: 'spring', delay: 0.6, duration: 4 }}
+                transition={{ type: 'spring', duration: 1 }}
               >
                 <Card headStyle={headerConfig} title={t('service-other-card-title')} className='card-item'>
                   <Row justify={'space-between'}>
@@ -124,7 +124,7 @@ export const Services: FC = () => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ type: 'spring', delay: 0.7, duration: 5 }}
+                transition={{ type: 'spring', duration: 1 }}
               >
                 <Card headStyle={headerConfig} title={t('service-other-card-title')} className='card-item'>
                   <Row justify={'space-between'}>

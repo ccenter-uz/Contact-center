@@ -10,7 +10,7 @@ import { BASIC_LINK, IGlobalDataType, IService } from '@/@core/utils/type'
 const settings = {
   infinite: true,
   autoplay: true,
-  speed: 500,
+  speed: 1000,
   dots: false,
   draggable: true,
   slidesToShow: 4,
@@ -21,14 +21,14 @@ const settings = {
       breakpoint: 1665,
       settings: {
         slidesToShow: 3,
-        slidesToScroll: 3
+        slidesToScroll: 1
       }
     },
     {
       breakpoint: 1120,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2
+        slidesToScroll: 1
       }
     },
 
@@ -50,7 +50,8 @@ export const OtherService: FC<IGlobalDataType> = ({ data }) => {
       <div className='other-title d-flex justify-center '>
         <h1>{t('other-service')}</h1>
       </div>
-      <Carousel {...settings} className='other-carousel'>
+
+      <Carousel {...settings} className='other-carousel '>
         {data.Servise.map((card: IService, index: number) => {
           return (
             <motion.div
