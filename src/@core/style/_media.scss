@@ -46,6 +46,11 @@
       display: none !important;
     }
   }
+  // carousel
+  .carousel #carousel-item {
+    height: auto !important;
+    max-height: 300px !important;
+  }
   // achievements
   .achievements {
     padding: 2rem !important;
@@ -70,6 +75,10 @@
   .services {
     padding: 2rem !important;
     margin-top: 0.5rem !important;
+    .card-title {
+      flex-wrap: wrap !important;
+    }
+
     .service-content {
       margin-top: 2rem !important;
       .content-left {
@@ -78,14 +87,22 @@
         .card-item-left {
           width: 100% !important;
           height: fit-content !important;
+          .card-title {
+            img {
+              height: 50px !important;
+            }
+          }
         }
       }
       .content-right {
-        width: 95% !important;
+        width: 100% !important;
         margin: 0 !important;
         .card-item {
           width: 100% !important;
           height: fit-content !important;
+          .ant-card-head-title {
+            font-size: 16px !important;
+          }
           .btn {
             margin: 2rem 0 0 0 !important;
           }
@@ -133,6 +150,12 @@
     }
     .join-card {
       width: 100% !important;
+      .ant-card-head-title {
+        text-wrap: pretty !important;
+        h1 {
+          font-size: 18px !important;
+        }
+      }
     }
     .join-image {
       img {

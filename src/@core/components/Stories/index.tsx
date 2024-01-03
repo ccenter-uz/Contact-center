@@ -42,7 +42,6 @@ export function StoriesComponent({ stories, onAllStoriesEndHandler }: IStories) 
   return (
     <Stories
       loader={<Spin size='large' />}
-      preventDefault={true}
       storyInnerContainerStyles={innerContainer}
       storyContainerStyles={container}
       stories={story}

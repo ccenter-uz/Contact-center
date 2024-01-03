@@ -21,7 +21,7 @@ export const Achievements: FC<IGlobalDataType> = ({ data }) => {
         transition={{ type: 'Spring', duration: 1 }}
         className='title-wrapper'
       >
-        <h1 className='achievements-title'>{t('achievements-title')}</h1>
+        <h1 className='achievements-title m-b-2'>{t('achievements-title')}</h1>
         <p>{t('achievements-pretitle')}</p>
       </motion.div>
       <motion.div

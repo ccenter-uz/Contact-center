@@ -18,24 +18,31 @@ type valuesForm = {
   comment: string
 }
 
-const serviceOptions = [
-  {
-    label: 'Nimadurni 1-turi',
-    value: 'Nimadurni 1-turi'
-  },
-  {
-    label: 'Nimadurni 2-turi',
-    value: 'Nimadurni 2-turi'
-  },
-  {
-    label: 'Nimadurni 3-turi',
-    value: 'Nimadurni 3-turi'
-  }
-]
-
 export const ModalService: FC<IModal> = ({ open, close }) => {
   const { t } = useLang()
   const [form] = Form.useForm()
+  const serviceOptions = [
+    {
+      label: t('service-modal-type-first'),
+      value: t('service-modal-type-first')
+    },
+    {
+      label: t('service-modal-type-second'),
+      value: t('service-modal-type-second')
+    },
+    {
+      label: t('service-modal-type-third'),
+      value: t('service-modal-type-third')
+    },
+    {
+      label: t('service-modal-type-fourth'),
+      value: t('service-modal-type-fourth')
+    },
+    {
+      label: t('service-modal-type-fiveth'),
+      value: t('service-modal-type-fiveth')
+    }
+  ]
 
   // handleFinish
   const handleFinish = async (values: valuesForm) => {
