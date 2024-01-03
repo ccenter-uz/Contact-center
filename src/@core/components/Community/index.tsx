@@ -1,32 +1,29 @@
 import { FC } from 'react'
 import './style.scss'
 import { useLang } from '@/@core/service/hooks/useLang'
+import ImageSwiper from '../reusables/Slider'
+import { IGlobalDataType } from '@/@core/utils/type'
 
-export const Community: FC = () => {
+export const Community: FC<IGlobalDataType> = ({ data }) => {
   const { t } = useLang()
 
   return (
-    <section id='community' className='community d-flex flex-column align-center justify-around'>
+    <section id='community' className='w-100 community d-flex flex-column align-center '>
       <div className='community-title d-flex justify-center m-b-4'>
         <h1>{t('collective')}</h1>
       </div>
-      <div className='community-content d-flex align-start gap-3 '>
+      <div className='community-content d-flex align-start gap-3 m-t-4'>
         <div className='content-text'>
-          <p>Built Wicket longer admire</p>
+          <p>{t('community-title')}</p>
           <br />
-          <span>
-            Built Wicket longer admire do barton vanity itself do in it. Built Wicket longer admire do barton vanity
-            itself do in it. Built Wicket longer admire do barton vanity itself do in it. Built Wicket longer admire do
-            barton vanity itself do in it. Built Wicket longer admire do barton vanity itself do in it. Built Wicket
-            longer admire do barton vanity itself do in it.
-          </span>
+          <span>{t('community-paragraph')}</span>
         </div>
-        <div className='content-images d-flex align-center justify-center gap-3 flex-wrap'>
-          <img src='/assets/collective/community.svg' alt='img' />
-          <img src='/assets/collective/community.svg' alt='img' />
-          <img src='/assets/collective/community.svg' alt='img' />
+        <div className='content-images '>
+          <ImageSwiper images={data.TeamImages} />
         </div>
       </div>
     </section>
   )
 }
+
+export default Community

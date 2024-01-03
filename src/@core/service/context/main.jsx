@@ -5,9 +5,9 @@ import { createContext } from 'react'
 export const Main = createContext()
 
 const MainContext = ({ children }) => {
-  const [token, setToken] = useState(null)
+  const [data, setData] = useState(null)
 
-  return <Main.Provider value={[token, setToken]}>{children}</Main.Provider>
+  return <Main.Provider value={[data, setData]}>{children}</Main.Provider>
 }
 
 export { MainContext }

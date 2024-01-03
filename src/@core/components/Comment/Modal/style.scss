@@ -1,0 +1,29 @@
+.modal-service {
+  .modal_footer {
+    height: 70px;
+  }
+  .modal-title {
+    border-radius: 8px 8px 0 0;
+    height: 70px;
+    background: var(--primary);
+    h1 {
+      color: #fff;
+    }
+  }
+  .ant-modal-close {
+    svg {
+      color: #fff !important;
+    }
+  }
+  .ant-modal-content {
+    padding: 0 !important;
+  }
+  .ant-modal-body {
+    padding: 24px 5% 0 5% !important;
+  }
+  .ant-input,
+  .ant-select-selector {
+    min-height: 40px;
+    border-radius: 4px;
+  }
+}

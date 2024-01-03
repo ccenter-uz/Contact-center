@@ -1,9 +1,48 @@
+'use client'
 import { FC } from 'react'
 import './style.scss'
 import { useLang } from '@/@core/service/hooks/useLang'
-import { Card, Col, Row } from 'antd'
+import { Card, Carousel } from 'antd'
+import { motion } from 'framer-motion'
+import { BASIC_LINK, IGlobalDataType, IService } from '@/@core/utils/type'
 
-export const OtherService: FC = () => {
+// settings
+const settings = {
+  infinite: true,
+  autoplay: true,
+  speed: 1000,
+  dots: false,
+  draggable: true,
+  slidesToShow: 4,
+  initialSlide: 0,
+  autoplaySpeed: 2500,
+  responsive: [
+    {
+      breakpoint: 1665,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 1120,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+
+    {
+      breakpoint: 820,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+}
+
+export const OtherService: FC<IGlobalDataType> = ({ data }) => {
   const { t } = useLang()
 
   return (
@@ -11,40 +50,27 @@ export const OtherService: FC = () => {
       <div className='other-title d-flex justify-center '>
         <h1>{t('other-service')}</h1>
       </div>
-      <div className='d-flex align-center justify-center gap-5 flex-wrap'>
-        <Card hoverable className='other-card'>
-          <h1>
-            Axborot va ma’lumot <br /> xizmati
-          </h1>
-          <div className='other-img d-flex align-end justify-end'>
-            <img src='/assets/otherService/chip.svg' alt='chip' />
-          </div>
-        </Card>
-        <Card hoverable className='other-card'>
-          <h1>
-            Tabriklash <br /> xizmati
-          </h1>
-          <div id='present' className='other-img d-flex align-end justify-end'>
-            <img src='/assets/otherService/present.svg' alt='present' />
-          </div>
-        </Card>
-        <Card hoverable className='other-card'>
-          <h1>
-            1064 <br /> xizmati
-          </h1>
-          <div className='other-img d-flex align-end justify-end'>
-            <img src='/assets/otherService/earphones.svg' alt='earphones' />
-          </div>
-        </Card>
-        <Card hoverable className='other-card'>
-          <h1>
-            1086 <br /> xizmati
-          </h1>
-          <div className='other-img d-flex align-end justify-end'>
-            <img src='/assets/otherService/earphones.svg' alt='earphones' />
-          </div>
-        </Card>
-      </div>
+
+      <Carousel {...settings} className='other-carousel '>
+        {data.Servise.map((card: IService, index: number) => {
+          return (
+            <motion.div
+              key={index}
+              initial={{ y: -100 }}
+              viewport={{ once: true }}
+              whileInView={{ y: 0 }}
+              transition={{ type: 'spring', duration: 2, bounce: 0.1 }}
+            >
+              <Card hoverable className='other-card'>
+                <h1>{card.title}</h1>
+                <div className='other-img d-flex align-end justify-end'>
+                  <motion.img whileHover={{ scale: 1.1 }} src={BASIC_LINK + '' + card.image_link} alt={'card-image'} />
+                </div>
+              </Card>
+            </motion.div>
+          )
+        })}
+      </Carousel>
     </section>
   )
 }

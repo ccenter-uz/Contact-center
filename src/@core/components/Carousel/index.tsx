@@ -1,21 +1,21 @@
 'use client'
 import { FC, useRef } from 'react'
 import './style.scss'
-import { Button, Carousel } from 'antd'
+import { Carousel } from 'antd'
 import { ArrowLeft, ArrowRight } from 'react-feather'
+import { BASIC_LINK, IGlobalDataType, IHeaderImages } from '@/@core/utils/type'
 
-export const CarouselComp: FC = () => {
+const CarouselComp: FC<IGlobalDataType> = ({ data }) => {
   const carouselRef = useRef<any>()
 
   return (
     <div className='carousel'>
       <Carousel ref={carouselRef} autoplay dots={false}>
-        <img src='/assets/header/carousel/img1.svg' alt='item' id='carousel-item' />
-        <img src='/assets/header/carousel/img1.svg' alt='item' id='carousel-item' />
-        <img src='/assets/header/carousel/img1.svg' alt='item' id='carousel-item' />
-        <img src='/assets/header/carousel/img1.svg' alt='item' id='carousel-item' />
+        {data.headerImages.map((image: IHeaderImages) => {
+          return <img key={image.id} src={BASIC_LINK + '' + image.haeder_image_link} alt='item' id='carousel-item' />
+        })}
       </Carousel>
-      <div className='d-flex justify-center align-center gap-x-2'>
+      <div className='d-flex justify-center m-t-2 align-center gap-x-2'>
         <button
           className='carousel-btn btn-prev d-flex align-center justify-center'
           onClick={() => carouselRef.current.prev()}
@@ -32,3 +32,5 @@ export const CarouselComp: FC = () => {
     </div>
   )
 }
+
+export default CarouselComp

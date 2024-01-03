@@ -1,59 +1,57 @@
-import { useLang } from '@/@core/service/hooks/useLang'
-import { FC } from 'react'
-import './style.scss'
+import { BASIC_LINK, IHistory } from '@/@core/utils/type'
+import { Spin } from 'antd'
+import Stories from 'react-insta-stories'
 
-export const Stories: FC = () => {
-  const { t } = useLang()
+type IStories = {
+  stories: IHistory
+  onAllStoriesEndHandler: () => void
+}
+// styles for story
+// content
+const storyContent = {
+  width: '768px',
+  maxWidth: '100%',
+  maxHeight: '100%',
+  margin: 'auto'
+}
+// innerContainer
+const innerContainer = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center'
+}
+// container
+const container = {
+  position: 'fixed',
+  inset: 0,
+  width: '100%',
+  height: '100dvh',
+  zIndex: 999,
+  overFlow: 'hidden'
+}
 
-  // mock-data
-  const data = [
+export function StoriesComponent({ stories, onAllStoriesEndHandler }: IStories) {
+  const story = [
     {
-      id: 1,
-      title: 'Nimadur'
-    },
-    {
-      id: 2,
-      title: 'Nimadur'
-    },
-    {
-      id: 3,
-      title: 'Nimadur'
-    },
-    {
-      id: 4,
-      title: 'Nimadur'
-    },
-    {
-      id: 5,
-      title: 'Nimadur'
-    },
-    {
-      id: 6,
-      title: 'Nimadur'
-    },
-    {
-      id: 7,
-      title: 'Nimadur'
-    },
-    {
-      id: 8,
-      title: 'Nimadur'
+      url: BASIC_LINK + '' + stories.image_link,
+      type: 'image',
+      duration: 5000
     }
   ]
 
   return (
-    <section id='stories'>
-      <p style={{ fontSize: '12px' }}>{t('follow-last-news')}</p>
-      <div className='circles-wrapper d-flex align-center justify-between m-t-2 gap-x-3 p-x-4'>
-        {data?.map(item => {
-          return (
-            <div key={item.id} className='d-flex flex-column justify-center align-center'>
-              <div className='circle-item d-flex align-center justify-center m-b-2'></div>
-              <p>{item.title}</p>
-            </div>
-          )
-        })}
-      </div>
-    </section>
+    <Stories
+      loader={<Spin size='large' />}
+      storyInnerContainerStyles={innerContainer}
+      storyContainerStyles={container}
+      stories={story}
+      defaultInterval={5000}
+      width={'100%'}
+      height={'100%'}
+      storyStyles={storyContent}
+      loop={false}
+      keyboardNavigation={true}
+      onAllStoriesEnd={onAllStoriesEndHandler}
+    />
   )
 }

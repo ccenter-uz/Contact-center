@@ -1,5 +1,6 @@
 .btn-reusable {
-  width: 141px;
+  min-width: 141px;
+  padding: 0 1.5rem;
   height: 36px;
   outline: none;
   border: none;
@@ -21,6 +22,6 @@
     transition: all 0.6s ease-in-out;
   }
   &:hover::before {
-    transform: translateX(400%) rotate(180deg) scale(2);
+    transform: translateX(530%) rotate(180deg);
   }
 }

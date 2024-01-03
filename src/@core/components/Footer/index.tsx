@@ -28,18 +28,18 @@ const Footer: FC = () => {
             <li className='d-flex align-center gap-3'>
               <img src='/assets/footer/map.svg' alt='map' />
               <p>
-                Наш адрес: <br /> Toshkent sh. Furqat 23 A
+                {t('footer-address')} <br /> {t('address')}
               </p>
             </li>
             <li className='d-flex align-center gap-3'>
               <img src='/assets/footer/message.svg' alt='message' />
               <p>
-                Почта для связи: <br /> infoedugately@gmail.com
+                {t('footer-mail')} <br /> ucc.outsource@gmail.com
               </p>
             </li>
             <li className='d-flex align-center gap-3'>
               <img src='/assets/footer/phone.svg' alt='phone' />
-              <p>+998 (55) 506 1011</p>
+              <p>+998 71 200 97 79</p>
             </li>
           </ul>
           <ul className='footer-uzdst h-100 d-flex flex-column justify-between align-start gap-2'>

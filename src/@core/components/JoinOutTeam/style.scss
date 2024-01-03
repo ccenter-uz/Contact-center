@@ -2,16 +2,35 @@
   margin-top: 4rem;
   padding: var(--paddingSection);
   .join-image {
+    max-width: 700px;
+    width: 100%;
+    position: relative;
     img {
-      max-width: 552px;
       width: 100%;
+    }
+    .count-users {
+      position: absolute;
+      background: #fff;
+      width: 210px;
+      height: 65px;
+      border-radius: 20px;
+      box-shadow: var(--boxShadow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      bottom: 20%;
+      left: 15%;
+      text-transform: capitalize;
+      font-weight: 600;
+      padding: 1rem;
     }
   }
   .join-card {
     .card-item {
       width: 100%;
+      min-height: 527px;
       max-width: 961px;
-      min-height: 427px;
       .ant-card-body {
         padding: 64px 106px 0px 106px;
       }
@@ -23,7 +42,7 @@
         font-size: 18px;
       }
       .card-link {
-        margin-top: 4rem;
+        margin-top: 2rem;
         h3 {
           font-size: 20px;
           text-transform: capitalize;
