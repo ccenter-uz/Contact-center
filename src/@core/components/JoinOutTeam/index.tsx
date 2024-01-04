@@ -57,9 +57,11 @@ export const JoinOurTeam: FC = () => {
             </Col>
           </Row>
           <div key='links' className='card-link '>
-            <h3 className='d-flex align-center gap-x-1'>
-              {t('join-btn')} <ArrowRight className='arrow-icon' />
-            </h3>
+            <a href='https://t.me/ucc_hr_bot' target='_blank'>
+              <h3 className='d-flex align-center gap-x-1'>
+                {t('join-btn')} <ArrowRight className='arrow-icon' />
+              </h3>
+            </a>
           </div>
         </Card>
       </motion.div>

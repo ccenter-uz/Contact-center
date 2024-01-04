@@ -95,16 +95,15 @@
         }
       }
       .content-right {
-        width: 100% !important;
         margin: 0 !important;
         .card-item {
-          width: 100% !important;
           height: fit-content !important;
           .ant-card-head-title {
             font-size: 16px !important;
           }
           .btn {
-            margin: 2rem 0 0 0 !important;
+            position: relative !important;
+            bottom: -0.5rem !important;
           }
         }
       }

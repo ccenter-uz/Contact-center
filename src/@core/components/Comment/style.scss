@@ -6,6 +6,9 @@
     min-height: 420px;
     display: flex !important;
     flex-direction: column !important;
+    .ant-card-body {
+      text-wrap: pretty;
+    }
     .comment-card-title {
       margin: 2rem 0 0.5rem 0;
     }
