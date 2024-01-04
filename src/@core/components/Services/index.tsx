@@ -61,11 +61,11 @@ export const Services: FC = () => {
                 transition={{ type: 'spring', duration: 1 }}
               >
                 <Card headStyle={headerConfig} title={t('service-other-card-title')} className='card-item'>
-                  <Row justify={'space-between'}>
-                    <Col xs={10} sm={10} md={10} lg={7} xl={7}>
-                      <p>{t('service-modal-type-fiveth')}</p>
+                  <Row justify={'space-between'} gutter={[0, 16]}>
+                    <Col xs={24} sm={24} md={18} lg={18} xl={18}>
+                      <p>{t('service-other-card-paragraph')}</p>
                     </Col>
-                    <Col xs={10} sm={10} md={10} lg={7} xl={7} push={3}>
+                    <Col xs={24} sm={24} md={6} lg={6} xl={6} push={3}>
                       <img src='/assets/service/Profile.svg' alt='logo' />
                     </Col>
                   </Row>
@@ -82,11 +82,11 @@ export const Services: FC = () => {
                 transition={{ type: 'spring', duration: 1 }}
               >
                 <Card headStyle={headerConfig} title={t('service-other-card-title-second')} className='card-item'>
-                  <Row justify={'space-between'}>
-                    <Col xs={10} sm={10} md={10} lg={7} xl={7}>
-                      <p>{t('service-modal-type-third')}</p>
+                  <Row justify={'space-between'} gutter={[0, 16]}>
+                    <Col xs={24} sm={24} md={18} lg={18} xl={18}>
+                      <p>{t('service-other-card-paragraph-second')}</p>
                     </Col>
-                    <Col xs={10} sm={10} md={10} lg={7} xl={7} push={2}>
+                    <Col xs={24} sm={24} md={6} lg={6} xl={6} push={2}>
                       <img src='/assets/service/StepsChart.svg' alt='logo' />
                     </Col>
                   </Row>
@@ -106,11 +106,11 @@ export const Services: FC = () => {
                 transition={{ type: 'spring', duration: 1 }}
               >
                 <Card headStyle={headerConfig} title={t('service-other-card-title-third')} className='card-item'>
-                  <Row justify={'space-between'}>
-                    <Col xs={10} sm={10} md={10} lg={10} xl={10}>
-                      <p>{t('service-modal-type-second')}</p>
+                  <Row justify={'space-between'} gutter={[0, 16]}>
+                    <Col xs={24} sm={24} md={18} lg={18} xl={18}>
+                      <p>{t('service-other-card-paragraph-third')}</p>
                     </Col>
-                    <Col xs={10} sm={10} md={10} lg={7} xl={7} push={3}>
+                    <Col xs={24} sm={24} md={6} lg={6} xl={6} push={3}>
                       <img src='/assets/service/Map.svg' alt='logo' />
                     </Col>
                   </Row>
@@ -127,11 +127,11 @@ export const Services: FC = () => {
                 transition={{ type: 'spring', duration: 1 }}
               >
                 <Card headStyle={headerConfig} title={t('service-other-card-title-four')} className='card-item'>
-                  <Row justify={'space-between'}>
-                    <Col xs={10} sm={10} md={10} lg={10} xl={10}>
-                      <p>{t('service-modal-type-fourth')}</p>
+                  <Row justify={'space-between'} gutter={[0, 16]}>
+                    <Col xs={24} sm={24} md={18} lg={18} xl={18}>
+                      <p>{t('service-other-card-paragraph-four')}</p>
                     </Col>
-                    <Col xs={10} sm={10} md={10} lg={7} xl={7} push={2}>
+                    <Col xs={24} sm={24} md={6} lg={6} xl={6} push={2}>
                       <img src='/assets/service/Chat.svg' alt='logo' />
                     </Col>
                   </Row>

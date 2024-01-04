@@ -30,10 +30,18 @@
     }
     .content-right {
       .card-item {
-        width: 558px;
-        height: 261px;
+        width: 100%;
+        max-width: 558px;
+        min-height: 290px;
+        height: 100%;
+        p {
+          font-size: 14px;
+        }
         .btn {
-          margin: 1.5rem 0 0 0;
+          position: absolute;
+          bottom: 1.5rem;
+          left: 50%;
+          transform: translateX(-50%);
         }
         .line-bottom {
           position: absolute;
