@@ -2,6 +2,7 @@ import { FC } from 'react'
 import './style.scss'
 import { useLang } from '@/@core/service/hooks/useLang'
 import Link from 'next/link'
+import Marquee from './Marquee'
 
 const Footer: FC = () => {
   const { t } = useLang()
@@ -60,6 +61,7 @@ const Footer: FC = () => {
       <div className='footer-copyright m-t-3 d-flex align-center justify-center'>
         <p>© 2023 • All Rights Reserved</p>
       </div>
+      <Marquee />
     </footer>
   )
 }
