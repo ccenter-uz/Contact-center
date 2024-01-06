@@ -11,6 +11,9 @@
     }
     .comment-card-title {
       margin: 2rem 0 0.5rem 0;
+      img {
+        object-fit: cover;
+      }
     }
   }
 }

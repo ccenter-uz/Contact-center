@@ -64,7 +64,12 @@ export const OtherService: FC<IGlobalDataType> = ({ data }) => {
               <Card hoverable className='other-card'>
                 <h1>{card.title}</h1>
                 <div className='other-img d-flex align-end justify-end'>
-                  <motion.img whileHover={{ scale: 1.1 }} src={BASIC_LINK + '' + card.image_link} alt={'card-image'} />
+                  <motion.img
+                    whileHover={{ scale: 1.1 }}
+                    src={BASIC_LINK + '' + card.image_link}
+                    alt={'card-image'}
+                    loading='lazy'
+                  />
                 </div>
               </Card>
             </motion.div>

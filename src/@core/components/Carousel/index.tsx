@@ -12,7 +12,15 @@ const CarouselComp: FC<IGlobalDataType> = ({ data }) => {
     <div className='carousel'>
       <Carousel ref={carouselRef} autoplay dots={false}>
         {data.headerImages.map((image: IHeaderImages) => {
-          return <img key={image.id} src={BASIC_LINK + '' + image.haeder_image_link} alt='item' id='carousel-item' />
+          return (
+            <img
+              key={image.id}
+              src={BASIC_LINK + '' + image.haeder_image_link}
+              alt='item'
+              id='carousel-item'
+              loading='lazy'
+            />
+          )
         })}
       </Carousel>
       <div className='d-flex justify-center m-t-2 align-center gap-x-2'>

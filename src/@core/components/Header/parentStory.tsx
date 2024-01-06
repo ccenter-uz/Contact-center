@@ -25,7 +25,7 @@ export const ParentStory: FC<IGlobalDataType> = ({ data }) => {
               }}
               className='circle-item d-flex align-center justify-center'
             >
-              <Avatar src={BASIC_LINK + '' + item.image_link} size={'large'} />
+              <Avatar src={BASIC_LINK + '' + item.image_link} size={'large'} alt='stories' />
             </div>
             <p>{item.title}</p>
           </div>
