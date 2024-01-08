@@ -30,9 +30,10 @@ const LanguageSwitcher: FC = () => {
   }
 
   return (
-    <div className='language_wrapper'>
+    <div className='language_wrapper d-flex align-center '>
+      <img width={20} height={20} src='/assets/languageSvg.svg' alt='language' />
       <Select
-        suffixIcon={<img src='/assets/languageSvg.svg' alt='language' />}
+        suffixIcon
         className='lang_switcher d-flex align-center'
         value={locale}
         onChange={handleChange}

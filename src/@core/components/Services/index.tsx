@@ -40,7 +40,7 @@ export const Services: FC = () => {
             title={
               <div className='card-title d-flex align-center justify-between'>
                 <h1>{t('service-first-card-title')}</h1>
-                <img src='/assets/service/Rocket.svg' alt='rocket' loading='lazy' />
+                <img src='/assets/service/Rocket.svg' alt='rocket' loading='lazy' placeholder='loading...' />
               </div>
             }
             cover={
@@ -55,7 +55,13 @@ export const Services: FC = () => {
             className='card-item-left'
           >
             <Button onclick={openModal}>{t('left-application')}</Button>
-            <img loading='lazy' className='line-bottom' src='/assets/service/BottomLineMainCard.svg' alt='svg' />
+            <img
+              loading='lazy'
+              className='line-bottom'
+              src='/assets/service/BottomLineMainCard.svg'
+              alt='svg'
+              placeholder='loading...'
+            />
           </Card>
         </motion.div>
         <div className='content-right'>
@@ -73,7 +79,7 @@ export const Services: FC = () => {
                       <p>{t('service-other-card-paragraph')}</p>
                     </Col>
                     <Col xs={24} sm={24} md={6} lg={6} xl={6} push={3}>
-                      <img src='/assets/service/Profile.svg' alt='logo' loading='lazy' />
+                      <img src='/assets/service/Profile.svg' alt='logo' loading='lazy' placeholder='loading...' />
                     </Col>
                   </Row>
                   <div className='btn d-flex justify-center align-center '>
@@ -84,6 +90,7 @@ export const Services: FC = () => {
                     src='/assets/service/BottomLineOtherCards.svg'
                     alt='svg'
                     loading='lazy'
+                    placeholder='loading...'
                   />
                 </Card>
               </motion.div>
@@ -99,7 +106,7 @@ export const Services: FC = () => {
                       <p>{t('service-other-card-paragraph-second')}</p>
                     </Col>
                     <Col xs={24} sm={24} md={6} lg={6} xl={6} push={2}>
-                      <img src='/assets/service/StepsChart.svg' alt='logo' loading='lazy' />
+                      <img src='/assets/service/StepsChart.svg' alt='logo' loading='lazy' placeholder='loading...' />
                     </Col>
                   </Row>
                   <div className='btn d-flex justify-center align-center '>
@@ -110,6 +117,7 @@ export const Services: FC = () => {
                     src='/assets/service/BottomLineOtherCards.svg'
                     alt='svg'
                     loading='lazy'
+                    placeholder='loading...'
                   />
                 </Card>
               </motion.div>
@@ -128,7 +136,7 @@ export const Services: FC = () => {
                       <p>{t('service-other-card-paragraph-third')}</p>
                     </Col>
                     <Col xs={24} sm={24} md={6} lg={6} xl={6} push={3}>
-                      <img src='/assets/service/Map.svg' alt='logo' loading='lazy' />
+                      <img src='/assets/service/Map.svg' alt='logo' loading='lazy' placeholder='loading...' />
                     </Col>
                   </Row>
                   <div className='btn d-flex justify-center align-center '>
@@ -139,6 +147,7 @@ export const Services: FC = () => {
                     src='/assets/service/BottomLineOtherCards.svg'
                     alt='svg'
                     loading='lazy'
+                    placeholder='loading...'
                   />
                 </Card>
               </motion.div>
@@ -154,7 +163,7 @@ export const Services: FC = () => {
                       <p>{t('service-other-card-paragraph-four')}</p>
                     </Col>
                     <Col xs={24} sm={24} md={6} lg={6} xl={6} push={2}>
-                      <img src='/assets/service/Chat.svg' alt='logo' loading='lazy' />
+                      <img src='/assets/service/Chat.svg' alt='logo' loading='lazy' placeholder='loading...' />
                     </Col>
                   </Row>
                   <div className='btn d-flex justify-center align-center '>
@@ -165,6 +174,7 @@ export const Services: FC = () => {
                     src='/assets/service/BottomLineOtherCards.svg'
                     alt='svg'
                     loading='lazy'
+                    placeholder='loading...'
                   />
                 </Card>
               </motion.div>

@@ -36,8 +36,8 @@ export const JoinOurTeam: FC = () => {
         viewport={{ once: true }}
         className='join-image'
       >
-        <img src='/assets/mainPic.svg' alt='join' loading='lazy' />
-        <div className='count-users'>1 млн {t('join-users')}</div>
+        <img src='/assets/mainPic.svg' alt='join' loading='lazy' placeholder='loading...' />
+        <div className='count-users'>1{t('join-users')}</div>
       </motion.div>
       <motion.div
         initial={{ y: 100, opacity: 0.5 }}
@@ -52,7 +52,7 @@ export const JoinOurTeam: FC = () => {
               <p>{t('join-paragraph')}</p>
             </Col>
             <Col className='d-flex flex-column align-center' xs={24} sm={24} md={5} lg={4} xl={4} xxl={4}>
-              <img src='/assets/QRcode.svg' alt='qrcode' width={120} loading='lazy' />
+              <img src='/assets/QRcode.svg' alt='qrcode' width={120} loading='lazy' placeholder='loading...' />
               <p>SCAN ME</p>
             </Col>
           </Row>

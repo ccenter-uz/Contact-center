@@ -2,6 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <!-- Only one page -->
     <url>
+        <loc>https://www.ccenter.uz/ru</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+      <url>
+        <loc>https://www.ccenter.uz/uz</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+      <url>
+        <loc>https://www.ccenter.uz/en</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+     <url>
         <loc>https://www.ccenter.uz/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>

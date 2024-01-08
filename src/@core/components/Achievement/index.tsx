@@ -20,6 +20,7 @@ export const Achievements: FC<IGlobalDataType> = ({ data }) => {
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ type: 'Spring', duration: 1 }}
         className='title-wrapper'
+        viewport={{ once: true }}
       >
         <h1 className='achievements-title m-b-2'>{t('achievements-title')}</h1>
         <p>{t('achievements-pretitle')}</p>
@@ -29,9 +30,10 @@ export const Achievements: FC<IGlobalDataType> = ({ data }) => {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ type: 'spring', duration: 2, bounce: 0.1 }}
         className='box-wrapper'
+        viewport={{ once: true }}
       >
         <div className='box-item d-flex align-start  gap-x-1 '>
-          <img src='/assets/achievements/IconUsers.svg' alt='svg' />
+          <img src='/assets/achievements/IconUsers.svg' alt='svg' placeholder='loading...' />
           <div>
             <h1 className='d-flex align-center '>
               <AnimatedNumbers
@@ -48,7 +50,7 @@ export const Achievements: FC<IGlobalDataType> = ({ data }) => {
           </div>
         </div>
         <div className='box-item d-flex align-start  gap-x-1 '>
-          <img src='/assets/achievements/IconUser2.svg' alt='svg' />
+          <img src='/assets/achievements/IconUser2.svg' alt='svg' placeholder='loading...' />
           <div>
             <h1 className='d-flex align-center gap-x-1'>
               <AnimatedNumbers
@@ -65,7 +67,7 @@ export const Achievements: FC<IGlobalDataType> = ({ data }) => {
           </div>
         </div>
         <div className='box-item d-flex align-start  gap-x-1 '>
-          <img src='/assets/achievements/IconService.svg' alt='svg' />
+          <img src='/assets/achievements/IconService.svg' alt='svg' placeholder='loading...' />
           <div>
             <h1 className='d-flex align-center gap-x-1'>
               <AnimatedNumbers
@@ -82,7 +84,7 @@ export const Achievements: FC<IGlobalDataType> = ({ data }) => {
           </div>
         </div>
         <div className='box-item d-flex align-start  gap-x-1 '>
-          <img src='/assets/achievements/IconUser3.svg' alt='svg' />
+          <img src='/assets/achievements/IconUser3.svg' alt='svg' placeholder='loading...' />
           <div>
             <h1 className='d-flex align-center '>
               <AnimatedNumbers

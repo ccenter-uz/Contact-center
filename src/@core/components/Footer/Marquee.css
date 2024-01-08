@@ -1,6 +1,7 @@
 .marquee-container {
-  width: 100%;
+  width: 90%;
   overflow: hidden;
+  margin: auto;
 }
 
 .marquee-text {

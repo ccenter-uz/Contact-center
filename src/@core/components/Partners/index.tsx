@@ -69,7 +69,15 @@ export const Partners: FC<IGlobalDataType> = ({ data }) => {
       </div>
       <Carousel {...setting} className='partners-images m-b-3 d-flex align-center justify-between gap-3'>
         {data.partners.map((image: IPartners) => {
-          return <img key={image.id} src={BASIC_LINK + '' + image.image_link} alt='partner' loading='lazy' />
+          return (
+            <img
+              key={image.id}
+              src={BASIC_LINK + '' + image.image_link}
+              alt='partner'
+              loading='lazy'
+              placeholder='loading...'
+            />
+          )
         })}
       </Carousel>
     </section>

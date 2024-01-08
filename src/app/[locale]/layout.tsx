@@ -14,7 +14,16 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'ccenter.uz',
-  description: 'This is basic web app for Contact center',
+  icons: {
+    icon: [
+      {
+        url: '/favicon.svg',
+        href: '/favicon.svg'
+      }
+    ]
+  },
+  description:
+    'Контактный центр "АК Узбектелеком" предоставляет услуги по аутсорсингу, созданию виртуального офиса, анкетированию, автоматическому обзвону абонентов и множеству других услуг.',
   applicationName: 'ccenter',
   authors: [{ name: 'ccenter,Uztelecom AK' }],
   generator: 'Next.js',

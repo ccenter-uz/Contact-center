@@ -69,6 +69,7 @@ export const OtherService: FC<IGlobalDataType> = ({ data }) => {
                     src={BASIC_LINK + '' + card.image_link}
                     alt={'card-image'}
                     loading='lazy'
+                    placeholder='loading...'
                   />
                 </div>
               </Card>

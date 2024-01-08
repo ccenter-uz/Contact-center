@@ -10,8 +10,8 @@ const CarouselComp: FC<IGlobalDataType> = ({ data }) => {
 
   return (
     <div className='carousel'>
-      <Carousel ref={carouselRef} autoplay dots={false}>
-        {data.headerImages.map((image: IHeaderImages) => {
+      <Carousel ref={carouselRef} autoplay dots={false} fade>
+        {data?.headerImages.map((image: IHeaderImages) => {
           return (
             <img
               key={image.id}
@@ -19,6 +19,7 @@ const CarouselComp: FC<IGlobalDataType> = ({ data }) => {
               alt='item'
               id='carousel-item'
               loading='lazy'
+              placeholder='loading...'
             />
           )
         })}

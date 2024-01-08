@@ -48,11 +48,12 @@
   }
   // carousel
   .carousel #carousel-item {
-    height: auto !important;
-    max-height: 300px !important;
+    height: 100% !important;
+    height: 250px !important;
   }
   // achievements
   .achievements {
+    margin-top: 2rem !important;
     padding: 2rem !important;
     flex-direction: column;
     gap: 2rem 0;
