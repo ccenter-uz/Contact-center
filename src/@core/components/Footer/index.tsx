@@ -18,10 +18,10 @@ const Footer: FC = () => {
             <Link href={'#services'}>{t('services')}</Link>
           </li>
           <li>
-            <Link href={'#services'}>{t('out-team')}</Link>
+            <Link href={'#community'}>{t('out-team')}</Link>
           </li>
           <li>
-            <Link href={'#services'}>{t('partners')}</Link>
+            <Link href={'#partners'}>{t('partners')}</Link>
           </li>
         </ul>
         <div className='footer-right d-flex align-start justify-between gap-3'>
