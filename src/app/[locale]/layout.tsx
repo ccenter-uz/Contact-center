@@ -4,7 +4,6 @@ import StyledComponentsRegistry from '@/lib/AntdRegistry'
 import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ToastContainer } from 'react-toastify'
-import Head from 'next/head'
 
 // If loading a variable font, you don't need to specify the font weight
 const inter = Inter({
@@ -22,6 +21,14 @@ export const metadata: Metadata = {
       }
     ]
   },
+  alternates: {
+    canonical: `/`,
+    languages: {
+      'en-US': '/en',
+      'uz-UZ': '/uz',
+      'ru-RU': '/ru'
+    }
+  },
   description:
     'Контактный центр "АК Узбектелеком" предоставляет услуги по аутсорсингу, созданию виртуального офиса, анкетированию, автоматическому обзвону абонентов и множеству других услуг.',
   applicationName: 'ccenter',
@@ -30,7 +37,7 @@ export const metadata: Metadata = {
   referrer: 'origin-when-cross-origin',
   creator: 'Contact center-Uztelecom AK',
   publisher: 'Contact center-Uztelecom AK',
-  metadataBase: new URL('https://www.ccenter.uz/')
+  metadataBase: new URL('https://www.ccenter.uz')
 }
 
 const RootLayout = ({ children, params: { locale } }: { children: React.ReactNode; params: any }) => {
@@ -38,9 +45,6 @@ const RootLayout = ({ children, params: { locale } }: { children: React.ReactNod
 
   return (
     <html lang={locale} className={inter.className}>
-      <Head>
-        <link rel='canonical' href={`https://www.ccenter.uz/${locale}`} />
-      </Head>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <MainContext>
