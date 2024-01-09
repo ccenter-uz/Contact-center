@@ -16,7 +16,11 @@ const CarouselComp: FC<IGlobalDataType> = ({ data }) => {
             <img
               key={image.id}
               src={BASIC_LINK + '' + image.haeder_image_link}
-              alt='item'
+              srcSet={`/assets/mobileCarousel.jpg 480w, /assets/mobileCarousel.jpg 720w, ${
+                BASIC_LINK + '' + image.haeder_image_link
+              } 1200w`}
+              sizes='(max-width: 720px) 100vw, 50vw'
+              alt='LOADING...'
               id='carousel-item'
               loading='lazy'
               placeholder='loading...'

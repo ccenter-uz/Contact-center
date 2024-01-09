@@ -1,3 +1,4 @@
+'use client'
 import { FC } from 'react'
 import './style.scss'
 import { useLang } from '@/@core/service/hooks/useLang'
@@ -12,7 +13,13 @@ const Footer: FC = () => {
       <div className='footer-pre w-100 d-flex align-start justify-between flex-wrap gap-4'>
         <ul className='footer-links h-100 d-flex flex-column justify-between align-start gap-y-4'>
           <li>
-            <img src='/assets/logo.svg' alt='logo' placeholder='loading...' />
+            <img
+              src='/assets/logo.svg'
+              alt='logo'
+              placeholder='loading...'
+              onClick={() => window.scrollTo(0, 0)}
+              style={{ cursor: 'pointer' }}
+            />
           </li>
           <li>
             <Link href={'#services'}>{t('services')}</Link>
