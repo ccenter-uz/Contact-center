@@ -29,7 +29,8 @@ const container = {
   width: '100%',
   height: '100dvh',
   zIndex: 999,
-  overFlow: 'hidden'
+  overFlow: 'hidden',
+  background: 'rgb(17 17 17 / 82%)'
 }
 
 export function StoriesComponent({ stories, onAllStoriesEndHandler, index }: IStories) {

@@ -12,7 +12,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'ccenter.uz',
+  title: 'Contact center – UZTELECOM',
   icons: {
     icon: [
       {
