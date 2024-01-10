@@ -8,23 +8,6 @@
     img {
       width: 100%;
     }
-    .count-users {
-      position: absolute;
-      background: #fff;
-      width: 210px;
-      height: 65px;
-      border-radius: 20px;
-      box-shadow: var(--boxShadow);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--primary);
-      bottom: 20%;
-      left: 15%;
-      text-transform: capitalize;
-      font-weight: 600;
-      padding: 1rem;
-    }
   }
   .join-card {
     .card-item {

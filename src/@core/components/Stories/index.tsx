@@ -13,8 +13,8 @@ type IStories = {
 const storyContent = {
   width: '100%',
   height: '100%',
-  maxWidth: '1080px',
-  maxHeight: '1920px',
+  maxWidth: '768px',
+  maxHeight: '93dvh',
   margin: 'auto',
   objectFit: 'contain'
 }
