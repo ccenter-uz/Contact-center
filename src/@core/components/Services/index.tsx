@@ -45,9 +45,11 @@ export const Services: FC = () => {
             }
             cover={
               <img
-                style={{ objectFit: 'cover' }}
-                src={'/assets/service/mainCardImg.svg'}
+                style={{ objectFit: 'fill' }}
+                src={'/assets/service/mainCardImg.png'}
                 alt='card-img'
+                width={'100%'}
+                height={'100%'}
                 loading='lazy'
               />
             }
