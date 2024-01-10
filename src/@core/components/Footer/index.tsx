@@ -35,15 +35,15 @@ const Footer: FC = () => {
           <ul className='footer-address h-100 d-flex flex-column justify-between align-start gap-y-5'>
             <li className='d-flex align-center gap-3'>
               <img src='/assets/footer/map.svg' alt='map' placeholder='loading...' />
-              <p>
+              <a href='https://maps.app.goo.gl/as92wSiCT2NRgUHt7' target='_blank'>
                 {t('footer-address')} <br /> {t('address')}
-              </p>
+              </a>
             </li>
             <li className='d-flex align-center gap-3'>
               <img src='/assets/footer/message.svg' alt='message' placeholder='loading...' />
-              <p>
+              <a href='mailto:ucc.outsource@gmail.com' target='_top'>
                 {t('footer-mail')} <br /> ucc.outsource@gmail.com
-              </p>
+              </a>
             </li>
             <li className='d-flex align-center gap-3'>
               <img src='/assets/footer/phone.svg' alt='phone' placeholder='loading...' />
@@ -52,15 +52,21 @@ const Footer: FC = () => {
           </ul>
           <ul className='footer-uzdst h-100 d-flex flex-column justify-between align-start gap-2'>
             <li className='d-flex align-center gap-3'>
-              <img src='/assets/footer/facebook-logo.svg' alt='facebook' placeholder='loading...' />
-              <img src='/assets/footer/instagram-logo.svg' alt='insta' placeholder='loading...' />
-              <img src='/assets/footer/youtube-logo.svg' alt='youtube' placeholder='loading...' />
+              <a href='https://www.facebook.com/contactcenteruz/' target='_blank'>
+                <img src='/assets/footer/facebook-logo.svg' alt='facebook' placeholder='loading...' loading='lazy' />
+              </a>
+              <a href='https://www.instagram.com/contactcenter.uz/' target='_blank'>
+                <img src='/assets/footer/instagram-logo.svg' alt='insta' placeholder='loading...' loading='lazy' />
+              </a>
+              <a href='https://t.me/contactcenteruz' target='_blank'>
+                <img src='/assets/footer/youtube-logo.svg' alt='youtube' placeholder='loading...' loading='lazy' />
+              </a>
             </li>
             <li>
-              <img src='/assets/footer/uzdst.svg' alt='uzdst' placeholder='loading...' />
+              <img src='/assets/footer/uzdst.svg' alt='uzdst' placeholder='loading...' loading='lazy' />
             </li>
             <li>
-              <img src='/assets/footer/cert-int.svg' alt='cert' placeholder='loading...' />
+              <img src='/assets/footer/cert-int.svg' alt='cert' placeholder='loading...' loading='lazy' />
             </li>
           </ul>
         </div>
