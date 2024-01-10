@@ -11,10 +11,12 @@ type IStories = {
 // styles for story
 // content
 const storyContent = {
-  width: '800px',
-  maxWidth: '100%',
-  maxHeight: '100%',
-  margin: 'auto'
+  width: '100%',
+  height: '100%',
+  maxWidth: '1080px',
+  maxHeight: '1920px',
+  margin: 'auto',
+  objectFit: 'contain'
 }
 // innerContainer
 const innerContainer = {
@@ -27,10 +29,10 @@ const container = {
   position: 'fixed',
   inset: 0,
   width: '100%',
-  height: '100dvh',
+  height: '100%',
   zIndex: 999,
   overFlow: 'hidden',
-  background: 'rgb(17 17 17 / 82%)'
+  background: 'rgb(17 17 17 / 92%)'
 }
 
 export function StoriesComponent({ stories, onAllStoriesEndHandler, index }: IStories) {

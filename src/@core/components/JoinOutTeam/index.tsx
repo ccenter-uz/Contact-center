@@ -36,7 +36,7 @@ export const JoinOurTeam: FC = () => {
         viewport={{ once: true }}
         className='join-image'
       >
-        <img src='/assets/mainPic.svg' alt='join' loading='lazy' placeholder='loading...' />
+        <img src='/assets/mainPic.png' alt='join' loading='lazy' placeholder='loading...' />
         <div className='count-users'>1{t('join-users')}</div>
       </motion.div>
       <motion.div
