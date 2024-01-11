@@ -10,7 +10,7 @@ const CarouselComp: FC<IGlobalDataType> = ({ data }) => {
 
   return (
     <div className='carousel'>
-      <Carousel ref={carouselRef} autoplay dots={false} fade>
+      <Carousel ref={carouselRef} autoplay dots={true} fade>
         {data?.headerImages.map((image: IHeaderImages) => {
           return (
             <img

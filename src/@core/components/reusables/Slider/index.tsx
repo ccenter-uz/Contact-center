@@ -65,7 +65,7 @@ const setting = {
 
 const ImageSwiper: FC<ISwiper> = ({ images }) => {
   return (
-    <Carousel {...setting} className='slide-container'>
+    <Carousel {...setting} className='slide-container' pauseOnHover={false}>
       {images?.map((image, index) => {
         return (
           <img
