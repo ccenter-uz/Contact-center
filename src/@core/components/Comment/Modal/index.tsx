@@ -85,19 +85,15 @@ export const ModalService: FC<IModal> = ({ open, close }) => {
       <Form onFinish={handleFinish} form={form} id='modal-form' layout='vertical'>
         <Row justify={'space-between'}>
           <Col xs={24} sm={24} md={11} lg={11} xl={11} xxl={11}>
-            <Form.Item
-              name={'service_type'}
-              label={t('service-modal-type')}
-              rules={[{ required: true, message: 'Xizmat turini tanlang!' }]}
-            >
-              <Select options={serviceOptions} />
+            <Form.Item name={'service_type'} label={t('service-modal-type')} rules={[{ required: true, message: '' }]}>
+              <Select options={serviceOptions} style={{ height: '40px' }} />
             </Form.Item>
           </Col>
           <Col xs={24} sm={24} md={12} lg={12} xl={12} xxl={12}>
             <Form.Item
               name={'organization_name'}
               label={t('service-modal-organization')}
-              rules={[{ required: true, message: 'Tashkilot nomini kiriting!' }]}
+              rules={[{ required: true, message: '' }]}
             >
               <Input />
             </Form.Item>
@@ -105,11 +101,7 @@ export const ModalService: FC<IModal> = ({ open, close }) => {
         </Row>
         <Row justify={'space-between'}>
           <Col xs={24} sm={24} md={11} lg={11} xl={11} xxl={11}>
-            <Form.Item
-              name={'fio'}
-              label={t('service-modal-fio')}
-              rules={[{ required: true, message: 'F.I.Sh ni kiriting' }]}
-            >
+            <Form.Item name={'fio'} label={t('service-modal-fio')} rules={[{ required: true, message: '' }]}>
               <Input />
             </Form.Item>
           </Col>
@@ -117,7 +109,7 @@ export const ModalService: FC<IModal> = ({ open, close }) => {
             <Form.Item
               name={'applicant_phone'}
               label={t('service-modal-phone')}
-              rules={[{ required: true, message: 'Telefon raqam kiriting' }]}
+              rules={[{ required: true, message: '' }]}
             >
               <Input />
             </Form.Item>

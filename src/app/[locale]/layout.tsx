@@ -2,11 +2,11 @@ import { NextIntlClientProvider, useMessages } from 'next-intl'
 import { MainContext } from '@/@core/service/context/main'
 import StyledComponentsRegistry from '@/lib/AntdRegistry'
 import { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 import { ToastContainer } from 'react-toastify'
 
 // If loading a variable font, you don't need to specify the font weight
-const inter = Inter({
+const inter = Montserrat({
   subsets: ['latin'],
   display: 'swap'
 })

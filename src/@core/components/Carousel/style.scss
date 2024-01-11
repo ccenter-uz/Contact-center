@@ -1,5 +1,21 @@
 .carousel {
   position: relative;
+  .slick-dots {
+    height: 5%;
+    display: flex;
+    align-items: flex-start;
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      button {
+        width: 10px !important;
+        height: 10px !important;
+        border-radius: 50% !important;
+        margin: auto;
+      }
+    }
+  }
   #carousel-item {
     width: 1920px;
     height: 400px;

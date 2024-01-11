@@ -6,7 +6,7 @@ import { BASIC_LINK, IGlobalDataType, IPartners } from '@/@core/utils/type'
 const settings = {
   infinite: true,
   autoplay: true,
-  speed: 800,
+  speed: 2500,
   dots: false,
   draggable: true,
   slidesToShow: 4,
@@ -61,8 +61,8 @@ const settings = {
 
 export const Comment: FC<IGlobalDataType> = ({ data }) => {
   return (
-    <Carousel {...settings} className='comment d-flex align-center justify-center'>
-      {data.partners.map((partner: IPartners) => {
+    <Carousel {...settings} className='comment d-flex align-center justify-center' pauseOnHover={false}>
+      {data?.PartnerComments.map((partner: IPartners) => {
         return (
           <Card
             key={partner.id}
