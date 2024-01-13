@@ -16,13 +16,14 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/favicon.svg',
-        href: '/favicon.svg'
+        url: '/favicon.ico',
+        href: '/favicon.ico'
       }
     ]
   },
+
   alternates: {
-    canonical: `/`,
+    canonical: `https://ccenter.uz`,
     languages: {
       'en-US': '/en',
       'uz-UZ': '/uz',
@@ -30,14 +31,14 @@ export const metadata: Metadata = {
     }
   },
   description:
-    'Контактный центр "АК Узбектелеком" предоставляет услуги по аутсорсингу, созданию виртуального офиса, анкетированию, автоматическому обзвону абонентов и множеству других услуг.',
+    'UZTELECOM предлагает услуги аутсорсинга, создания виртуального офиса, анкетирования, автоматического обзвона и др.',
   applicationName: 'ccenter',
   authors: [{ name: 'ccenter,Uztelecom AK' }],
   generator: 'Next.js',
   referrer: 'origin-when-cross-origin',
   creator: 'Contact center-Uztelecom AK',
   publisher: 'Contact center-Uztelecom AK',
-  metadataBase: new URL('https://www.ccenter.uz')
+  metadataBase: new URL('https://ccenter.uz')
 }
 
 const RootLayout = ({ children, params: { locale } }: { children: React.ReactNode; params: any }) => {
