@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: `https://ccenter.uz`,
+    canonical: `https://ccenter.uz/`,
     languages: {
       'en-US': '/en',
       'uz-UZ': '/uz',
