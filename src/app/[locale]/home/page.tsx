@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: `https://ccenter.uz/`,
+    canonical: `https://ccenter.uz/home`,
     languages: {
       'en-US': '/en',
       'uz-UZ': '/uz',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   referrer: 'origin-when-cross-origin',
   creator: 'Contact center-Uztelecom AK',
   publisher: 'Contact center-Uztelecom AK',
-  metadataBase: new URL('https://ccenter.uz')
+  metadataBase: new URL('https://ccenter.uz/home')
 }
 
 const Home: FC = async () => {
