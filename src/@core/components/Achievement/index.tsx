@@ -33,7 +33,7 @@ export const Achievements: FC<IGlobalDataType> = ({ data }) => {
         viewport={{ once: true }}
       >
         <div className='box-item d-flex align-start  gap-x-1 '>
-          <img src='/assets/achievements/IconUsers.svg' alt='svg' placeholder='loading...' />
+          <img src='/assets/achievements/IconUsers.svg' alt='svg' placeholder='blur' />
           <div>
             <h1 className='d-flex align-center '>
               <AnimatedNumbers
@@ -50,7 +50,7 @@ export const Achievements: FC<IGlobalDataType> = ({ data }) => {
           </div>
         </div>
         <div className='box-item d-flex align-start  gap-x-1 '>
-          <img src='/assets/achievements/IconUser2.svg' alt='svg' placeholder='loading...' />
+          <img src='/assets/achievements/IconUser2.svg' alt='svg' placeholder='blur' />
           <div>
             <h1 className='d-flex align-center gap-x-1'>
               <AnimatedNumbers
@@ -67,7 +67,7 @@ export const Achievements: FC<IGlobalDataType> = ({ data }) => {
           </div>
         </div>
         <div className='box-item d-flex align-start  gap-x-1 '>
-          <img src='/assets/achievements/IconService.svg' alt='svg' placeholder='loading...' />
+          <img src='/assets/achievements/IconService.svg' alt='svg' placeholder='blur' />
           <div>
             <h1 className='d-flex align-center gap-x-1'>
               <AnimatedNumbers
@@ -84,7 +84,7 @@ export const Achievements: FC<IGlobalDataType> = ({ data }) => {
           </div>
         </div>
         <div className='box-item d-flex align-start  gap-x-1 '>
-          <img src='/assets/achievements/IconUser3.svg' alt='svg' placeholder='loading...' />
+          <img src='/assets/achievements/IconUser3.svg' alt='svg' placeholder='blur' />
           <div>
             <h1 className='d-flex align-center '>
               <AnimatedNumbers

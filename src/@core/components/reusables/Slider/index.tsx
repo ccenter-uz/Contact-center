@@ -74,7 +74,6 @@ const ImageSwiper: FC<ISwiper> = ({ images }) => {
             alt='image'
             width={'462px'}
             height={'336px'}
-            loading='lazy'
           />
         )
       })}

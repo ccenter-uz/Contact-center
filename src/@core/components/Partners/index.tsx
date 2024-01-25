@@ -14,15 +14,7 @@ const responsive = {
 export const Partners: FC<IGlobalDataType> = ({ data }) => {
   const { t } = useLang()
   const items = data.partners.map((image: IPartners) => {
-    return (
-      <img
-        key={image.id}
-        src={BASIC_LINK + '' + image.image_link}
-        alt='partner'
-        loading='lazy'
-        placeholder='loading...'
-      />
-    )
+    return <img key={image.id} src={BASIC_LINK + '' + image.image_link} alt='partner' placeholder='blur' />
   })
 
   return (

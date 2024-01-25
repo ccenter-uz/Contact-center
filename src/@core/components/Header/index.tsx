@@ -62,7 +62,7 @@ const Header: FC<IGlobalDataType> = ({ data }) => {
   return (
     <header id='header' className='d-flex flex-column justify-center align-between '>
       <div className='d-flex justify-between align-center m-b-3'>
-        <img id='logo' src={'/assets/logo.svg'} alt='logo' loading='lazy' placeholder='loading...' />
+        <img id='logo' src={'/assets/logo.svg'} alt='logo' placeholder='blur' loading='lazy' />
         <div className='block d-flex align-center gap-x-1'>
           <Popover content={content}>
             <Globe size={20} />

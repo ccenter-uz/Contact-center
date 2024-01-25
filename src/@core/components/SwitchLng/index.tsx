@@ -33,6 +33,7 @@ const LanguageSwitcher: FC = () => {
     <div className='language_wrapper d-flex align-center '>
       <img width={20} height={20} src='/assets/languageSvg.svg' alt='language' />
       <Select
+        aria-label='select-language'
         suffixIcon
         className='lang_switcher d-flex align-center'
         value={locale}

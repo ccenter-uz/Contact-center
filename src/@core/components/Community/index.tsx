@@ -1,8 +1,10 @@
 import { FC } from 'react'
 import './style.scss'
 import { useLang } from '@/@core/service/hooks/useLang'
-import ImageSwiper from '../reusables/Slider'
 import { IGlobalDataType } from '@/@core/utils/type'
+import dynamic from 'next/dynamic'
+
+const ImageSwiper = dynamic(() => import('../reusables/Slider'))
 
 export const Community: FC<IGlobalDataType> = ({ data }) => {
   const { t } = useLang()
@@ -19,7 +21,7 @@ export const Community: FC<IGlobalDataType> = ({ data }) => {
           <span>{t('community-paragraph')}</span>
         </div>
         <div className='content-images '>
-          <ImageSwiper images={data.TeamImages} />
+          <ImageSwiper images={data?.TeamImages} />
         </div>
       </div>
     </section>

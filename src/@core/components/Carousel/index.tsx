@@ -17,21 +17,22 @@ const CarouselComp: FC<IGlobalDataType> = ({ data }) => {
               key={image.id}
               src={BASIC_LINK + '' + image.haeder_image_link}
               alt='LOADING...'
-              id='carousel-item'
-              loading='lazy'
-              placeholder='loading...'
+              id={`image-${image.id}`}
+              placeholder='blur'
             />
           )
         })}
       </Carousel>
       <div className='d-flex justify-center m-t-2 align-center gap-x-2'>
         <button
+          aria-label='prev-button'
           className='carousel-btn btn-prev d-flex align-center justify-center'
           onClick={() => carouselRef.current.prev()}
         >
           <ArrowLeft size={15} />
         </button>
         <button
+          aria-label='next-button'
           className='carousel-btn btn-next d-flex align-center justify-center'
           onClick={() => carouselRef.current.next()}
         >

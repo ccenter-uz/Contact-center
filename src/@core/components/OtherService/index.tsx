@@ -27,8 +27,7 @@ export const OtherService: FC<IGlobalDataType> = ({ data }) => {
               whileHover={{ scale: 1.1 }}
               src={BASIC_LINK + '' + card.image_link}
               alt={'card-image'}
-              loading='lazy'
-              placeholder='loading...'
+              placeholder='blur'
             />
           </div>
         </Card>

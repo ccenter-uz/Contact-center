@@ -73,7 +73,7 @@ export const Comment: FC<IGlobalDataType> = ({ data }) => {
                   alt='clickup'
                   width={'160px'}
                   height={'80px'}
-                  loading='lazy'
+                  placeholder='blur'
                 />
               </div>
             }
