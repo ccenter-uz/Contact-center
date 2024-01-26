@@ -1,9 +1,10 @@
-'use client'
 import { FC, memo, useCallback, useState } from 'react'
 import './style.scss'
-import { StoriesComponent } from '../Stories'
 import { Avatar } from 'antd'
 import { BASIC_LINK, IGlobalDataType, IHistory } from '@/@core/utils/type'
+import dynamic from 'next/dynamic'
+
+const StoriesComponent = dynamic(() => import('../Stories').then(res => res.StoriesComponent))
 
 export const ParentStory: FC<IGlobalDataType> = ({ data }) => {
   const [open, setOpen] = useState<boolean>(false)

@@ -1,4 +1,3 @@
-'use client'
 import React, { FC } from 'react'
 import { useLocale } from 'next-intl'
 import { usePathname, useRouter } from '@/navigation'
@@ -31,7 +30,7 @@ const LanguageSwitcher: FC = () => {
 
   return (
     <div className='language_wrapper d-flex align-center '>
-      <img width={20} height={20} src='/assets/languageSvg.svg' alt='language' />
+      <img width={20} height={20} src='/assets/languageSvg.svg' alt='language' placeholder='blur' loading='lazy' />
       <Select
         aria-label='select-language'
         suffixIcon

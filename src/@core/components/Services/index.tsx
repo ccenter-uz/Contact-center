@@ -1,4 +1,3 @@
-'use client'
 import { FC, useState } from 'react'
 import './style.scss'
 import { useLang } from '@/@core/service/hooks/useLang'

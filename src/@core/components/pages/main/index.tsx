@@ -1,5 +1,5 @@
 'use client'
-import { FC, useEffect, useState } from 'react'
+import { FC, useEffect, useLayoutEffect, useState } from 'react'
 import './style.scss'
 import dynamic from 'next/dynamic'
 import { IGlobalDataType } from '@/@core/utils/type'
@@ -41,7 +41,7 @@ const Main: FC<IGlobalDataType> = ({ data }) => {
     }
   }, [])
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [])
 
@@ -55,7 +55,7 @@ const Main: FC<IGlobalDataType> = ({ data }) => {
       <JoinOurTeam />
       <Partners data={data} />
       <Comment data={data} />
-      <div className={`float-button ${isVisible ? 'visible' : 'hidden'}`}>
+      <div role='button' aria-label='to-top' className={`float-button ${isVisible ? 'visible' : 'hidden'}`}>
         <div className='floatBtnAnimate'></div>
         <FloatButton
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}

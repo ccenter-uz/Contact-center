@@ -19,6 +19,7 @@ const Footer: FC = () => {
               placeholder='blur'
               onClick={() => window.scrollTo(0, 0)}
               style={{ cursor: 'pointer' }}
+              loading='lazy'
             />
           </li>
           <li>

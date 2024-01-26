@@ -1,4 +1,3 @@
-'use client'
 import { FC, useRef } from 'react'
 import './style.scss'
 import { Carousel } from 'antd'
@@ -14,11 +13,13 @@ const CarouselComp: FC<IGlobalDataType> = ({ data }) => {
         {data?.headerImages.map((image: IHeaderImages) => {
           return (
             <img
+              fetchPriority='auto'
               key={image.id}
               src={BASIC_LINK + '' + image.haeder_image_link}
               alt='LOADING...'
               id={`image-${image.id}`}
               placeholder='blur'
+              loading='lazy'
             />
           )
         })}
