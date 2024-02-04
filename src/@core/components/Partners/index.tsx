@@ -2,7 +2,9 @@ import { FC } from 'react'
 import './style.scss'
 import { useLang } from '@/@core/service/hooks/useLang'
 import { BASIC_LINK, IGlobalDataType, IPartners } from '@/@core/utils/type'
-import AliceCarousel from 'react-alice-carousel'
+import dynamic from 'next/dynamic'
+
+const AliceCarousel = dynamic(() => import('react-alice-carousel'), { ssr: false })
 
 const responsive = {
   0: { items: 1 },
@@ -14,7 +16,7 @@ const responsive = {
 export const Partners: FC<IGlobalDataType> = ({ data }) => {
   const { t } = useLang()
   const items = data.partners.map((image: IPartners) => {
-    return <img key={image.id} src={BASIC_LINK + '' + image.image_link} alt='partner' placeholder='blur' />
+    return <img key={image.id} src={BASIC_LINK + '' + image.image_link} alt='partner' />
   })
 
   return (

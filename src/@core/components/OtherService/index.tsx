@@ -4,7 +4,9 @@ import { useLang } from '@/@core/service/hooks/useLang'
 import { Card } from 'antd'
 import { motion } from 'framer-motion'
 import { BASIC_LINK, IGlobalDataType, IService } from '@/@core/utils/type'
-import AliceCarousel from 'react-alice-carousel'
+import dynamic from 'next/dynamic'
+
+const AliceCarousel = dynamic(() => import('react-alice-carousel'), { ssr: false })
 
 const responsive = {
   0: { items: 1 },
@@ -22,12 +24,7 @@ export const OtherService: FC<IGlobalDataType> = ({ data }) => {
         <Card hoverable className='other-card'>
           <h1>{card.title}</h1>
           <div className='other-img d-flex align-end justify-end'>
-            <motion.img
-              whileHover={{ scale: 1.1 }}
-              src={BASIC_LINK + '' + card.image_link}
-              alt={'card-image'}
-              placeholder='blur'
-            />
+            <motion.img whileHover={{ scale: 1.1 }} src={BASIC_LINK + '' + card.image_link} alt={'card-image'} />
           </div>
         </Card>
       </div>

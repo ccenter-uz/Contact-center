@@ -1,8 +1,6 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { useLocale } from 'next-intl'
 import { usePathname, useRouter } from '@/navigation'
-import { Select } from 'antd'
-import './style.scss'
 
 const options = [
   {
@@ -24,21 +22,28 @@ const LanguageSwitcher: FC = () => {
   const router = useRouter()
   const pathName = usePathname()
 
-  const handleChange = (e: string) => {
-    router.push(pathName, { locale: e })
+  const handleChange = (e: any) => {
+    router.push(pathName, { locale: e.target.value })
   }
 
   return (
-    <div className='language_wrapper d-flex align-center '>
-      <img width={20} height={20} src='/assets/languageSvg.svg' alt='language' placeholder='blur' loading='lazy' />
-      <Select
+    <div className='language_wrapper d-flex align-center  justify-end'>
+      <img width={20} height={20} src='/assets/languageSvg.svg' alt='language' />
+      <select
+        style={{ border: 'none', outline: 'rgb(0, 149, 255)', background: 'transparent', cursor: 'pointer' }}
         aria-label='select-language'
-        suffixIcon
         className='lang_switcher d-flex align-center'
         value={locale}
         onChange={handleChange}
-        options={options}
-      />
+      >
+        {options.map(option => {
+          return (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          )
+        })}
+      </select>
     </div>
   )
 }

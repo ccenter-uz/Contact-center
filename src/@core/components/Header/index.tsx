@@ -7,39 +7,9 @@ import { Globe } from 'react-feather'
 import { Popover, Space } from 'antd'
 import { IGlobalDataType } from '@/@core/utils/type'
 import dynamic from 'next/dynamic'
-import ShapeLoading from '../ShapeLoading'
 
-const ParentStory = dynamic(() => import('./parentStory'), {
-  ssr: false,
-  loading: () => (
-    <div className='d-flex align-center justify-between'>
-      <div className='m-y-2 d-flex flex-column gap-y-1'>
-        <ShapeLoading width='60px' height='60px' radius='50%' />
-        <ShapeLoading width='60px' height='15px' radius='5px' />
-      </div>
-      <div className='m-y-2 d-flex flex-column gap-y-1'>
-        <ShapeLoading width='60px' height='60px' radius='50%' />
-        <ShapeLoading width='60px' height='15px' radius='5px' />
-      </div>
-      <div className='m-y-2 d-flex flex-column gap-y-1'>
-        <ShapeLoading width='60px' height='60px' radius='50%' />
-        <ShapeLoading width='60px' height='15px' radius='5px' />
-      </div>
-      <div className='m-y-2 d-flex flex-column gap-y-1'>
-        <ShapeLoading width='60px' height='60px' radius='50%' />
-        <ShapeLoading width='60px' height='15px' radius='5px' />
-      </div>
-      <div className='m-y-2 d-flex flex-column gap-y-1'>
-        <ShapeLoading width='60px' height='60px' radius='50%' />
-        <ShapeLoading width='60px' height='15px' radius='5px' />
-      </div>
-    </div>
-  )
-})
-const LanguageSwitcher = dynamic(() => import('@/@core/components/SwitchLng'), {
-  ssr: false,
-  loading: () => <ShapeLoading width='80px' height='20px' radius='8px' />
-})
+const ParentStory = dynamic(() => import('./parentStory'))
+const LanguageSwitcher = dynamic(() => import('@/@core/components/SwitchLng'))
 const SideBar = dynamic(() => import('../Sidebar').then(res => res.SideBar))
 
 const content = (
@@ -62,7 +32,16 @@ const Header: FC<IGlobalDataType> = ({ data }) => {
   return (
     <header id='header' className='d-flex flex-column justify-center align-between '>
       <div className='d-flex justify-between align-center m-b-3'>
-        <img id='logo' src={'/assets/logo.svg'} alt='logo' placeholder='blur' loading='lazy' aria-label='logo' />
+        <Link href={'/'}>
+          <img
+            sizes='(min-width:768px) 768px,100vw'
+            id='logo'
+            src={'/assets/logo.svg'}
+            alt='logo'
+            aria-label='logo'
+            fetchPriority='high'
+          />
+        </Link>
         <div className='block d-flex align-center gap-x-1'>
           <Popover content={content}>
             <Globe size={20} />

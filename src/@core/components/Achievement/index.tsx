@@ -32,7 +32,7 @@ export const Achievements: FC<IGlobalDataType> = ({ data }) => {
         viewport={{ once: true }}
       >
         <div className='box-item d-flex align-start  gap-x-1 '>
-          <img src='/assets/achievements/IconUsers.svg' alt='svg' placeholder='blur' />
+          <img src='/assets/achievements/IconUsers.svg' alt='svg' />
           <div>
             <h1 className='d-flex align-center '>
               <AnimatedNumbers
@@ -43,13 +43,12 @@ export const Achievements: FC<IGlobalDataType> = ({ data }) => {
                 })}
                 animateToNumber={+data.statistic[0]?.statistic || 0}
               />
-              +
             </h1>
             <p>{data.statistic[0]?.title || 'Неизвестно'}</p>
           </div>
         </div>
         <div className='box-item d-flex align-start  gap-x-1 '>
-          <img src='/assets/achievements/IconUser2.svg' alt='svg' placeholder='blur' />
+          <img src='/assets/achievements/IconUser2.svg' alt='svg' />
           <div>
             <h1 className='d-flex align-center gap-x-1'>
               <AnimatedNumbers
@@ -60,13 +59,12 @@ export const Achievements: FC<IGlobalDataType> = ({ data }) => {
                 })}
                 animateToNumber={+data.statistic[1]?.statistic || 0}
               />
-              {t('yearTogether')}
             </h1>
             <p>{data.statistic[1]?.title || 'Неизвестно'}</p>
           </div>
         </div>
         <div className='box-item d-flex align-start  gap-x-1 '>
-          <img src='/assets/achievements/IconService.svg' alt='svg' placeholder='blur' />
+          <img src='/assets/achievements/IconService.svg' alt='svg' />
           <div>
             <h1 className='d-flex align-center gap-x-1'>
               <AnimatedNumbers
@@ -77,13 +75,12 @@ export const Achievements: FC<IGlobalDataType> = ({ data }) => {
                 })}
                 animateToNumber={+data.statistic[2]?.statistic || 0}
               />
-              +
             </h1>
             <p>{data.statistic[2]?.title || 'Неизвестно'}</p>
           </div>
         </div>
         <div className='box-item d-flex align-start  gap-x-1 '>
-          <img src='/assets/achievements/IconUser3.svg' alt='svg' placeholder='blur' />
+          <img src='/assets/achievements/IconUser3.svg' alt='svg' />
           <div>
             <h1 className='d-flex align-center '>
               <AnimatedNumbers
@@ -94,7 +91,6 @@ export const Achievements: FC<IGlobalDataType> = ({ data }) => {
                 })}
                 animateToNumber={+data.statistic[3]?.statistic || 0}
               />
-              +
             </h1>
             <p>{data.statistic[3]?.title || 'Неизвестно'}</p>
           </div>

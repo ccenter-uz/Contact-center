@@ -13,22 +13,25 @@ const inter = Montserrat({
 
 export const metadata: Metadata = {
   title: 'Contact center – UZTELECOM',
+  openGraph: {
+    title: 'Contact center – UZTELECOM',
+    type: 'website',
+    description:
+      'UZTELECOM предлагает услуги аутсорсинга, создания виртуального офиса, анкетирования, автоматического обзвона и др.',
+    url: 'https://ccenter.uz/',
+    images: '/favicon.ico'
+  },
   icons: {
     icon: [
       {
-        url: '/favicon.ico',
-        href: '/favicon.ico'
+        url: '/favicon.svg',
+        href: '/favicon.svg'
       }
     ]
   },
 
   alternates: {
-    canonical: `https://ccenter.uz/`,
-    languages: {
-      'en-US': '/en',
-      'uz-UZ': '/uz',
-      'ru-RU': '/ru'
-    }
+    canonical: `https://ccenter.uz/`
   },
   description:
     'UZTELECOM предлагает услуги аутсорсинга, создания виртуального офиса, анкетирования, автоматического обзвона и др.',

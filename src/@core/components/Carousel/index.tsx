@@ -13,13 +13,13 @@ const CarouselComp: FC<IGlobalDataType> = ({ data }) => {
         {data?.headerImages.map((image: IHeaderImages) => {
           return (
             <img
-              fetchPriority='auto'
+              fetchPriority='high'
+              sizes='(max-width:400px) 400px,(max-width:768px) 768px,(max-width:1024px) 1024px,100vw'
               key={image.id}
               src={BASIC_LINK + '' + image.haeder_image_link}
               alt='LOADING...'
               id={`image-${image.id}`}
-              placeholder='blur'
-              loading='lazy'
+              className='carousel-item'
             />
           )
         })}

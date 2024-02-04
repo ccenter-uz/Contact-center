@@ -16,9 +16,9 @@
       }
     }
   }
-  #carousel-item {
-    width: 1920px;
-    height: 400px;
+  .carousel-item {
+    width: 100vw;
+    height: 250px;
     object-fit: cover;
   }
   .carousel-btn {

@@ -68,13 +68,7 @@ export const Comment: FC<IGlobalDataType> = ({ data }) => {
             key={partner.id}
             title={
               <div className='comment-card-title d-flex align-center justify-center p-y-2 '>
-                <img
-                  src={BASIC_LINK + '' + partner.image_link}
-                  alt='clickup'
-                  width={'160px'}
-                  height={'80px'}
-                  placeholder='blur'
-                />
+                <img src={BASIC_LINK + '' + partner.image_link} alt='clickup' width={'160px'} height={'80px'} />
               </div>
             }
           >
