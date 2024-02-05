@@ -1,4 +1,17 @@
 @media only screen and (max-width: 575px) {
+  .join {
+    .join-image {
+      max-height: 350px !important;
+      height: 100%;
+    }
+  }
+  .slide-container {
+    img {
+      width: 100% !important;
+      height: 200px !important;
+      object-fit: cover;
+    }
+  }
   .footer {
     &::before {
       position: absolute;
@@ -47,7 +60,7 @@
     }
   }
   // carousel
-  .carousel #carousel-item {
+  .carousel .carousel-item {
     height: 100% !important;
     height: 250px !important;
   }
@@ -88,6 +101,7 @@
         .card-item-left {
           width: 100% !important;
           height: fit-content !important;
+
           .card-title {
             img {
               height: 50px !important;
@@ -135,7 +149,15 @@
         justify-content: center;
       }
     }
+    .slide-container {
+      img {
+        width: 100% !important;
+        height: 200px !important;
+        object-fit: cover;
+      }
+    }
   }
+
   // join
   .join {
     padding: 2rem !important;
@@ -157,9 +179,7 @@
       }
     }
     .join-image {
-      img {
-        max-width: 100% !important;
-      }
+      height: 600px;
       .count-users {
         width: 50% !important;
         font-size: 14px !important;
@@ -216,7 +236,7 @@
     }
   }
   // carousel
-  #carousel-item {
+  .carousel-item {
     background-size: contain !important;
   }
   // achievements
@@ -285,6 +305,7 @@
       }
     }
     .join-image {
+      height: 731px;
       img {
         max-width: 100% !important;
       }
@@ -322,6 +343,12 @@
 
 /* Desktop Styles (1024px and above) */
 @media only screen and (min-width: 1024px) {
+  .join-image {
+    height: 731px;
+    img {
+      max-width: 100% !important;
+    }
+  }
   /* Your desktop styles here */
   p,
   a {
@@ -329,11 +356,17 @@
   }
 }
 
-@media only screen and (max-width: 1290px) {
+@media only screen and (min-width: 1920px) {
   .other-carousel {
     width: 100% !important;
     .slick-slide {
       margin: 0 auto !important;
+    }
+  }
+  .join-image {
+    height: 731px;
+    img {
+      max-width: 100% !important;
     }
   }
 }

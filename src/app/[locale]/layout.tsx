@@ -5,7 +5,7 @@ import { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 import { ToastContainer } from 'react-toastify'
 
-// If loading a variable font, you don't need to specify the font weight
+
 const inter = Montserrat({
   subsets: ['latin'],
   display: 'swap'

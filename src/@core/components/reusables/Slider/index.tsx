@@ -1,4 +1,3 @@
-'use client'
 import { FC } from 'react'
 import './style.scss'
 import { Carousel } from 'antd'

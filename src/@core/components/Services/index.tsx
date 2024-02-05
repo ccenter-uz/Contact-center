@@ -45,13 +45,12 @@ export const Services: FC = () => {
               </div>
             }
             cover={
-              <img
-                style={{ objectFit: 'fill' }}
-                src={'/assets/service/mainCardImg.png'}
-                alt='card-img'
-                width={'100%'}
-                height={'100%'}
-              />
+                <img
+                  style={{ objectFit: 'fill' }}
+                  src={'/assets/service/mainCardImg.png'}
+                  alt='card-img'
+                  sizes='sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"'
+                />
             }
             bodyStyle={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
             className='card-item-left'

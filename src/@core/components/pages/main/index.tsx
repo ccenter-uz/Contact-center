@@ -27,15 +27,11 @@ const Main: FC<IGlobalDataType> = ({ data }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Check if the user has scrolled down 545px
       const scrolledDown = window.scrollY > 545
       setIsVisible(scrolledDown)
     }
-
-    // Attach the scroll event listener
     window.addEventListener('scroll', handleScroll)
 
-    // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
@@ -56,12 +52,12 @@ const Main: FC<IGlobalDataType> = ({ data }) => {
       <Partners data={data} />
       <Comment data={data} />
       <div role='button' aria-label='to-top' className={`float-button ${isVisible ? 'visible' : 'hidden'}`}>
-        <div className='floatBtnAnimate'></div>
-        <FloatButton
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className='d-flex align-center justify-center'
-          icon={<ArrowUp style={{ color: '#fff', fontSize: '28px', textAlign: 'center' }} />}
-        />
+      <div className='floatBtnAnimate'></div>
+      <FloatButton
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className='d-flex align-center justify-center'
+        icon={<ArrowUp style={{ color: '#fff', fontSize: '28px', textAlign: 'center' }} />}
+      />
       </div>
     </main>
   )
