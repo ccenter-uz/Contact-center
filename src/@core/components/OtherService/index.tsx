@@ -2,7 +2,6 @@ import { FC } from 'react'
 import './style.scss'
 import { useLang } from '@/@core/service/hooks/useLang'
 import { Card } from 'antd'
-import { motion } from 'framer-motion'
 import { BASIC_LINK, IGlobalDataType, IService } from '@/@core/utils/type'
 import dynamic from 'next/dynamic'
 
@@ -24,7 +23,7 @@ export const OtherService: FC<IGlobalDataType> = ({ data }) => {
         <Card hoverable className='other-card'>
           <h1>{card.title}</h1>
           <div className='other-img d-flex align-end justify-end'>
-            <motion.img loading='lazy' whileHover={{ scale: 1.1 }} src={BASIC_LINK + '' + card.image_link} alt={'card-image'} />
+            <img loading='lazy' fetchPriority='low' src={BASIC_LINK + '' + card.image_link} alt={'card-image'} />
           </div>
         </Card>
       </div>

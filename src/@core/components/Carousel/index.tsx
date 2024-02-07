@@ -3,7 +3,6 @@ import './style.scss'
 import { Carousel } from 'antd'
 import { ArrowLeft, ArrowRight } from 'react-feather'
 import { BASIC_LINK, IGlobalDataType, IHeaderImages } from '@/@core/utils/type'
-import Image from 'next/image'
 
 const CarouselComp: FC<IGlobalDataType> = ({ data }) => {
   const carouselRef = useRef<any>()
@@ -13,17 +12,14 @@ const CarouselComp: FC<IGlobalDataType> = ({ data }) => {
       <Carousel ref={carouselRef} autoplay dots={true} fade>
         {data?.headerImages.map((image: IHeaderImages) => {
           return (
-            <div key={image.id} className='carousel-item'>
-              <Image
-                priority
-                fill
-                sizes='(max-width:400px) 400px,(max-width:768px) 768px,(max-width:1024px) 1024px,100vw'
-                src={BASIC_LINK + '' + image.haeder_image_link}
-                alt='LOADING...'
-                id={`image-${image.id}`}
-                style={{ objectFit: 'cover' }}
-              />
-            </div>
+            <img
+              key={image.id}
+              src={BASIC_LINK + '' + image.haeder_image_link}
+              alt='LOADING...'
+              id={`image-${image.id}`}
+              style={{ objectFit: 'cover' }}
+              className='carousel-item'
+            />
           )
         })}
       </Carousel>

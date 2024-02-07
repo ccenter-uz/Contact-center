@@ -6,6 +6,7 @@ import { IGlobalDataType } from '@/@core/utils/type'
 import Loading from '@/app/[locale]/loading'
 import { FloatButton } from 'antd'
 import { ArrowUp } from 'react-feather'
+import CarouselComp from '../../Carousel'
 
 const Achievements = dynamic(() => import('../../Achievement').then(res => res.Achievements), {
   loading: () => <Loading />
@@ -15,17 +16,14 @@ const OtherService = dynamic(() => import('../../OtherService').then(res => res.
   loading: () => <Loading />
 })
 const Community = dynamic(() => import('../../Community').then(res => res.Community), { loading: () => <Loading /> })
-const JoinOurTeam = dynamic(() => import('../../JoinOutTeam').then(res => res.JoinOurTeam), {
-  loading: () => <Loading />
-})
+const JoinOurTeam = dynamic(() => import('../../JoinOutTeam').then(res => res.JoinOurTeam))
 const Partners = dynamic(() => import('../../Partners').then(res => res.Partners), { loading: () => <Loading /> })
 const Comment = dynamic(() => import('../../Comment').then(res => res.Comment), { loading: () => <Loading /> })
-const CarouselComp = dynamic(() => import('../../Carousel'), { loading: () => <Loading /> })
 
 const Main: FC<IGlobalDataType> = ({ data }) => {
   const [isVisible, setIsVisible] = useState<boolean>(false)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const handleScroll = () => {
       const scrolledDown = window.scrollY > 545
       setIsVisible(scrolledDown)
@@ -52,12 +50,13 @@ const Main: FC<IGlobalDataType> = ({ data }) => {
       <Partners data={data} />
       <Comment data={data} />
       <div role='button' aria-label='to-top' className={`float-button ${isVisible ? 'visible' : 'hidden'}`}>
-      <div className='floatBtnAnimate'></div>
-      <FloatButton
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className='d-flex align-center justify-center'
-        icon={<ArrowUp style={{ color: '#fff', fontSize: '28px', textAlign: 'center' }} />}
-      />
+        <div className='floatBtnAnimate'></div>
+        <FloatButton
+          aria-label='button-float'
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className='d-flex align-center justify-center'
+          icon={<ArrowUp style={{ color: '#fff', fontSize: '28px', textAlign: 'center' }} />}
+        />
       </div>
     </main>
   )

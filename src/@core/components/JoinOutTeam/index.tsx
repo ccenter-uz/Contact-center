@@ -5,7 +5,6 @@ import { useLang } from '@/@core/service/hooks/useLang'
 import { ArrowRight } from 'react-feather'
 import { motion } from 'framer-motion'
 import { Link } from '@/navigation'
-import Image from 'next/image'
 
 type IHeaderConfig = {
   height: '95px'
@@ -34,14 +33,15 @@ export const JoinOurTeam: FC = () => {
         initial={{ x: -100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ type: 'tween', duration: 1 }}
-        viewport={{ once: true }}
-        className='join-image'
+        viewport={{ once: true }}  
       >
-        <Image
-          fill
+        <img
+          fetchPriority='low'
+          loading='lazy'
           sizes='(max-width:400px) 400px,(max-width:768px) 768px,(max-width:1024px) 1024px,100vw'
           src='/assets/mainPic.png'
           alt='join'
+          className='join-image'
         />
       </motion.div>
       <motion.div
@@ -57,7 +57,9 @@ export const JoinOurTeam: FC = () => {
               <p>{t('join-paragraph')}</p>
             </Col>
             <Col className='d-flex flex-column align-center' xs={24} sm={24} md={5} lg={4} xl={4} xxl={4}>
-              <Image
+              <img
+                fetchPriority='low'
+                loading='lazy'
                 sizes='(max-width:400px) 400px,(max-width:768px) 768px,(max-width:1024px) 1024px,100vw'
                 src='/assets/QRcode.svg'
                 alt='qrcode'

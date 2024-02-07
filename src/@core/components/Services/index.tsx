@@ -41,7 +41,7 @@ export const Services: FC = () => {
             title={
               <div className='card-title d-flex align-center justify-between'>
                 <h1>{t('service-first-card-title')}</h1>
-                <img src='/assets/service/Rocket.svg' alt='rocket' />
+                <img src='/assets/service/Rocket.svg' alt='rocket' loading='lazy' fetchPriority='low'/>
               </div>
             }
             cover={
@@ -50,13 +50,14 @@ export const Services: FC = () => {
                   src={'/assets/service/mainCardImg.png'}
                   alt='card-img'
                   sizes='sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"'
+                  loading='lazy'
                 />
             }
             bodyStyle={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
             className='card-item-left'
           >
             <Button onclick={openModal}>{t('left-application')}</Button>
-            <img className='line-bottom' src='/assets/service/BottomLineMainCard.svg' alt='svg' />
+            <img className='line-bottom' src='/assets/service/BottomLineMainCard.svg' alt='svg' fetchPriority='low'/>
           </Card>
         </motion.div>
         <div className='content-right'>
@@ -74,13 +75,13 @@ export const Services: FC = () => {
                       <p>{t('service-other-card-paragraph')}</p>
                     </Col>
                     <Col xs={24} sm={24} md={6} lg={6} xl={6} push={3}>
-                      <img src='/assets/service/Profile.svg' alt='logo' />
+                      <img src='/assets/service/Profile.svg' alt='logo' loading='lazy' fetchPriority='low'/>
                     </Col>
                   </Row>
                   <div className='btn d-flex justify-center align-center '>
                     <Button onclick={openModal}>{t('left-application')}</Button>
                   </div>
-                  <img className='line-bottom' src='/assets/service/BottomLineOtherCards.svg' alt='svg' />
+                  <img className='line-bottom' src='/assets/service/BottomLineOtherCards.svg' alt='svg' loading='lazy' fetchPriority='low'/>
                 </Card>
               </motion.div>
               <motion.div
@@ -95,13 +96,13 @@ export const Services: FC = () => {
                       <p>{t('service-other-card-paragraph-second')}</p>
                     </Col>
                     <Col xs={24} sm={24} md={6} lg={6} xl={6} push={2}>
-                      <img src='/assets/service/StepsChart.svg' alt='logo' />
+                      <img src='/assets/service/StepsChart.svg' alt='logo' loading='lazy' fetchPriority='low'/>
                     </Col>
                   </Row>
                   <div className='btn d-flex justify-center align-center '>
                     <Button onclick={openModal}>{t('left-application')}</Button>
                   </div>
-                  <img className='line-bottom' src='/assets/service/BottomLineOtherCards.svg' alt='svg' />
+                  <img className='line-bottom' src='/assets/service/BottomLineOtherCards.svg' alt='svg' loading='lazy' fetchPriority='low'/>
                 </Card>
               </motion.div>
             </div>
@@ -119,13 +120,13 @@ export const Services: FC = () => {
                       <p>{t('service-other-card-paragraph-third')}</p>
                     </Col>
                     <Col xs={24} sm={24} md={6} lg={6} xl={6} push={3}>
-                      <img src='/assets/service/Map.svg' alt='logo' />
+                      <img src='/assets/service/Map.svg' alt='logo' loading='lazy' fetchPriority='low'/>
                     </Col>
                   </Row>
                   <div className='btn d-flex justify-center align-center '>
                     <Button onclick={openModal}>{t('left-application')}</Button>
                   </div>
-                  <img className='line-bottom' src='/assets/service/BottomLineOtherCards.svg' alt='svg' />
+                  <img className='line-bottom' src='/assets/service/BottomLineOtherCards.svg' alt='svg' loading='lazy' fetchPriority='low'/>
                 </Card>
               </motion.div>
               <motion.div
@@ -140,13 +141,13 @@ export const Services: FC = () => {
                       <p>{t('service-other-card-paragraph-four')}</p>
                     </Col>
                     <Col xs={24} sm={24} md={6} lg={6} xl={6} push={2}>
-                      <img src='/assets/service/Chat.svg' alt='logo' />
+                      <img src='/assets/service/Chat.svg' alt='logo' loading='lazy' fetchPriority='low'/>
                     </Col>
                   </Row>
                   <div className='btn d-flex justify-center align-center '>
                     <Button onclick={openModal}>{t('left-application')}</Button>
                   </div>
-                  <img className='line-bottom' src='/assets/service/BottomLineOtherCards.svg' alt='svg' />
+                  <img className='line-bottom' src='/assets/service/BottomLineOtherCards.svg' alt='svg' loading='lazy' fetchPriority='low'/>
                 </Card>
               </motion.div>
             </div>

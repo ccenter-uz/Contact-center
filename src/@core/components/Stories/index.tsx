@@ -9,7 +9,6 @@ type IStories = {
   index: number
 }
 // styles for story
-// content
 const storyContent = {
   width: '100%',
   height: '100%',
@@ -46,7 +45,7 @@ export function StoriesComponent({ stories, onAllStoriesEndHandler, index }: ISt
 
   return (
     <div>
-      <div className='d-flex justify-end' style={{ position: 'absolute', top: '2%', right: '1%', zIndex: 9999 }}>
+      <div className='d-flex justify-end' style={{ position: 'fixed', top: '2%', right: '1%', zIndex: 9999 }}>
         <X onClick={onAllStoriesEndHandler} size={'10%'} color='#fff' cursor={'pointer'} />
       </div>
       <Stories

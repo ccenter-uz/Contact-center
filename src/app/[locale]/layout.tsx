@@ -1,5 +1,4 @@
 import { NextIntlClientProvider, useMessages } from 'next-intl'
-import { MainContext } from '@/@core/service/context/main'
 import StyledComponentsRegistry from '@/lib/AntdRegistry'
 import { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
@@ -51,9 +50,9 @@ const RootLayout = ({ children, params: { locale } }: { children: React.ReactNod
     <html lang={locale} className={inter.className}>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <MainContext>
+         
             <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
-          </MainContext>
+       
         </NextIntlClientProvider>
         <ToastContainer />
       </body>

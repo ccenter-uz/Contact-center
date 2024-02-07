@@ -4,10 +4,10 @@ import { getLocale } from 'next-intl/server'
 import { getData } from '@/@core/components/pages/main/actions'
 import { Metadata } from 'next'
 import Loading from '../loading'
+import Header from '@/@core/components/Header'
 
-const Header = dynamic(() => import('@/@core/components/Header'))
-const Footer = dynamic(() => import('@/@core/components/Footer'))
-const Main = dynamic(() => import('@/@core/components/pages/main'), { loading: () => <Loading /> })
+const Footer = dynamic(() => import('@/@core/components/Footer'), { loading: () => <Loading /> })
+const Main = dynamic(() => import('@/@core/components/pages/main'), { ssr: false, loading: () => <Loading /> })
 
 export const metadata: Metadata = {
   title: 'Contact center – UZTELECOM',

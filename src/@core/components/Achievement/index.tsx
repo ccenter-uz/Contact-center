@@ -64,7 +64,7 @@ export const Achievements: FC<IGlobalDataType> = ({ data }) => {
           </div>
         </div>
         <div className='box-item d-flex align-start  gap-x-1 '>
-          <img src='/assets/achievements/IconService.svg' alt='svg' />
+          <img src='/assets/achievements/IconService.svg' alt='svg' loading='lazy'/>
           <div>
             <h1 className='d-flex align-center gap-x-1'>
               <AnimatedNumbers
@@ -80,7 +80,7 @@ export const Achievements: FC<IGlobalDataType> = ({ data }) => {
           </div>
         </div>
         <div className='box-item d-flex align-start  gap-x-1 '>
-          <img src='/assets/achievements/IconUser3.svg' alt='svg' />
+          <img src='/assets/achievements/IconUser3.svg' alt='svg' loading='lazy'/>
           <div>
             <h1 className='d-flex align-center '>
               <AnimatedNumbers

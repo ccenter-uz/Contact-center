@@ -3,8 +3,15 @@ import './style.scss'
 import { Avatar } from 'antd'
 import { BASIC_LINK, IGlobalDataType, IHistory } from '@/@core/utils/type'
 import dynamic from 'next/dynamic'
+import Loading from '@/app/[locale]/loading'
 
-const StoriesComponent = dynamic(() => import('../Stories').then(res => res.StoriesComponent))
+const StoriesComponent = dynamic(() => import('../Stories').then(res => res.StoriesComponent), {
+  loading: () => (
+    <div style={{ position: 'absolute', zIndex: 99, inset: 0,width:'100dvw',height:'100dvh',background:'rgba(17, 17, 17, 0.92)'}}>
+      <Loading />
+    </div>
+  )
+})
 
 export const ParentStory: FC<IGlobalDataType> = ({ data }) => {
   const [open, setOpen] = useState<boolean>(false)

@@ -7,9 +7,10 @@ import { Globe } from 'react-feather'
 import { Popover, Space } from 'antd'
 import { IGlobalDataType } from '@/@core/utils/type'
 import dynamic from 'next/dynamic'
+import Loading from '@/app/[locale]/loading'
+import LanguageSwitcher from '@/@core/components/SwitchLng'
 
-const ParentStory = dynamic(() => import('./parentStory'))
-const LanguageSwitcher = dynamic(() => import('@/@core/components/SwitchLng'))
+const ParentStory = dynamic(() => import('./parentStory'), { ssr: false, loading: () => <Loading /> })
 const SideBar = dynamic(() => import('../Sidebar').then(res => res.SideBar))
 
 const content = (
@@ -33,14 +34,7 @@ const Header: FC<IGlobalDataType> = ({ data }) => {
     <header id='header' className='d-flex flex-column justify-center align-between '>
       <div className='d-flex justify-between align-center m-b-3'>
         <Link href={'/'}>
-          <img
-            sizes='(min-width:768px) 768px,100vw'
-            id='logo'
-            src={'/assets/logo.svg'}
-            alt='logo'
-            aria-label='logo'
-            fetchPriority='high'
-          />
+          <img sizes='(min-width:768px) 768px,100vw' id='logo' src={'/assets/logo.svg'} alt='logo' aria-label='logo' />
         </Link>
         <div className='block d-flex align-center gap-x-1'>
           <Popover content={content}>

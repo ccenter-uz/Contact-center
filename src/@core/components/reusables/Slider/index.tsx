@@ -71,8 +71,8 @@ const ImageSwiper: FC<ISwiper> = ({ images }) => {
             key={index}
             src={BASIC_LINK + '' + image?.our_team_image_link}
             alt='image'
-            width={'462px'}
-            height={'336px'}
+            fetchPriority='low'
+            loading='lazy'
           />
         )
       })}

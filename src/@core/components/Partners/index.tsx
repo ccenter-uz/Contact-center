@@ -3,9 +3,9 @@ import './style.scss'
 import { useLang } from '@/@core/service/hooks/useLang'
 import { BASIC_LINK, IGlobalDataType, IPartners } from '@/@core/utils/type'
 import dynamic from 'next/dynamic'
-import Image from 'next/image'
+import Loading from '@/app/[locale]/loading'
 
-const AliceCarousel = dynamic(() => import('react-alice-carousel'), { ssr: false })
+const AliceCarousel = dynamic(() => import('react-alice-carousel'), { ssr: false, loading: () => <Loading /> })
 
 const responsive = {
   0: { items: 1 },
@@ -18,12 +18,14 @@ export const Partners: FC<IGlobalDataType> = ({ data }) => {
   const { t } = useLang()
   const items = data.partners.map((image: IPartners) => {
     return (
-      <div key={image.id} className='partner-img'>
-        <Image
-          fill
+      <div key={image.id} >
+        <img
+          fetchPriority='low'
+          loading='lazy'
           sizes='(max-width:400px) 400px,(max-width:768px) 768px,(max-width:1024px) 1024px,100vw'
           src={BASIC_LINK + '' + image.image_link}
           alt='partner'
+          className='partner-img'
         />
       </div>
     )

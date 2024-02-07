@@ -3,8 +3,9 @@ import './style.scss'
 import { useLang } from '@/@core/service/hooks/useLang'
 import { IGlobalDataType } from '@/@core/utils/type'
 import dynamic from 'next/dynamic'
+import Loading from '@/app/[locale]/loading'
 
-const ImageSwiper = dynamic(() => import('../reusables/Slider'))
+const ImageSwiper = dynamic(() => import('../reusables/Slider'),{loading:()=><Loading/>})
 
 export const Community: FC<IGlobalDataType> = ({ data }) => {
   const { t } = useLang()

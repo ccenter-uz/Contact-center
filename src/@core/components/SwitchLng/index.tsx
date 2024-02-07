@@ -28,7 +28,7 @@ const LanguageSwitcher: FC = () => {
 
   return (
     <div className='language_wrapper d-flex align-center  justify-end'>
-      <img width={20} height={20} src='/assets/languageSvg.svg' alt='language' />
+      <img width={20} height={20} src='/assets/languageSvg.svg' alt='language' fetchPriority='high'/>
       <select
         style={{ border: 'none', outline: 'rgb(0, 149, 255)', background: 'transparent', cursor: 'pointer' }}
         aria-label='select-language'
