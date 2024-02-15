@@ -8,7 +8,7 @@ import { Link } from '@/navigation'
 
 type IHeaderConfig = {
   height: '95px'
-  background: '#193BDA'
+  background: 'linear-gradient(180deg, #2d86eb 0%, #023977 100%)'
   padding: ' 15px 20px'
   fontSize: '36px'
   color: '#fff'
@@ -17,7 +17,7 @@ type IHeaderConfig = {
 
 const headerConfig: IHeaderConfig = {
   height: '95px',
-  background: '#193BDA',
+  background: 'linear-gradient(180deg, #2d86eb 0%, #023977 100%)',
   padding: ' 15px 20px',
   fontSize: '36px',
   color: '#fff',

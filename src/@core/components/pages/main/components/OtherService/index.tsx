@@ -19,13 +19,20 @@ export const OtherService: FC<IGlobalDataType> = ({ data }) => {
   const { t } = useLang()
   const items = data?.Servise.map((card: IService, index: number) => {
     return (
-      <div key={index}>
-        <Card hoverable className='other-card'>
+      <div className='other-card' key={index} role='group' aria-label='card'>
+        <div className='other-card-title-block' aria-label='card-title'>
           <h1>{card.title}</h1>
-          <div className='other-img d-flex align-end justify-end'>
+          <h2>{card?.pre_title || 'От 50 000 UZS'}</h2>
+        </div>
+        <div className='other-card-body'>
+          <p>
+            {card?.paragraph ||
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. '}
+          </p>
+          <div className='other-img'>
             <img loading='lazy' fetchPriority='low' src={BASIC_LINK + '' + card.image_link} alt={'card-image'} />
           </div>
-        </Card>
+        </div>
       </div>
     )
   })

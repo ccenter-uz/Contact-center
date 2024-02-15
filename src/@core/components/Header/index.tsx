@@ -15,13 +15,13 @@ const SideBar = dynamic(() => import('../Sidebar').then(res => res.SideBar))
 
 const content = (
   <Space className='d-flex flex-column'>
-    <Link href='/en' locale='en' aria-current='page'>
+    <Link href='/en/' locale='en' aria-current='page'>
       Eng
     </Link>
-    <Link href='/ru' locale='ru' aria-current='page'>
+    <Link href='/ru/' locale='ru' aria-current='page'>
       Рус
     </Link>
-    <Link href='/uz' locale='uz' aria-current='page'>
+    <Link href='/uz/' locale='uz' aria-current='page'>
       Uzb
     </Link>
   </Space>

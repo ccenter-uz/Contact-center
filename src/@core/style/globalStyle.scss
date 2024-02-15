@@ -1,3 +1,18 @@
+// fonts
+@font-face {
+  font-family: 'Gilroy-Bold';
+  src: local('Gilroy-Bold'), url(../../../public/fonts/font/Gilroy-Bold.woff2) format('truetype');
+}
+
+@font-face {
+  font-family: 'Gilroy-Medium';
+  src: local('Gilroy-Medium'), url(../../../public/fonts/font/Gilroy-Medium.woff2) format('truetype');
+}
+
+@font-face {
+  font-family: 'Gilroy-Light';
+  src: local('Gilroy-Light'), url(../../../public/fonts/font/Gilroy-Light.woff2) format('truetype');
+}
 * {
   margin: 0;
   padding: 0;
@@ -16,10 +31,10 @@
 /* variables */
 :root {
   --bgColor: #f5f8fc;
-  --primary: #193bda;
+  --primary: linear-gradient(180deg, #2d86eb 0%, #023977 100%);
   --white: #fff;
   --textColor: #252525;
-  --btnColor: linear-gradient(180deg, #0066ff 0%, #444cfc 100%);
+  --btnColor: linear-gradient(180deg, #2d86eb 0%, #023977 100%);
   --loginBg: #e7f1fb;
   --boxShadow: 0px 20px 50px 0px #0000001a;
   --radiusCard: 10px, 10px, 0px, 0px;
@@ -35,6 +50,7 @@ body {
   margin: 0 auto;
   background: var(--bgColor);
   scroll-behavior: smooth;
+  font-family: 'Gilroy-Medium';
 }
 // styles for Error page
 .error {

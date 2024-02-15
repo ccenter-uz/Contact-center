@@ -2,14 +2,14 @@ import { FC, useState } from 'react'
 import './style.scss'
 import { useLang } from '@/@core/service/hooks/useLang'
 import { Card, Col, Row } from 'antd'
-import { Button } from '../reusables/Button'
+import { Button } from '../../../../reusables/Button'
 import { motion } from 'framer-motion'
 import dynamic from 'next/dynamic'
+import { ModalService } from '@/@core/components/Modal'
 
-const ModalService = dynamic(() => import('../Comment/Modal').then(res => res.ModalService))
 
 const headerConfig = {
-  background: '#193BDA',
+  background: 'linear-gradient(180deg, #2d86eb 0%, #023977 100%)',
   padding: ' 15px 20px',
   fontSize: '22px',
   color: '#fff'
@@ -41,7 +41,7 @@ export const Services: FC = () => {
             title={
               <div className='card-title d-flex align-center justify-between'>
                 <h1>{t('service-first-card-title')}</h1>
-                <img src='/assets/service/Rocket.svg' alt='rocket' loading='lazy' fetchPriority='low'/>
+                <img src='/assets/service/Rocket.svg' alt='rocket' loading='lazy' fetchPriority='low' />
               </div>
             }
             cover={

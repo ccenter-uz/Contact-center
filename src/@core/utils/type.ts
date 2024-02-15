@@ -21,6 +21,8 @@ export type IApplication = {
 }
 export type IService = {
   title: string
+  pre_title:string
+  paragraph:string
   image_link: string
 }
 export type ITeamImages = {

@@ -128,6 +128,17 @@
   .other-section {
     padding: 2rem !important;
     margin-top: 0.5rem !important;
+    .other-card {
+      width: 95%;
+      .other-card-title-block {
+        h1 {
+          font-size: 14px !important;
+        }
+        h2 {
+          font-size: 18px !important;
+        }
+      }
+    }
   }
   // community
   .community {
@@ -151,7 +162,8 @@
     }
     .slide-container {
       img {
-        width: 100% !important;
+        width: 95% !important;
+        margin: auto 8px;
         height: 200px !important;
         object-fit: cover;
       }
@@ -173,13 +185,19 @@
       width: 100% !important;
       .ant-card-head-title {
         text-wrap: pretty !important;
+        /* Safari 9+ */
+        _:default:not(:root:root),
+        & {
+          text-wrap: wrap !important;
+        }
         h1 {
           font-size: 18px !important;
         }
       }
     }
     .join-image {
-      height: 600px;
+      height: fit-content;
+      width: 100% !important;
       .count-users {
         width: 50% !important;
         font-size: 14px !important;
@@ -288,10 +306,26 @@
         }
       }
     }
+    .slide-container {
+      img {
+        width: 95% !important;
+        margin: auto 8px;
+      }
+    }
   }
   // other-section
   .other-section {
     padding: 2rem !important;
+    .other-card {
+      .other-card-title-block {
+        h1 {
+          font-size: 16px !important;
+        }
+        h2 {
+          font-size: 18px !important;
+        }
+      }
+    }
   }
   // join
   .join {

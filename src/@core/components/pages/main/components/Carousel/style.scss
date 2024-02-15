@@ -30,10 +30,9 @@
     background: var(--white);
     box-shadow: var(--boxShadow);
     cursor: pointer;
-    transition: all 0.2s ease-in;
     &:hover {
       color: #fff;
-      background: linear-gradient(90.05deg, #2337f0 27.8%, #00a7ff 98.65%);
+      background: linear-gradient(180deg, #2d86eb 0%, #023977 100%);
     }
   }
 }

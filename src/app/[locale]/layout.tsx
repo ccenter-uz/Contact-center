@@ -1,14 +1,8 @@
 import { NextIntlClientProvider, useMessages } from 'next-intl'
 import StyledComponentsRegistry from '@/lib/AntdRegistry'
 import { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
 import { ToastContainer } from 'react-toastify'
 
-
-const inter = Montserrat({
-  subsets: ['latin'],
-  display: 'swap'
-})
 
 export const metadata: Metadata = {
   title: 'Contact center – UZTELECOM',
@@ -47,12 +41,10 @@ const RootLayout = ({ children, params: { locale } }: { children: React.ReactNod
   const messages = useMessages()
 
   return (
-    <html lang={locale} className={inter.className}>
+    <html lang={locale} >
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
-         
-            <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
-       
+          <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
         </NextIntlClientProvider>
         <ToastContainer />
       </body>

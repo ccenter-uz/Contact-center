@@ -2,7 +2,7 @@ import { FC } from 'react'
 import './style.scss'
 import { Col, Form, Input, Modal, Row, Select } from 'antd'
 import { useLang } from '@/@core/service/hooks/useLang'
-import { Button } from '../../reusables/Button'
+import { Button } from '../reusables/Button'
 import { api } from '@/@core/utils/api'
 import { toast } from 'react-toastify'
 
