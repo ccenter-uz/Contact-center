@@ -40,7 +40,7 @@
   }
   // header
   header {
-    padding: 1rem 0.5rem !important;
+    padding: 0.5rem 0.5rem 0 0.5em !important;
     gap: 0.2em;
     .circles-wrapper {
       padding: 0 !important;
@@ -59,6 +59,12 @@
       display: none !important;
     }
   }
+
+   // parent-story
+   #parent-story {
+    padding: 0 8px 16px 8px !important;
+  }
+
   // carousel
   .carousel .carousel-item {
     height: 100% !important;
@@ -228,12 +234,17 @@
   }
   // footer
   .footer {
-    padding: 2rem !important;
-    margin-top: 2rem !important;
+    padding: 1.5rem !important;
+    margin-top: 1.5rem !important;
 
     .footer-right {
       flex-direction: column;
     }
+  }
+   // additional
+   #additional{
+    padding:1em !important;
+    margin-top: 1em !important;
   }
 }
 
@@ -249,10 +260,15 @@
   // header
   header {
     padding: 1rem 2rem !important;
-    ul {
-      flex: 0.7 !important;
-    }
+   .switcher{
+    flex:0.5 !important
+   }
   }
+  // parent-story
+  #parent-story {
+    padding: 1rem 2rem !important;
+  }
+
   // carousel
   .carousel-item {
     background-size: contain !important;
@@ -278,7 +294,7 @@
       }
     }
   }
-  ///services
+  //services
   .services {
     padding: 2rem !important;
     .service-content {
@@ -373,17 +389,26 @@
       flex-direction: column;
     }
   }
+  // additional
+  #additional{
+    padding: 2rem !important;
+    margin-top: 2rem !important;
+  }
 }
 
 /* Desktop Styles (1024px and above) */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) and (max-width:1240px) {
   .join-image {
     height: 731px;
     img {
       max-width: 100% !important;
     }
   }
-  /* Your desktop styles here */
+  #header{
+    .switcher{
+      flex: 0.5 ;
+    }
+  }
   p,
   a {
     font-size: 17px;

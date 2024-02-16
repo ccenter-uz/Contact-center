@@ -1,5 +1,5 @@
 'use client'
-import { FC, useEffect, useLayoutEffect, useState } from 'react'
+import { FC, useLayoutEffect, useState } from 'react'
 import './style.scss'
 import dynamic from 'next/dynamic'
 import { IGlobalDataType } from '@/@core/utils/type'
@@ -8,16 +8,24 @@ import { FloatButton } from 'antd'
 import { ArrowUp } from 'react-feather'
 import CarouselComp from './components/Carousel'
 
+const ParentStory = dynamic(() => import('./components/NavStories'), { ssr: false, loading: () => <Loading /> })
+
 const Achievements = dynamic(() => import('./components/Achievement').then(res => res.Achievements), {
   loading: () => <Loading />
 })
-const Services = dynamic(() => import('./components/Services').then(res => res.Services), { loading: () => <Loading /> })
+const Services = dynamic(() => import('./components/Services').then(res => res.Services), {
+  loading: () => <Loading />
+})
 const OtherService = dynamic(() => import('./components/OtherService').then(res => res.OtherService), {
   loading: () => <Loading />
 })
-const Community = dynamic(() => import('./components/Community').then(res => res.Community), { loading: () => <Loading /> })
+const Community = dynamic(() => import('./components/Community').then(res => res.Community), {
+  loading: () => <Loading />
+})
 const JoinOurTeam = dynamic(() => import('./components/JoinOutTeam').then(res => res.JoinOurTeam))
-const Partners = dynamic(() => import('./components/Partners').then(res => res.Partners), { loading: () => <Loading /> })
+const Partners = dynamic(() => import('./components/Partners').then(res => res.Partners), {
+  loading: () => <Loading />
+})
 const Comment = dynamic(() => import('./components/Comment').then(res => res.Comment), { loading: () => <Loading /> })
 
 const Main: FC<IGlobalDataType> = ({ data }) => {
@@ -41,6 +49,7 @@ const Main: FC<IGlobalDataType> = ({ data }) => {
 
   return (
     <main className='main-page'>
+      <ParentStory data={data} />
       <CarouselComp data={data} />
       <Achievements data={data} />
       <Services />

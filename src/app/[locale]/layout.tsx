@@ -2,7 +2,12 @@ import { NextIntlClientProvider, useMessages } from 'next-intl'
 import StyledComponentsRegistry from '@/lib/AntdRegistry'
 import { Metadata } from 'next'
 import { ToastContainer } from 'react-toastify'
+import dynamic from 'next/dynamic'
+import Loading from './loading'
+import Header from '@/@core/components/Header'
 
+
+const Footer = dynamic(() => import('@/@core/components/Footer'), { loading: () => <Loading /> })
 
 export const metadata: Metadata = {
   title: 'Contact center – UZTELECOM',
@@ -39,12 +44,17 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children, params: { locale } }: { children: React.ReactNode; params: any }) => {
   const messages = useMessages()
+  
 
   return (
-    <html lang={locale} >
+    <html lang={locale}>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+          <StyledComponentsRegistry>
+            <Header />
+            {children}
+            <Footer />
+          </StyledComponentsRegistry>
         </NextIntlClientProvider>
         <ToastContainer />
       </body>

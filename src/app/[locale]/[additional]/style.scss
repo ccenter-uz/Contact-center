@@ -1,0 +1,12 @@
+@use '/src/@core/style/media';
+#additional {
+  padding: var(--paddingSection);
+  opacity: 0;
+  animation: fade-in 0.5s linear forwards;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}

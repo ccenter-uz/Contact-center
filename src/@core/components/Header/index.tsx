@@ -5,12 +5,9 @@ import Link from 'next/link'
 import { useLang } from '@/@core/service/hooks/useLang'
 import { Globe } from 'react-feather'
 import { Popover, Space } from 'antd'
-import { IGlobalDataType } from '@/@core/utils/type'
 import dynamic from 'next/dynamic'
-import Loading from '@/app/[locale]/loading'
 import LanguageSwitcher from '@/@core/components/SwitchLng'
 
-const ParentStory = dynamic(() => import('./parentStory'), { ssr: false, loading: () => <Loading /> })
 const SideBar = dynamic(() => import('../Sidebar').then(res => res.SideBar))
 
 const content = (
@@ -27,22 +24,30 @@ const content = (
   </Space>
 )
 
-const Header: FC<IGlobalDataType> = ({ data }) => {
+const Header: FC = () => {
   const { t, locale } = useLang()
 
   return (
     <header id='header' className='d-flex flex-column justify-center align-between '>
       <div className='d-flex justify-between align-center m-b-3'>
-        <Link href={'/'}>
-          <img sizes='(min-width:768px) 768px,100vw' id='logo' src={'/assets/logo.svg'} alt='logo' aria-label='logo' />
-        </Link>
+        <div aria-label='logo-wrapper' className='logo'>
+          <Link href={'/'} aria-current='page'>
+            <img
+              sizes='(min-width:768px) 768px,100vw'
+              id='logo'
+              src={'/assets/logo.svg'}
+              alt='logo'
+              aria-label='logo'
+            />
+          </Link>
+        </div>
         <div className='block d-flex align-center gap-x-1'>
           <Popover content={content}>
             <Globe size={20} />
           </Popover>
           <SideBar />
         </div>
-        <ul className='header-links w-30 d-flex align-center justify-between'>
+        <ul aria-label='menu-link-list' className='header-links d-flex align-center justify-between'>
           <li>
             <Link href={`#services`} locale={locale} aria-current='page'>
               {t('services')}
@@ -59,12 +64,11 @@ const Header: FC<IGlobalDataType> = ({ data }) => {
             </Link>
           </li>
         </ul>
-        <div className='switcher'>
+        <div aria-label='select-wrapper' className='switcher'>
           <LanguageSwitcher />
         </div>
       </div>
       <p style={{ fontSize: '12px' }}>{t('follow-last-news')}</p>
-      <ParentStory data={data} />
     </header>
   )
 }

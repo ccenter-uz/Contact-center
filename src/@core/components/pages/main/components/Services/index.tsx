@@ -4,7 +4,6 @@ import { useLang } from '@/@core/service/hooks/useLang'
 import { Card, Col, Row } from 'antd'
 import { Button } from '../../../../reusables/Button'
 import { motion } from 'framer-motion'
-import dynamic from 'next/dynamic'
 import { ModalService } from '@/@core/components/Modal'
 
 
@@ -51,6 +50,8 @@ export const Services: FC = () => {
                   alt='card-img'
                   sizes='sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"'
                   loading='lazy'
+                  width={'auto'}
+                  height={'auto'}
                 />
             }
             bodyStyle={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
