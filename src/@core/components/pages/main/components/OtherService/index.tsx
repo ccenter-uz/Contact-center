@@ -42,7 +42,7 @@ export const OtherService: FC<IGlobalDataType> = ({ data }) => {
       <div className='other-title d-flex justify-center '>
         <h1>{t('other-service')}</h1>
       </div>
-      <AliceCarousel disableButtonsControls responsive={responsive} items={items} animationDuration={1500} />
+      <AliceCarousel disableButtonsControls responsive={responsive} items={items}  animationDuration={1500} />
     </section>
   )
 }

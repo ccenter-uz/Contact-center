@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { CSSProperties, FC } from 'react'
 import './style.scss'
 import { Card, Col, Row } from 'antd'
 import { useLang } from '@/@core/service/hooks/useLang'
@@ -6,18 +6,9 @@ import { ArrowRight } from 'react-feather'
 import { motion } from 'framer-motion'
 import { Link } from '@/navigation'
 
-type IHeaderConfig = {
-  height: '95px'
-  background: 'linear-gradient(180deg, #2d86eb 0%, #023977 100%)'
-  padding: ' 15px 20px'
-  fontSize: '36px'
-  color: '#fff'
-  textAlign: 'center'
-}
-
-const headerConfig: IHeaderConfig = {
+const headerConfig: CSSProperties = {
   height: '95px',
-  background: 'linear-gradient(180deg, #2d86eb 0%, #023977 100%)',
+  background: 'rgba(21, 110, 211, 1)',
   padding: ' 15px 20px',
   fontSize: '36px',
   color: '#fff',
@@ -33,7 +24,7 @@ export const JoinOurTeam: FC = () => {
         initial={{ x: -100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ type: 'tween', duration: 1 }}
-        viewport={{ once: true }}  
+        viewport={{ once: true }}
       >
         <img
           fetchPriority='low'

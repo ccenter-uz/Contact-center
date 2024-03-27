@@ -28,7 +28,7 @@ const Header: FC = () => {
   const { t, locale } = useLang()
 
   return (
-    <header id='header' className='d-flex flex-column justify-center align-between '>
+    <header id='header' className={`d-flex flex-column justify-center align-between `}>
       <div className='d-flex justify-between align-center m-b-3'>
         <div aria-label='logo-wrapper' className='logo'>
           <Link href={'/'} aria-current='page'>

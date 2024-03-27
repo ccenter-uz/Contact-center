@@ -13,6 +13,10 @@
   font-family: 'Gilroy-Light';
   src: local('Gilroy-Light'), url(../../../public/fonts/font/Gilroy-Light.woff2) format('truetype');
 }
+// IMPORTS
+@import './variables/global.scss';
+
+
 * {
   margin: 0;
   padding: 0;
@@ -20,27 +24,6 @@
   text-decoration: none;
   scroll-behavior: smooth;
   box-sizing: border-box;
-  h1,
-  p,
-  span,
-  a {
-    color: var(--textColor);
-  }
-}
-
-/* variables */
-:root {
-  --bgColor: #f5f8fc;
-  --primary: linear-gradient(180deg, #2d86eb 0%, #023977 100%);
-  --white: #fff;
-  --textColor: #252525;
-  --btnColor: linear-gradient(180deg, #2d86eb 0%, #023977 100%);
-  --loginBg: #e7f1fb;
-  --boxShadow: 0px 20px 50px 0px #0000001a;
-  --radiusCard: 10px, 10px, 0px, 0px;
-  --mainPaddingX: 1rem;
-  --mainPaddingY: 1rem;
-  --paddingSection: 3em 5em;
 }
 
 body {

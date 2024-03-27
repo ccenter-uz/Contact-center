@@ -1,8 +1,12 @@
 .comment {
   margin-top: 4rem;
   padding: var(--paddingSection);
+  .slick-track{
+    display: flex;
+    gap: 16px;
+  }
   .ant-card {
-    width: 95% !important;
+    width: 100%;
     min-height: 420px;
     display: flex !important;
     flex-direction: column !important;

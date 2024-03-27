@@ -18,7 +18,7 @@ const setting = {
   initialSlide: 0,
   responsive: [
     {
-      breakpoint: 1440,
+      breakpoint: 1441,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2
@@ -41,8 +41,8 @@ const setting = {
     {
       breakpoint: 768,
       settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
+        slidesToShow: 1,
+        slidesToScroll: 1
       }
     },
     {
@@ -73,6 +73,8 @@ const ImageSwiper: FC<ISwiper> = ({ images }) => {
             alt='image'
             fetchPriority='low'
             loading='lazy'
+            height={'auto'}
+            width={'100%'}
           />
         )
       })}

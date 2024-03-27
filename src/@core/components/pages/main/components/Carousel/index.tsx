@@ -14,11 +14,12 @@ const CarouselComp: FC<IGlobalDataType> = ({ data }) => {
           return (
             <img
               key={image.id}
-              src={BASIC_LINK + '' + image.haeder_image_link}
+              srcSet={`/mobile.png 768w,  ${BASIC_LINK + '' + image.haeder_image_link} 1024w,`}
               alt='LOADING...'
               id={`image-${image.id}`}
-              style={{ objectFit: 'cover' }}
               className='carousel-item'
+              height={'auto'}
+              width={'100%'}
             />
           )
         })}

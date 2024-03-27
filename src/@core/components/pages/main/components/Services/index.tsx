@@ -8,7 +8,7 @@ import { ModalService } from '@/@core/components/Modal'
 
 
 const headerConfig = {
-  background: 'linear-gradient(180deg, #2d86eb 0%, #023977 100%)',
+  background: 'rgba(21, 110, 211, 1)',
   padding: ' 15px 20px',
   fontSize: '22px',
   color: '#fff'

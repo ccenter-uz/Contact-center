@@ -1,3 +1,4 @@
+'use server'
 import { IGlobalDataType } from '@/@core/utils/type'
 
 export const getData = async (locale: unknown) => {

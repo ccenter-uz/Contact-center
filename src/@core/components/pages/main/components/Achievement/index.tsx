@@ -31,10 +31,11 @@ export const Achievements: FC<IGlobalDataType> = ({ data }) => {
         className='box-wrapper'
         viewport={{ once: true }}
       >
-        <div className='box-item d-flex align-start  gap-x-1 '>
+        <div className='box-item d-flex align-center  gap-x-1 '>
           <img src='/assets/achievements/IconUsers.svg' alt='svg' />
           <div>
             <h1 className='d-flex align-center '>
+              +
               <AnimatedNumbers
                 includeComma
                 transitions={index => ({
@@ -47,10 +48,11 @@ export const Achievements: FC<IGlobalDataType> = ({ data }) => {
             <p>{data.statistic[0]?.title || 'Неизвестно'}</p>
           </div>
         </div>
-        <div className='box-item d-flex align-start  gap-x-1 '>
+        <div className='box-item d-flex align-center  gap-x-1 '>
           <img src='/assets/achievements/IconUser2.svg' alt='svg' />
           <div>
-            <h1 className='d-flex align-center gap-x-1'>
+            <h1 className='d-flex align-center '>
+              +
               <AnimatedNumbers
                 includeComma
                 transitions={index => ({
@@ -63,10 +65,11 @@ export const Achievements: FC<IGlobalDataType> = ({ data }) => {
             <p>{data.statistic[1]?.title || 'Неизвестно'}</p>
           </div>
         </div>
-        <div className='box-item d-flex align-start  gap-x-1 '>
-          <img src='/assets/achievements/IconService.svg' alt='svg' loading='lazy'/>
+        <div className='box-item d-flex align-center  gap-x-1 '>
+          <img src='/assets/achievements/IconService.svg' alt='svg' loading='lazy' />
           <div>
-            <h1 className='d-flex align-center gap-x-1'>
+            <h1 className='d-flex align-center '>
+              +
               <AnimatedNumbers
                 includeComma
                 transitions={index => ({
@@ -79,10 +82,11 @@ export const Achievements: FC<IGlobalDataType> = ({ data }) => {
             <p>{data.statistic[2]?.title || 'Неизвестно'}</p>
           </div>
         </div>
-        <div className='box-item d-flex align-start  gap-x-1 '>
-          <img src='/assets/achievements/IconUser3.svg' alt='svg' loading='lazy'/>
+        <div className='box-item d-flex align-center  gap-x-1 '>
+          <img src='/assets/achievements/IconUser3.svg' alt='svg' loading='lazy' />
           <div>
-            <h1 className='d-flex align-center '>
+            <h1 className='d-flex align-center'>
+              +
               <AnimatedNumbers
                 includeComma
                 transitions={index => ({

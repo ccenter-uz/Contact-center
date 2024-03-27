@@ -48,7 +48,7 @@ const Main: FC<IGlobalDataType> = ({ data }) => {
   }, [])
 
   return (
-    <main className='main-page'>
+    <main className={` main-page`}>
       <ParentStory data={data} />
       <CarouselComp data={data} />
       <Achievements data={data} />
