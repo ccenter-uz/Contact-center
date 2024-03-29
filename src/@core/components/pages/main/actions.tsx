@@ -11,3 +11,4 @@ export const getData = async (locale: unknown) => {
     console.log(err, 'err')
   }
 }
+

@@ -11,10 +11,10 @@ const setting = {
   infinite: true,
   autoplay: true,
   slidesToShow: 3,
-  speed: 500,
+  speed: 3500,
   draggable: true,
   dots: false,
-  autoplaySpeed: 2500,
+  autoplaySpeed: 3500,
   initialSlide: 0,
   responsive: [
     {

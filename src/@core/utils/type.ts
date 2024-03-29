@@ -8,6 +8,7 @@ export type IHeaderImages = {
   id: string
   haeder_image_link: string
   create_data: string
+  haeder_image_mobile_link?: string
 }
 export type IStatistic = { title: string; statistic: string }
 export type IApplication = {
@@ -21,8 +22,8 @@ export type IApplication = {
 }
 export type IService = {
   title: string
-  pre_title:string
-  paragraph:string
+  price: string
+  paragraph: string
   image_link: string
 }
 export type ITeamImages = {

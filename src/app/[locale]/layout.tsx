@@ -6,6 +6,7 @@ import dynamic from 'next/dynamic'
 import Loading from './loading'
 import Header from '@/@core/components/Header'
 
+
 const Footer = dynamic(() => import('@/@core/components/Footer'), { loading: () => <Loading /> })
 
 export const metadata: Metadata = {
@@ -47,14 +48,14 @@ const RootLayout = ({ children, params }: { children: React.ReactNode; params: a
   return (
     <html lang={params.locale}>
       <body>
-          <NextIntlClientProvider locale={params.locale} messages={messages}>
-            <StyledComponentsRegistry>
-              <Header />
-              {children}
-              <Footer />
-            </StyledComponentsRegistry>
-          </NextIntlClientProvider>
-          <ToastContainer />
+        <NextIntlClientProvider locale={params.locale} messages={messages}>
+          <StyledComponentsRegistry>
+            <Header />
+            {children}
+            <Footer />
+          </StyledComponentsRegistry>
+        </NextIntlClientProvider>
+        <ToastContainer />
       </body>
     </html>
   )

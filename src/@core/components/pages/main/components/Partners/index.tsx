@@ -18,7 +18,7 @@ export const Partners: FC<IGlobalDataType> = ({ data }) => {
   const { t } = useLang()
   const items = data.partners.map((image: IPartners) => {
     return (
-      <div key={image.id} >
+      <div key={image.id}>
         <img
           fetchPriority='low'
           loading='lazy'
@@ -32,16 +32,17 @@ export const Partners: FC<IGlobalDataType> = ({ data }) => {
   })
 
   return (
-    <section id='partners' className='partners d-flex flex-column justify-around gap-3'>
+    <section id='partners' className='partners d-flex flex-column justify-evenly gap-y-3'>
       <div className='partners-title d-flex justify-center'>
         <h1>{t('partners')}</h1>
       </div>
       <div className='partners-images  d-flex align-center justify-between'>
         <AliceCarousel
           disableButtonsControls
+          disableDotsControls
           responsive={responsive}
           items={items}
-          animationDuration={2500}
+          animationDuration={4500}
           autoPlay
           infinite
         />

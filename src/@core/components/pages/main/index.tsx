@@ -47,6 +47,7 @@ const Main: FC<IGlobalDataType> = ({ data }) => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [])
 
+
   return (
     <main className={` main-page`}>
       <ParentStory data={data} />

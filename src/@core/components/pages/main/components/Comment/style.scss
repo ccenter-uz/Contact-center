@@ -1,20 +1,26 @@
 .comment {
   margin-top: 4rem;
   padding: var(--paddingSection);
-  .slick-track{
+
+  .slick-track {
     display: flex;
     gap: 16px;
   }
+
   .ant-card {
     width: 100%;
-    min-height: 420px;
+    max-height: fit-content;
+    min-height: 300px;
     display: flex !important;
     flex-direction: column !important;
+
     .ant-card-body {
       text-wrap: pretty;
     }
+
     .comment-card-title {
       margin: 2rem 0 0.5rem 0;
+
       img {
         object-fit: contain;
       }

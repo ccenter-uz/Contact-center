@@ -1,16 +1,18 @@
 .footer {
-  margin-top: 6rem;
+  margin-top: 4rem;
   min-height: 322px;
   background: var(--white);
   box-shadow: var(--boxShadow);
   padding: 44px 106px 24px 106px;
   position: relative;
+
   &::before {
     content: url('/assets/footer/shapws.svg');
     position: absolute;
     bottom: 0;
     left: 0;
   }
+
   .footer-links {
     margin-left: 9%;
     flex: 1;
@@ -19,26 +21,32 @@
       color: #000 !important;
       cursor: pointer;
       transition: all 0.2s ease-in-out;
+
       &:hover {
         opacity: 0.7;
       }
     }
   }
+
   .footer-right {
     flex: 0.5;
+
     .footer-address {
       li {
         cursor: pointer;
         transition: all 0.2s ease-in-out;
+
         &:hover {
           opacity: 0.7;
         }
       }
     }
+
     .footer-uzdst {
       li img {
         cursor: pointer;
         transition: all 0.2s ease-in-out;
+
         &:hover {
           opacity: 0.7;
         }

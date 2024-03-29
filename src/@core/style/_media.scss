@@ -5,6 +5,7 @@
       height: 100%;
     }
   }
+
   .footer {
     &::before {
       position: absolute;
@@ -12,6 +13,7 @@
       right: 0;
       transform: scaleX(-1);
     }
+
     .footer-copyright {
       z-index: 9999;
       padding: 0.5rem;
@@ -27,26 +29,33 @@
   h1 {
     font-size: var(--font-size-l) !important;
   }
+
   p,
   a {
     font-size: var(--font-size-s) !important;
   }
+
   // header
   header {
     padding: 0.5rem 0.5rem 0 0.5em !important;
     gap: 0.2em;
+
     .circles-wrapper {
       padding: 0 !important;
+
       .circle-item {
         margin-bottom: 8px !important;
       }
     }
+
     .block {
       display: flex !important;
     }
+
     #logo {
       width: 170px;
     }
+
     ul,
     .switcher {
       display: none !important;
@@ -65,17 +74,21 @@
     padding: 24px 16px !important;
     flex-direction: column;
     gap: 16px 0;
+
     .title-wrapper {
       width: 100%;
       text-align: center;
+
       .achievements-title {
         width: 100% !important;
       }
     }
+
     .box-wrapper {
       width: 100%;
       gap: 0 !important;
       align-items: center;
+
       .box-item {
         width: 100%;
         margin: auto auto;
@@ -83,19 +96,23 @@
       }
     }
   }
+
   //services
   .services {
     padding: 16px !important;
     margin-top: 1.5rem !important;
+
     .card-title {
       flex-wrap: wrap !important;
     }
 
     .service-content {
       margin-top: 16px !important;
+
       .content-left {
         width: 95% !important;
         margin: 0 !important;
+
         .card-item-left {
           width: 100% !important;
           height: fit-content !important;
@@ -107,13 +124,17 @@
           }
         }
       }
+
       .content-right {
         margin: 0 !important;
+
         .card-item {
           height: fit-content !important;
+
           .ant-card-head-title {
             font-size: 16px !important;
           }
+
           .btn {
             position: relative !important;
             bottom: -0.5rem !important;
@@ -122,42 +143,66 @@
       }
     }
   }
+
   // other-section
   .other-section {
     padding: 16px !important;
     margin-top: 0.5rem !important;
     gap: 24px;
     min-height: fit-content !important;
+
+    .other-title {
+      margin-bottom: 0 !important;
+    }
+
+    .alice-carousel__dots {
+      margin: 16px !important;
+
+      .alice-carousel__dots-item {
+        width: 8px !important;
+        height: 8px !important;
+      }
+
+    }
+
     .other-card {
       width: 95%;
       margin: 0 auto;
+
       .other-card-title-block {
         h1 {
           font-size: 14px !important;
         }
+
         h2 {
           font-size: 18px !important;
         }
       }
     }
   }
+
   // community
   .community {
-    margin-top: 3rem !important;
+    margin-top: 24px !important;
     padding: 16px !important;
     min-height: 580px !important;
+
     .community-content {
       flex-direction: column !important;
       margin-top: 0;
+
       .content-text {
         width: 100% !important;
+
         p {
           font-size: 14px !important;
         }
+
         span {
           font-size: 12px !important;
         }
       }
+
       .content-images {
         width: 100% !important;
         justify-content: center;
@@ -169,64 +214,80 @@
   .join {
     margin-top: 1em;
     padding: 8px !important;
+
     .card-item {
       min-height: fit-content !important;
+
       .card-link {
         margin-top: 16px !important;
       }
+
       .ant-card-head {
         height: fit-content !important;
       }
+
       .ant-card-body {
         padding: 16px !important;
       }
     }
+
     .join-card {
       width: 100% !important;
+
       .ant-card-head-title {
         text-wrap: pretty !important;
+
         /* Safari 9+ */
         _:default:not(:root:root),
         & {
           text-wrap: wrap !important;
         }
+
         h1 {
           font-size: var(--font-size-m) !important;
         }
       }
     }
+
     .join-image {
       height: fit-content;
       width: 100% !important;
     }
+
     .card-link {
       h3 {
         font-size: var(--font-size-s) !important;
       }
     }
   }
+
   // partners
   .partners {
     padding: 16px !important;
     min-height: fit-content !important;
     margin-top: 2em !important;
+
     .partners-title {
       h1 {
         font-size: var(--font-size-l) !important;
       }
     }
+
     .partners-images {
       justify-content: center !important;
     }
   }
+
   // comment
   .comment {
     padding: 8px !important;
     margin-top: 2rem !important;
+
     .ant-card-body {
       font-size: var(--font-size-s) !important;
     }
   }
+
   // footer
   .footer {
     padding: 1.5rem !important;
@@ -236,6 +297,7 @@
       flex-direction: column;
     }
   }
+
   // additional
   #additional {
     padding: 1em !important;
@@ -248,17 +310,21 @@
   h1 {
     font-size: var(--font-size-l) !important;
   }
+
   p,
   a {
     font-size: var(--font-size-m) !important;
   }
+
   // header
   header {
     padding: 1rem 2rem !important;
+
     .switcher {
       flex: 0.5 !important;
     }
   }
+
   // parent-story
   #parent-story {
     padding: 0 2rem 1em !important;
@@ -269,27 +335,34 @@
     padding: 2rem !important;
     flex-direction: column;
     gap: 2rem 0;
+
     .title-wrapper {
       width: 100%;
       text-align: center;
+
       .achievements-title {
         width: 100% !important;
         font-size: 35px !important;
       }
     }
+
     .box-wrapper {
       width: 100%;
       gap: 2rem !important;
     }
   }
+
   //services
   .services {
     padding: 16px !important;
+
     .service-content {
       margin-top: 2rem !important;
+
       .content-left {
         width: 100% !important;
         margin: 0 !important;
+
         .card-item-left {
           width: 558px !important;
           height: fit-content !important;
@@ -297,86 +370,106 @@
       }
     }
   }
+
   // community
   .community {
     padding: 16px !important;
     min-height: 450px !important;
+
     .community-content {
       .content-text {
         p {
           font-size: var(--font-size-m) !important;
         }
+
         span {
           font-size: var(--font-size-s) !important;
         }
       }
     }
   }
+
   // other-section
   .other-section {
     padding: 16px !important;
     min-height: fit-content !important;
+
     .other-title {
       font-size: var(--font-size-l) !important;
     }
+
     .other-card {
       p {
         font-size: var(--font-size-s) !important;
       }
+
       .other-card-title-block {
         h1 {
           font-size: var(--font-size-l) !important;
         }
+
         h2 {
           font-size: var(--font-size-l) !important;
         }
       }
     }
   }
+
   // join
   .join {
     padding: 16px !important;
     margin-top: 2em !important;
+
     .card-item {
       min-height: fit-content !important;
+
       h1 {
         font-size: var(--font-size-l) !important;
       }
+
       .ant-card-head {
         height: fit-content !important;
       }
+
       .ant-card-body {
         padding: 16px 2em !important;
       }
     }
+
     .join-image {
       height: 731px;
+
       img {
         max-width: 100% !important;
       }
     }
+
     .card-link {
       h3 {
         font-size: 14px !important;
       }
     }
   }
+
   // comment
   .comment {
     padding: 8px !important;
     margin-top: 2rem !important;
   }
+
   // partners
   .partners {
     padding: 16px !important;
     min-height: fit-content !important;
     margin-top: 2em !important;
+
     .partners-title {
       h1 {
         font-size: var(--font-size-l) !important;
       }
     }
   }
+
   // footer
   .footer {
     padding: 2rem !important;
@@ -386,6 +479,7 @@
       flex-direction: column;
     }
   }
+
   // additional
   #additional {
     padding: 2rem !important;
@@ -397,15 +491,18 @@
 @media only screen and (min-width: 1024px) and (max-width: 1240px) {
   .join-image {
     height: 731px;
+
     img {
       max-width: 100% !important;
     }
   }
+
   #header {
     .switcher {
       flex: 0.5;
     }
   }
+
   p,
   a {
     font-size: 17px;
@@ -415,12 +512,15 @@
 @media only screen and (min-width: 1920px) {
   .other-carousel {
     width: 100% !important;
+
     .slick-slide {
       margin: 0 auto !important;
     }
   }
+
   .join-image {
     height: 731px;
+
     img {
       max-width: 100% !important;
     }

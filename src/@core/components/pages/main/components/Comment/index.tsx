@@ -6,12 +6,12 @@ import { BASIC_LINK, IGlobalDataType, IPartners } from '@/@core/utils/type'
 const settings = {
   infinite: true,
   autoplay: true,
-  speed: 2500,
+  speed: 5500,
   dots: false,
   draggable: true,
   slidesToShow: 4,
   initialSlide: 0,
-  autoplaySpeed: 2500,
+  autoplaySpeed: 5500,
   responsive: [
     {
       breakpoint: 1440,
@@ -61,14 +61,21 @@ const settings = {
 
 export const Comment: FC<IGlobalDataType> = ({ data }) => {
   return (
-    <Carousel {...settings} className='comment d-flex align-center justify-center' pauseOnHover={false}>
+    <Carousel {...settings} className='comment d-flex align-center justify-center' pauseOnHover={true}>
       {data?.PartnerComments.map((partner: IPartners) => {
         return (
           <Card
             key={partner.id}
             title={
               <div className='comment-card-title d-flex align-center justify-center p-y-2 '>
-                <img fetchPriority='low' loading='lazy' src={BASIC_LINK + '' + partner.image_link} alt='clickup' width={'160px'} height={'80px'} />
+                <img
+                  fetchPriority='low'
+                  loading='lazy'
+                  src={BASIC_LINK + '' + partner.image_link}
+                  alt='clickup'
+                  width={'160px'}
+                  height={'80px'}
+                />
               </div>
             }
           >

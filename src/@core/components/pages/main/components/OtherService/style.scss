@@ -1,81 +1,63 @@
 .other-section {
   margin-top: 3rem;
   min-height: 533px;
-  background: var(--primary);
-  box-shadow: var(--boxShadow);
   padding: var(--paddingSection);
+
   .alice-carousel__dots {
     .alice-carousel__dots-item {
-      width: 10px;
-      height: 10px;
+      width: 12px;
+      height: 12px;
       opacity: 0.5;
-      background: #fff;
+      background: var(--primary);
     }
+
     .__active {
-      background: #fff;
+      background: #408adf;
       opacity: 1;
     }
   }
-  .other-carousel {
-    margin: 0 auto;
-  }
+
+
   .other-title {
+    margin-bottom: 1em;
+
     h1 {
-      color: #fff;
       font-size: 36px;
       font-weight: 600;
     }
   }
+
   .other-card {
     background: #fff;
     border-radius: 8px;
     max-width: 319px;
-    height: 318px;
+    min-height: 407px;
     margin: auto;
-    .other-card-title-block {
-      height: 82px;
-      padding: 16px 16px 8px 16px;
-      background: rgb(136 192 255 / 25%);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      h1 {
-        font-size: 16px;
-        font-weight: 500;
-      }
-      h2 {
-        font-size: 24px;
-        color: #408ADF;
 
-      }
-    }
-    .other-card-body {
-      height: 236px;
+    .other-img {
       display: flex;
-      flex-direction: column;
-      align-items: space-between;
-      justify-content: space-between;
-      padding: 8px 16px;
-      p {
-        font-size: 14px;
-        color: rgba(100, 116, 139, 1);
-      }
-      .other-img {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        img {
-          width: 100%;
-          height: 100%;
-          max-width: 149px;
-          max-height: 107px;
-          object-fit: contain;
-        }
+      align-items: center;
+      justify-content: flex-end;
+      height: 30cqh;
+      max-height: 200px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
       }
     }
-  }
-  #present {
-    bottom: -0.4rem !important;
-    right: 0;
+
+    .other-card-body {
+      min-height: 118px;
+      word-break: keep-all;
+      border-radius: 16px;
+      background: rgba(205, 222, 255, 0.39);
+      padding: 8px 16px;
+      font-size: 13px;
+      color: rgba(100, 116, 139, 0.986);
+      margin-top: 16px;
+
+    }
   }
 }

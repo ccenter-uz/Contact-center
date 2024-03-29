@@ -19,21 +19,24 @@ export const OtherService: FC<IGlobalDataType> = ({ data }) => {
   const { t } = useLang()
   const items = data?.Servise.map((card: IService, index: number) => {
     return (
-      <div className='other-card' key={index} role='group' aria-label='card'>
-        <div className='other-card-title-block' aria-label='card-title'>
-          <h1>{card.title}</h1>
-          <h2>{card?.pre_title || 'От 50 000 UZS'}</h2>
-        </div>
-        <div className='other-card-body'>
-          <p>
-            {card?.paragraph ||
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. '}
-          </p>
+      <Card
+        key={index}
+        className='other-card'
+        cover={
           <div className='other-img'>
             <img loading='lazy' fetchPriority='low' src={BASIC_LINK + '' + card.image_link} alt={'card-image'} />
           </div>
-        </div>
-      </div>
+        }
+      >
+        <Card.Meta
+          title={card.title}
+          description={<h1 style={{ fontSize: '29px', color: 'rgb(37 37 88)' }}>От {card.price || '50 000'} UZS</h1>}
+        />
+        <p className='other-card-body'>
+          {card.paragraph ||
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. '}
+        </p>
+      </Card>
     )
   })
 
@@ -42,7 +45,15 @@ export const OtherService: FC<IGlobalDataType> = ({ data }) => {
       <div className='other-title d-flex justify-center '>
         <h1>{t('other-service')}</h1>
       </div>
-      <AliceCarousel disableButtonsControls responsive={responsive} items={items}  animationDuration={1500} />
+      <AliceCarousel
+        autoPlay
+        infinite
+        disableButtonsControls
+        responsive={responsive}
+        items={items}
+        animationDuration={3500}
+        autoPlayInterval={1500}
+      />
     </section>
   )
 }
