@@ -2,24 +2,31 @@
   min-height: 12dvh;
   background: var(--headerBg);
   padding: 48px 80px 0px 80px;
+
+
   .block {
     display: none;
   }
+
   .header-links {
     flex: 1;
+
     li a {
       cursor: pointer;
       transition: all 0.2s ease-in-out;
       font-weight: 500;
       color: #252525;
+
       &:hover {
         opacity: 0.7;
       }
     }
   }
+
   .switcher {
     flex: 1;
   }
+
   .logo {
     flex: 1;
   }

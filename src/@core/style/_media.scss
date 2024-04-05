@@ -6,6 +6,39 @@
     }
   }
 
+  // services
+  #services {
+    padding: 0 !important;
+
+    // BANNER-PART
+    #banner {
+      padding: 16px !important;
+
+      .title-block {
+        width: 100%;
+      }
+
+      .phone-block {
+        img {
+          width: 50px;
+          height: 50px;
+        }
+
+        h2 {
+          font-size: 20px !important;
+        }
+      }
+
+      .button-group {
+        button {
+          font-size: 16px;
+          width: fit-content !important;
+          height: 20px !important;
+        }
+      }
+    }
+  }
+
   .footer {
     &::before {
       position: absolute;
@@ -25,7 +58,7 @@
 }
 
 /* Mobile Styles (up to 767px) */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   h1 {
     font-size: var(--font-size-l) !important;
   }
@@ -97,48 +130,54 @@
     }
   }
 
-  //services
-  .services {
-    padding: 16px !important;
-    margin-top: 1.5rem !important;
+  // services
+  #services {
+    padding: 24px 16px;
 
-    .card-title {
-      flex-wrap: wrap !important;
+    // TAB
+    #tab-buttons {
+      border-radius: 8px;
+
+      #tab-button-item {
+        button {
+          width: fit-content;
+          padding: 0.5em;
+          height: 40px;
+          font-size: var(--font-size-s);
+          border-radius: 8px;
+        }
+      }
     }
 
-    .service-content {
-      margin-top: 16px !important;
+    #tab-content {
+      margin: 0.5em;
+    }
 
-      .content-left {
-        width: 95% !important;
-        margin: 0 !important;
 
-        .card-item-left {
-          width: 100% !important;
-          height: fit-content !important;
+    // BANNER-PART
+    #banner {
+      padding: 24px;
+      height: 320px !important;
 
-          .card-title {
-            img {
-              height: 50px !important;
-            }
-          }
+      .title-block {
+        width: 100%;
+      }
+
+      .phone-block {
+        img {
+          width: 50px;
+          height: 50px;
+        }
+
+        h2 {
+          font-size: 34px;
         }
       }
 
-      .content-right {
-        margin: 0 !important;
-
-        .card-item {
-          height: fit-content !important;
-
-          .ant-card-head-title {
-            font-size: 16px !important;
-          }
-
-          .btn {
-            position: relative !important;
-            bottom: -0.5rem !important;
-          }
+      .button-group {
+        button {
+          font-size: var(--font-size-s);
+          height: 30px !important;
         }
       }
     }
@@ -352,24 +391,7 @@
     }
   }
 
-  //services
-  .services {
-    padding: 16px !important;
 
-    .service-content {
-      margin-top: 2rem !important;
-
-      .content-left {
-        width: 100% !important;
-        margin: 0 !important;
-
-        .card-item-left {
-          width: 558px !important;
-          height: fit-content !important;
-        }
-      }
-    }
-  }
 
   // community
   .community {

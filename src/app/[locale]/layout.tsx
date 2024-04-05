@@ -5,7 +5,7 @@ import { ToastContainer } from 'react-toastify'
 import dynamic from 'next/dynamic'
 import Loading from './loading'
 import Header from '@/@core/components/Header'
-
+import ContextWrapper from '@/@core/service/context'
 
 const Footer = dynamic(() => import('@/@core/components/Footer'), { loading: () => <Loading /> })
 
@@ -50,9 +50,11 @@ const RootLayout = ({ children, params }: { children: React.ReactNode; params: a
       <body>
         <NextIntlClientProvider locale={params.locale} messages={messages}>
           <StyledComponentsRegistry>
-            <Header />
-            {children}
-            <Footer />
+            <ContextWrapper>
+              <Header />
+              {children}
+              <Footer />
+            </ContextWrapper>
           </StyledComponentsRegistry>
         </NextIntlClientProvider>
         <ToastContainer />

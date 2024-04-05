@@ -1,0 +1,27 @@
+#banner {
+    padding: 48px;
+    color: #fff;
+
+    .title-block {
+        width: 556px;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+        }
+    }
+
+    .phone-block {
+        h2 {
+            font-size: 54px;
+        }
+    }
+
+    .button-group {
+        height: 10%;
+    }
+}
