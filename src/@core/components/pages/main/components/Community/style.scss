@@ -1,0 +1,51 @@
+.community {
+  margin-top: 5rem;
+  min-height: 636px;
+  padding: 64px 0 64px 103px;
+  background: var(--white);
+  box-shadow: var(--boxShadow);
+  position: relative;
+  &::before {
+    content: url('/assets/collective/shapwsCardBottom.svg');
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  &::after {
+    content: url('/assets/collective/shapwsCardTop.svg');
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .community-title {
+    h1 {
+      font-size: 36px;
+      font-weight: 600;
+    }
+  }
+  .community-content {
+    width: 100%;
+    .content-text {
+      width: 40%;
+      max-width: 450px;
+      text-align: left;
+      p {
+        color: #5e6282;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 22.5px;
+        letter-spacing: 1px;
+      }
+      span {
+        font-size: 18px;
+        line-height: 22.5px;
+        letter-spacing: 1px;
+        color: #5e6282;
+      }
+    }
+    .content-images {
+      flex: 1;
+      width: 40%;
+    }
+  }
+}

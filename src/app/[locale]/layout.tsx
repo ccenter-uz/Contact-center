@@ -1,14 +1,13 @@
 import { NextIntlClientProvider, useMessages } from 'next-intl'
 import StyledComponentsRegistry from '@/lib/AntdRegistry'
 import { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
 import { ToastContainer } from 'react-toastify'
+import dynamic from 'next/dynamic'
+import Loading from './loading'
+import Header from '@/@core/components/Header'
+import ContextWrapper from '@/@core/service/context'
 
-
-const inter = Montserrat({
-  subsets: ['latin'],
-  display: 'swap'
-})
+const Footer = dynamic(() => import('@/@core/components/Footer'), { loading: () => <Loading /> })
 
 export const metadata: Metadata = {
   title: 'Contact center – UZTELECOM',
@@ -43,16 +42,20 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://ccenter.uz')
 }
 
-const RootLayout = ({ children, params: { locale } }: { children: React.ReactNode; params: any }) => {
+const RootLayout = ({ children, params }: { children: React.ReactNode; params: any }) => {
   const messages = useMessages()
 
   return (
-    <html lang={locale} className={inter.className}>
+    <html lang={params.locale}>
       <body>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-         
-            <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
-       
+        <NextIntlClientProvider locale={params.locale} messages={messages}>
+          <StyledComponentsRegistry>
+            <ContextWrapper>
+              <Header />
+              {children}
+              <Footer />
+            </ContextWrapper>
+          </StyledComponentsRegistry>
         </NextIntlClientProvider>
         <ToastContainer />
       </body>

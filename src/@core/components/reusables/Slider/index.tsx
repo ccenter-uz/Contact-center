@@ -11,14 +11,14 @@ const setting = {
   infinite: true,
   autoplay: true,
   slidesToShow: 3,
-  speed: 500,
+  speed: 3500,
   draggable: true,
   dots: false,
-  autoplaySpeed: 2500,
+  autoplaySpeed: 3500,
   initialSlide: 0,
   responsive: [
     {
-      breakpoint: 1440,
+      breakpoint: 1441,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2
@@ -41,8 +41,8 @@ const setting = {
     {
       breakpoint: 768,
       settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
+        slidesToShow: 1,
+        slidesToScroll: 1
       }
     },
     {
@@ -73,6 +73,8 @@ const ImageSwiper: FC<ISwiper> = ({ images }) => {
             alt='image'
             fetchPriority='low'
             loading='lazy'
+            height={'auto'}
+            width={'100%'}
           />
         )
       })}

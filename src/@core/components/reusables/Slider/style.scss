@@ -1,7 +1,6 @@
 .slide-container {
-  img {
-    width: 95% !important;
-    height: 336px;
-    object-fit: cover;
+  .slick-track {
+    gap: 1em;
+    display: flex;
   }
 }

@@ -1,0 +1,42 @@
+.join {
+  padding: var(--paddingSection);
+  .join-image {
+    max-width: 557px;
+    width: 100%;
+    max-height: 582px;
+  }
+  .join-card {
+    .card-item {
+      width: 100%;
+      min-height: 427px;
+      max-width: 961px;
+      .ant-card-body {
+        padding: 64px 106px 0px 106px;
+      }
+      h1 {
+        color: #fff;
+        font-size: 30px;
+      }
+      p {
+        font-size: 18px;
+      }
+      .card-link {
+        margin-top: 2rem;
+        h3 {
+          font-size: 20px;
+          color: #192348;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.2s ease-in-out;
+          &:hover {
+            opacity: 0.8;
+          }
+          &:hover .arrow-icon {
+            transform: translateX(1rem);
+            transition: all 0.2s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}

@@ -4,6 +4,9 @@ const withNextIntl = require('next-intl/plugin')()
 
 const nextConfig = {
   reactStrictMode: true,
+  experimental: {
+    webVitalsAttribution: ['CLS', 'LCP']
+  },
   images: {
     remotePatterns: [
       {

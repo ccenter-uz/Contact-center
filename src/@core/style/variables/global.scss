@@ -1,0 +1,24 @@
+/* variables */
+:root {
+  --bgColor: #f5f8fc;
+  --primary: rgba(21, 110, 211, 1);
+  --white: #fff;
+  --textColor: #252525;
+  --btnColor: var(--primary);
+  --loginBg: #e7f1fb;
+  --boxShadow: 0px 20px 50px 0px #0000001a;
+  --radiusCard: 10px, 10px, 0px, 0px;
+  --mainPaddingX: 1rem;
+  --mainPaddingY: var(--mainPaddingX);
+  --paddingSection: 3em 5em;
+
+  --button-bg-color: rgba(255, 95, 47, 1);
+
+  // FONTS
+  --font-size-s: 12px;
+  --font-line-s: var(--font-size-s);
+  --font-size-m: 16px;
+  --font-line-m: var(--font-size-m);
+  --font-size-l: 18px;
+  --font-line-l: var(--font-size-l);
+}
