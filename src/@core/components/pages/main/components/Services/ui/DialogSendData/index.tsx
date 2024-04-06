@@ -3,6 +3,7 @@ import { useSearchParams } from 'next/navigation'
 import { Dispatch, FC, SetStateAction } from 'react'
 import { api } from '@/@core/utils/api'
 import { toast } from 'react-toastify'
+import Swal from 'sweetalert2'
 
 type DialogSendDataType = {
   open: boolean
@@ -52,7 +53,19 @@ const DialogSendData: FC<DialogSendDataType> = props => {
       }
       const res = await api.post(`Application/create`, body)
 
-      res.status === 201 && (toast.success('Success', { position: 'bottom-right' }), form.resetFields(), handleClose())
+      res.status === 201 &&
+        (toast.success('Success', { position: 'bottom-right' }),
+        form.resetFields(),
+        Swal.fire({
+          title: `№${res.data.aplicationNumber}`,
+          text: 'Please save this number, before closing this modal. By this number you can get status of your application',
+          icon: 'info',
+          allowOutsideClick: false
+        })).then(res => {
+          if (res.isConfirmed) {
+            handleClose()
+          }
+        })
     } catch (err) {
       console.error(err, 'err')
     }

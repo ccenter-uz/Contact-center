@@ -183,6 +183,31 @@
     }
   }
 
+  // CARD-PART
+  .cards-card {
+    height: fit-content !important;
+
+    .ant-card-head,
+    .ant-card-body {
+      padding: 8px 16px;
+    }
+
+    .ant-card-body {
+      min-height: 250px !important;
+    }
+
+    .card-footer {
+
+      .ant-btn {
+        height: 30px !important;
+        font-size: var(--font-size-s);
+      }
+    }
+  }
+
+
+
+
   // other-section
   .other-section {
     padding: 16px !important;

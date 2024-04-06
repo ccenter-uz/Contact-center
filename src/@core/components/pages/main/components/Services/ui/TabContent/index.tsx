@@ -60,8 +60,8 @@ const TabContent: FC<Props> = () => {
     <main id='tab-content' className='m-3'>
       {tabData[0]?.type === 'banner' && tabData.map((item: DataType) => <Banner key={1} data={item} />)}
       {tabData[0]?.type === 'card' && <Cards key={2} data={tabData} />}
-      {tabData.length == 0 && loading && (
-        <div className='d-flex justify-center '>
+      {loading && (
+        <div className='d-flex justify-center align-center' style={{ height: '350px' }}>
           <LoadingUI />
         </div>
       )}
