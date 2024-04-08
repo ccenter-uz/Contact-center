@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from 'react'
 import './style.scss'
-import { GetLinks } from '../../api'
+import { GetLinks } from '../../api/serverAction'
 import TabButtonItem from '../../modal/TabButtonItem'
 import { useLang } from '@/@core/service/hooks/useLang'
 

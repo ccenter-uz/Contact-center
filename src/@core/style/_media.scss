@@ -184,7 +184,8 @@
   }
 
   // CARD-PART
-  .cards-card {
+  .cards-card-img-exists,
+  .cards-card-img-notExists {
     height: fit-content !important;
 
     .ant-card-head,
@@ -198,13 +199,19 @@
 
     .card-footer {
 
-      .ant-btn {
+      button {
         height: 30px !important;
         font-size: var(--font-size-s);
       }
     }
   }
 
+  .dialog-service,
+  .dialog-send-data {
+    .ant-modal-content {
+      padding: 8px 16px;
+    }
+  }
 
 
 

@@ -1,5 +1,5 @@
 import { Button, Card, Divider } from 'antd'
-import React, { FC, useState } from 'react'
+import { FC } from 'react'
 import { DataType } from '../../ui/TabContent'
 import { useSearchParams } from 'next/navigation'
 import { ArrowLeft, ArrowRight } from 'react-feather'
@@ -9,6 +9,8 @@ import { BASIC_LINK } from '@/@core/utils/type'
 import './style.scss'
 import DialogSendData from '../../ui/DialogSendData'
 import { Link } from '@/navigation'
+import { getLng } from '../../utils'
+import { useDisclosure } from '@/@core/service/hooks/useDisclosure'
 
 type Props = {
   data: DataType[]
@@ -24,14 +26,9 @@ const responsive = {
 
 const Cards: FC<Props> = props => {
   const { data } = props
-  const { locale } = useLang()
-  const [open, setOpen] = useState<boolean>(false)
+  const { locale, t } = useLang()
+  const { open, isOpen, close } = useDisclosure()
   const searchParams = useSearchParams()
-
-  // OPEN
-  const handleOpen = () => {
-    setOpen(true)
-  }
 
   return (
     <>
@@ -78,7 +75,7 @@ const Cards: FC<Props> = props => {
       >
         {data?.map(item => (
           <Card
-            className='cards-card'
+            className={item.background_image ? 'cards-card-img-exists' : 'cards-card-img-notExists'}
             headStyle={{ borderBottom: 'none', color: 'white' }}
             key={item.id}
             bodyStyle={{
@@ -87,39 +84,23 @@ const Cards: FC<Props> = props => {
               height: '88%'
             }}
             style={{
-              backgroundImage: `url(${BASIC_LINK + '' + item.background_image})`,
+              backgroundImage: item.background_image
+                ? `url(${BASIC_LINK + '' + item.background_image})`
+                : "url('/Ellipse.png')",
               color: item.background_image ? '#fff' : '#252525'
             }}
-            title={
-              <p className='card-title'>
-                {(locale === 'ru' && item.title_ru) ||
-                  (locale === 'en' && item.title_en) ||
-                  (locale === 'uz' && item.title)}
-              </p>
-            }
+            title={<p className='card-title'>{getLng(locale, item, 'title')}</p>}
           >
             <div className='card-header d-flex align-center  gap-2'>
               <img src={BASIC_LINK + '' + item.icon} alt='icon' width={'22px'} height={'22px'} />
               <div className='card-header-title'>
-                <p>
-                  {(locale === 'ru' && item.paragraph_ru) ||
-                    (locale === 'en' && item.paragraph_en) ||
-                    (locale === 'uz' && item.paragraph_uz)}
-                </p>
-                <span>
-                  {(locale === 'ru' && item.span_ru) ||
-                    (locale === 'en' && item.span_en) ||
-                    (locale === 'uz' && item.span_uz)}
-                </span>
+                <p>{getLng(locale, item, 'paragraph')}</p>
+                <span>{getLng(locale, item, 'span')}</span>
               </div>
             </div>
-            <Divider style={{ background: 'lightgrey' }} />
+            <Divider style={{ background: item.background_image ? 'rgb(255, 255, 255,40%)' : 'rgb(0, 0, 0,10%)' }} />
             <div className='content-block'>
-              <p>
-                {(locale === 'ru' && item.content_text_ru) ||
-                  (locale === 'en' && item.content_text_en) ||
-                  (locale === 'uz' && item.content_text_uz)}
-              </p>
+              <p>{getLng(locale, item, 'content_text')}</p>
             </div>
             <div className='card-footer'>
               <Link
@@ -127,22 +108,15 @@ const Cards: FC<Props> = props => {
                 scroll={false}
                 onClick={() => sessionStorage.setItem('selectedTarif', JSON.stringify(item))}
               >
-                <Button
-                  onClick={handleOpen}
-                  type='primary'
-                  style={{
-                    background: item.background_image ? '#fff' : 'rgba(255, 95, 47, 1)',
-                    color: item.background_image ? '#252525' : '#fff'
-                  }}
-                >
-                  Bog’lanish
-                </Button>
+                <button onClick={open} className={item.background_image ? 'img-exists-btn' : 'img-not-exists-btn'}>
+                  {t('choose-btn')}
+                </button>
               </Link>
             </div>
           </Card>
         ))}
       </AliceCarousel>
-      <DialogSendData open={open} close={setOpen} />
+      <DialogSendData open={isOpen} close={close} />
     </>
   )
 }
