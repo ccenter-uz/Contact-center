@@ -12,18 +12,18 @@ const CarouselComp: FC<IGlobalDataType> = ({ data }) => {
       <Carousel ref={carouselRef} autoplay dots={true} fade>
         {data?.headerImages.map((image: IHeaderImages) => {
           return (
-            <img
-              key={image.id}
-              srcSet={`${BASIC_LINK + '' + image.haeder_image_mobile_link} 768w,  ${
-                BASIC_LINK + '' + image.haeder_image_link
-              } 1024w,`}
-              sizes='(max-width: 768px) 100vw, (max-width: 1024px) 100vw'
-              alt='LOADING...'
-              id={`image-${image.id}`}
-              className='carousel-item'
-              height={'auto'}
-              width={'100%'}
-            />
+            <picture key={image.id}>
+              <source media='(min-width: 1440px)' srcSet={`${BASIC_LINK + '' + image.haeder_image_link}`} />
+              <source media='(min-width: 1024px)' srcSet={`${BASIC_LINK + '' + image.haeder_image_link}`} />
+              <source media='(max-width: 768px)' srcSet={`${BASIC_LINK + '' + image.haeder_image_mobile_link}`} />
+              <img
+                src={`${BASIC_LINK + '' + image.haeder_image_mobile_link}`}
+                alt='LOADING...'
+                width={'100%'}
+                height={'auto'}
+                className='carousel-item'
+              />
+            </picture>
           )
         })}
       </Carousel>
