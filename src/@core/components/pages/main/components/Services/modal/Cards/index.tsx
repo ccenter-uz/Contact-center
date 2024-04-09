@@ -20,8 +20,9 @@ const responsive = {
   0: { items: 1 },
   545: { items: 2 },
   768: { items: 2 },
-  1154: { items: 3 },
-  1500: { items: 3 }
+  1024: { items: 2 },
+  1400: { items: 3 },
+  1800: { items: 4 }
 }
 
 const Cards: FC<Props> = props => {
@@ -34,44 +35,43 @@ const Cards: FC<Props> = props => {
     <>
       <AliceCarousel
         autoHeight
-        disableDotsControls
         responsive={responsive}
+        disableDotsControls
         mouseTracking={false}
-        animationEasingFunction='linear'
-        renderPrevButton={({ isDisabled }) => {
-          return (
-            <Button
-              type='primary'
-              disabled={isDisabled}
-              style={{
-                background: !isDisabled ? 'rgba(255, 95, 47, 1)' : 'white',
-                borderRadius: '50%',
-                width: '35px',
-                height: '35px',
-                padding: '5px'
-              }}
-            >
-              <ArrowLeft width={'18px'} />
-            </Button>
-          )
-        }}
-        renderNextButton={({ isDisabled }) => {
-          return (
-            <Button
-              type='primary'
-              disabled={isDisabled}
-              style={{
-                background: !isDisabled ? 'rgba(255, 95, 47, 1)' : 'white',
-                borderRadius: '50%',
-                width: '35px',
-                height: '35px',
-                padding: '5px'
-              }}
-            >
-              <ArrowRight width={'18px'} />
-            </Button>
-          )
-        }}
+        animationDuration={800}
+        animationEasingFunction='cubic-bezier(0.1, 1, 1,1)'
+        renderPrevButton={({ isDisabled }) => (
+          <Button
+            type='primary'
+            disabled={isDisabled}
+            style={{
+              background: !isDisabled ? 'rgba(255, 95, 47, 1)' : 'white',
+              borderRadius: '50%',
+              width: '40px',
+              height: '40px',
+              padding: '5px',
+              textAlign: 'center'
+            }}
+          >
+            <ArrowLeft width={'18px'} />
+          </Button>
+        )}
+        renderNextButton={({ isDisabled }) => (
+          <Button
+            type='primary'
+            disabled={isDisabled}
+            style={{
+              background: !isDisabled ? 'rgba(255, 95, 47, 1)' : 'white',
+              borderRadius: '50%',
+              width: '40px',
+              height: '40px',
+              padding: '5px',
+              textAlign: 'center'
+            }}
+          >
+            <ArrowRight width={'18px'} />
+          </Button>
+        )}
       >
         {data?.map(item => (
           <Card
@@ -98,7 +98,10 @@ const Cards: FC<Props> = props => {
                 <span>{getLng(locale, item, 'span')}</span>
               </div>
             </div>
-            <Divider style={{ background: item.background_image ? 'rgb(255, 255, 255,40%)' : 'rgb(0, 0, 0,10%)' }} />
+            <Divider
+              aria-label='divider'
+              style={{ background: item.background_image ? 'rgb(255, 255, 255,40%)' : 'rgb(0, 0, 0,10%)' }}
+            />
             <div className='content-block'>
               <p>{getLng(locale, item, 'content_text')}</p>
             </div>
@@ -108,7 +111,11 @@ const Cards: FC<Props> = props => {
                 scroll={false}
                 onClick={() => sessionStorage.setItem('selectedTarif', JSON.stringify(item))}
               >
-                <button onClick={open} className={item.background_image ? 'img-exists-btn' : 'img-not-exists-btn'}>
+                <button
+                  aria-label={t('choose-btn')}
+                  onClick={open}
+                  className={item.background_image ? 'img-exists-btn' : 'img-not-exists-btn'}
+                >
                   {t('choose-btn')}
                 </button>
               </Link>

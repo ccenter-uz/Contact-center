@@ -40,15 +40,18 @@ const DialogSendData: FC<DialogSendDataType> = props => {
 
   return (
     <Modal
+      aria-modal={open}
       open={open}
       onCancel={close}
       title={
-        <div className='dialog-send-data-header d-flex align-center justify-center'>
-          <p style={{ fontSize: 'var(--font-size-l)' }}>{t('service-modal-title')}</p>
+        <div aria-label='title-modal-card' className='dialog-send-data-header d-flex align-center justify-center'>
+          <p style={{ fontSize: 'var(--font-size-l)' }} aria-label={t('service-modal-title')}>
+            {t('service-modal-title')}
+          </p>
         </div>
       }
       footer={
-        <div className='dialog-send-data-button d-flex align-center justify-center'>
+        <div aria-label={t('send-btn')} className='dialog-send-data-button d-flex align-center justify-center'>
           <Button
             style={{ background: 'rgba(255, 95, 47, 1)', width: '157px', height: '40px' }}
             type='primary'

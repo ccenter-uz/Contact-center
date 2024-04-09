@@ -28,5 +28,7 @@
   "virtual-number": "Virtual number",
   "choose-btn": "Choose",
   "callback": "Contact",
-  "send-request": "Send request"
+  "send-request": "Send request",
+  "Please select catagory": "Please select catagory",
+  "not-content": "(if nothing will be shown, then this category is empty!)"
 }

@@ -28,5 +28,7 @@
   "virtual-number": "Virtual raqam ",
   "choose-btn": "Tanlash",
   "callback": "Bog'lanish",
-  "send-request": "So'rov yuborish"
+  "send-request": "So'rov yuborish",
+  "Please select catagory": "Iltimos, katalogni tanlang",
+  "not-content": "(agar hech narsa ko'rsatilmasa, bu toifa bo'sh!)"
 }
