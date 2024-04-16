@@ -1,5 +1,5 @@
 import { Button, Card, Divider } from 'antd'
-import { FC } from 'react'
+import { FC, Fragment } from 'react'
 import { DataType } from '../../ui/TabContent'
 import { useSearchParams } from 'next/navigation'
 import { ArrowLeft, ArrowRight } from 'react-feather'
@@ -75,7 +75,7 @@ const Cards: FC<Props> = props => {
       >
         {data?.map(item => (
           <Card
-            className={item.background_image ? 'cards-card-img-exists' : 'cards-card-img-notExists'}
+            className={item.background_image ? 'cards-card-img-exists fade-in' : 'cards-card-img-notExists fade-in'}
             headStyle={{ borderBottom: 'none', color: 'white' }}
             key={item.id}
             bodyStyle={{

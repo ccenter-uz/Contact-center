@@ -58,10 +58,6 @@ const TabContent: FC<Props> = () => {
 
   return (
     <main id='tab-content' className='m-3' aria-label='tab-content'>
-      <h1 aria-label={t('Please select catagory')} title={t('Please select catagory')}>
-        {t('Please select catagory')}
-      </h1>
-      <p aria-label={t('not-content')}>{t('not-content')}</p>
       {renderNode(tabData, loading)}
     </main>
   )

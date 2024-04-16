@@ -1,7 +1,10 @@
 import LoadingUI from '@/@core/components/LoadingUI'
-import Banner from '../modal/Banner'
-import Cards from '../modal/Cards'
 import { DataType } from '../ui/TabContent'
+import dynamic from 'next/dynamic'
+import { Suspense } from 'react'
+
+const Cards = dynamic(() => import('../modal/Cards'), { ssr: false })
+const Banner = dynamic(() => import('../modal/Banner'), { ssr: false })
 
 // getLanguage
 export const getLng = (locale: string, item: any, lng: string) => {
@@ -22,9 +25,17 @@ export const renderNode = (node: DataType[], loading: boolean) => {
   if (Array.isArray(node) && node.length > 0) {
     switch (node[0]?.type) {
       case 'banner':
-        return node.map((item: DataType) => <Banner key={1} data={item} />)
+        return node.map((item: DataType) => (
+          <Suspense key={1} fallback={<LoadingUI />}>
+            <Banner data={item} />{' '}
+          </Suspense>
+        ))
       case 'card':
-        return <Cards data={node} />
+        return (
+          <Suspense key={1} fallback={<LoadingUI />}>
+            <Cards data={node} />
+          </Suspense>
+        )
     }
   } else if (loading) {
     return (

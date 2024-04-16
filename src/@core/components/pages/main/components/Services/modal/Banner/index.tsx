@@ -26,7 +26,7 @@ export default function Banner({ data }: Props) {
   const { isOpen, open, close } = useDisclosure()
 
   return (
-    <section id='banner' style={styleBanner(BASIC_LINK + '' + data.background_image)}>
+    <section id='banner' style={styleBanner(BASIC_LINK + '' + data.background_image)} className='fade-in'>
       <div className='title-block'>
         <div className='title-upper-block d-flex flex-column gap-y-2'>
           <h1>{getLng(locale, data, 'title')}</h1>
