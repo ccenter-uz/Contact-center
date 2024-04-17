@@ -140,6 +140,9 @@
   #services {
     padding: 24px 16px;
 
+    .alice-carousel__wrapper {
+      padding-right: 0 !important;
+    }
 
 
     // TAB
@@ -197,7 +200,9 @@
     width: 95% !important;
     height: fit-content !important;
 
-
+    .card-title {
+      font-size: 18px !important;
+    }
 
     .ant-card-head,
     .ant-card-body {
@@ -435,6 +440,9 @@
   }
 
   #services {
+    .alice-carousel__wrapper {
+      padding-right: 0 !important;
+    }
 
     // CARDS-PART
     .cards-card-img-exists,
@@ -573,6 +581,9 @@
   }
 
   #services {
+    .alice-carousel__wrapper {
+      padding-right: 0 !important;
+    }
 
     // CARDS-PART
     .cards-card-img-exists,

@@ -1,6 +1,6 @@
 .cards-card-img-exists {
     width: 100%;
-    max-width: 403px;
+    max-width: 450px;
     height: 448px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -8,7 +8,7 @@
     margin: auto;
 
     .card-title {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .card-header {
@@ -42,7 +42,7 @@
 
         .img-exists-btn {
             background: #fff;
-            color: var(--primary);
+            color: #252525;
 
             &:hover {
                 background: var(--button-bg-color);
@@ -66,7 +66,7 @@
 
 .cards-card-img-notExists {
     width: 100%;
-    max-width: 403px;
+    max-width: 450px;
     height: 448px;
     position: relative;
     overflow: hidden;
@@ -77,7 +77,7 @@
 
     .card-title {
         color: #252525;
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .card-header {
@@ -114,7 +114,7 @@
 
         .img-exists-btn {
             background: #fff;
-            color: var(--primary);
+            color: #252525;
 
             &:hover {
                 background: var(--button-bg-color);

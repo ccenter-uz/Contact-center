@@ -22,7 +22,7 @@ const responsive = {
   768: { items: 2 },
   1024: { items: 2 },
   1400: { items: 3 },
-  1800: { items: 4 }
+  1800: { items: 3 }
 }
 
 const Cards: FC<Props> = props => {
@@ -35,6 +35,8 @@ const Cards: FC<Props> = props => {
     <>
       <AliceCarousel
         autoHeight
+        paddingRight={200}
+        preservePosition
         responsive={responsive}
         disableDotsControls
         mouseTracking={false}
