@@ -45,7 +45,7 @@ export const ParentStory: FC<IGlobalDataType> = ({ data }) => {
   }
 
   return (
-    <section id='parent-story'>
+    <section id='parent-story' className='fade-in'>
       <div className='circle-wrapper d-flex align-center justify-between gap-x-3 m-t-2'>
         {data?.histories.map((item: IHistory, index: number) => (
           <div key={item.id} className='d-flex flex-column align-center gap-y-1'>

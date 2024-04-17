@@ -1,24 +1,19 @@
 import { Button, Form, Modal, Row, Col, Input } from 'antd'
-import { useSearchParams } from 'next/navigation'
-import { Dispatch, FC, SetStateAction } from 'react'
-import { api } from '@/@core/utils/api'
+import { FC } from 'react'
 import { toast } from 'react-toastify'
 import Swal from 'sweetalert2'
+import { useLang } from '@/@core/service/hooks/useLang'
+import { sendData } from '../../api/clientAction'
 
 type DialogSendDataType = {
   open: boolean
-  close: Dispatch<SetStateAction<boolean>>
+  close: () => void
 }
 
 const DialogSendData: FC<DialogSendDataType> = props => {
   const { open, close } = props
   const [form] = Form.useForm()
-  const searchParams = useSearchParams()
-
-  // CLOSE
-  const handleClose = () => {
-    close(prev => (prev = false))
-  }
+  const { t } = useLang()
 
   // SEND
   const handleSendData = async (value: {
@@ -27,68 +22,43 @@ const DialogSendData: FC<DialogSendDataType> = props => {
     number: string
     comment: number
   }) => {
-    try {
-      const data = JSON.parse(sessionStorage.getItem('application') as string)
-      const type_of_service = JSON.parse(sessionStorage.getItem('serviceType') as string)
-      const tarif = JSON.parse(sessionStorage.getItem('selectedTarif') as string)
-      let body
-      if (searchParams.has('tarif')) {
-        body = {
-          ...value,
-          type_of_service,
-          text: {
-            type: 'card',
-            tarif
-          }
+    const res = await sendData(value)
+    res?.status === 201 &&
+      (toast.success('Success', { position: 'bottom-right' }),
+      form.resetFields(),
+      Swal.fire({
+        title: `№${res.data.aplicationNumber}`,
+        text: t('swal-identificalNumber-text'),
+        icon: 'info',
+        allowOutsideClick: false
+      })).then(res => {
+        if (res.isConfirmed) {
+          close()
         }
-      } else {
-        body = {
-          ...value,
-          type_of_service,
-          text: {
-            type: 'banner',
-            ...data
-          }
-        }
-      }
-      const res = await api.post(`Application/create`, body)
-
-      res.status === 201 &&
-        (toast.success('Success', { position: 'bottom-right' }),
-        form.resetFields(),
-        Swal.fire({
-          title: `№${res.data.aplicationNumber}`,
-          text: 'Please save this number, before closing this modal. By this number you can get status of your application',
-          icon: 'info',
-          allowOutsideClick: false
-        })).then(res => {
-          if (res.isConfirmed) {
-            handleClose()
-          }
-        })
-    } catch (err) {
-      console.error(err, 'err')
-    }
+      })
   }
 
   return (
     <Modal
+      aria-modal={open}
       open={open}
-      onCancel={handleClose}
+      onCancel={close}
       title={
-        <div className='dialog-send-data-header d-flex align-center justify-center'>
-          <p style={{ fontSize: 'var(--font-size-l)' }}>Онлайн заявка</p>
+        <div aria-label='title-modal-card' className='dialog-send-data-header d-flex align-center justify-center'>
+          <p style={{ fontSize: 'var(--font-size-l)' }} aria-label={t('service-modal-title')}>
+            {t('service-modal-title')}
+          </p>
         </div>
       }
       footer={
-        <div className='dialog-send-data-button d-flex align-center justify-center'>
+        <div aria-label={t('send-btn')} className='dialog-send-data-button d-flex align-center justify-center'>
           <Button
             style={{ background: 'rgba(255, 95, 47, 1)', width: '157px', height: '40px' }}
             type='primary'
             form='send-data-form'
             htmlType='submit'
           >
-            Отправить
+            {t('send-btn')}
           </Button>
         </div>
       }
@@ -97,22 +67,22 @@ const DialogSendData: FC<DialogSendDataType> = props => {
       <Form form={form} layout='vertical' onFinish={handleSendData} id='send-data-form'>
         <Row gutter={[16, 0]}>
           <Col xs={24} sm={24} md={12} xl={12}>
-            <Form.Item name={'name'} label='Ф.И.О' required>
+            <Form.Item name={'name'} label={t('service-modal-fio')} required>
               <Input type='text' style={{ borderRadius: '4px' }} />
             </Form.Item>
           </Col>
           <Col xs={24} sm={24} md={12} xl={12}>
-            <Form.Item name={'organization_name'} label='Название организации' required>
+            <Form.Item name={'organization_name'} label={t('service-modal-organization')} required>
               <Input type='text' style={{ borderRadius: '4px' }} />
             </Form.Item>
           </Col>
           <Col xs={24} sm={24} md={12} xl={12}>
-            <Form.Item name={'number'} label='Контактный номер' required>
+            <Form.Item name={'number'} label={t('service-modal-phone')} required>
               <Input type='text' style={{ borderRadius: '4px' }} />
             </Form.Item>
           </Col>
           <Col xs={24} sm={24} md={12} xl={12}>
-            <Form.Item name={'comment'} label='Комментария'>
+            <Form.Item name={'comment'} label={t('service-modal-comment')}>
               <Input.TextArea maxLength={100} showCount style={{ borderRadius: '4px' }} />
             </Form.Item>
           </Col>

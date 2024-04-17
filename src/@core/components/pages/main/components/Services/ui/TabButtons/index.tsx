@@ -1,8 +1,9 @@
 import { FC, useEffect, useState } from 'react'
 import './style.scss'
-import { GetLinks } from '../../api'
+import { GetLinks } from '../../api/serverAction'
 import TabButtonItem from '../../modal/TabButtonItem'
 import { useLang } from '@/@core/service/hooks/useLang'
+import { getLng } from '../../utils'
 
 type LinkType = {
   id: string
@@ -22,16 +23,7 @@ export const TabButtons: FC = () => {
   return (
     <div id='tab-buttons' aria-label='tab-section' className='d-flex align-center gap-1'>
       {links.map((link: LinkType) => (
-        <TabButtonItem
-          key={link.id}
-          title={
-            (locale === 'ru' && link.title_ru) ||
-            (locale === 'uz' && link.title) ||
-            (locale === 'en' && link.title_en) ||
-            ''
-          }
-          id={link.id}
-        />
+        <TabButtonItem key={link.id} title={getLng(locale, link, 'title')} id={link.id} />
       ))}
     </div>
   )

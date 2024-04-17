@@ -1,22 +1,22 @@
 import { Modal, Row, Col, Button, Flex } from 'antd'
-import { ChangeEvent, Dispatch, FC, SetStateAction, useState } from 'react'
+import { ChangeEvent, FC } from 'react'
 import DialogSendData from '../DialogSendData'
 import { DataType } from '../TabContent'
 import { Link } from '@/navigation'
+import { useLang } from '@/@core/service/hooks/useLang'
+import { useDisclosure } from '@/@core/service/hooks/useDisclosure'
+import { getLng } from '../../utils'
 
 type Props = {
   open: boolean
-  close: Dispatch<SetStateAction<boolean>>
+  close: () => void
   services: DataType['services']
 }
 
 const DialogService: FC<Props> = props => {
   const { open, close, services } = props
-  const [sendDataModal, setSendDataModal] = useState<boolean>(false)
-  // CLOSE
-  const handleClose = () => {
-    close(prev => (prev = false))
-  }
+  const { isOpen: sendDataModal, open: sendDataModalOpen, close: setSendDataModal } = useDisclosure()
+  const { t, locale } = useLang()
 
   // SUBMIT
   const handleSubmit = (e: ChangeEvent<HTMLFormElement>) => {
@@ -33,14 +33,16 @@ const DialogService: FC<Props> = props => {
       })
     )
     e.currentTarget.reset()
-    setSendDataModal(prev => (prev = true))
+    sendDataModalOpen()
   }
 
   return (
     <>
       <Modal
+        className='dialog-service'
+        width={'743px'}
         open={open}
-        onCancel={handleClose}
+        onCancel={close}
         title='Choose service'
         footer={
           <div className='d-flex flex-column align-center gap-y-1'>
@@ -49,9 +51,9 @@ const DialogService: FC<Props> = props => {
               htmlType='submit'
               form='form-service'
               style={{ background: 'rgba(255, 95, 47, 1)', width: '157px', height: '40px' }}
-              onClick={handleClose}
+              onClick={close}
             >
-              Отправить
+              {t('send-btn')}
             </Button>
           </div>
         }
@@ -60,7 +62,9 @@ const DialogService: FC<Props> = props => {
           <form onSubmit={handleSubmit} id='form-service'>
             <Row align={'bottom'} gutter={[16, 16]} style={{ marginBottom: '1em' }}>
               <Col xs={24} sm={24} md={14} xl={14}>
+                <label htmlFor='virtual-number'>{t('virtual-number')}</label>
                 <input
+                  id='virtual-number'
                   required
                   name='virtual_number'
                   style={{
@@ -88,7 +92,7 @@ const DialogService: FC<Props> = props => {
                       borderColor: 'rgba(255, 95, 47, 1)'
                     }}
                   >
-                    Ёще нет номера нажмите сюда
+                    {t('not-virtualNumber-yet')}
                   </Button>
                 </Link>
               </Col>
@@ -103,13 +107,13 @@ const DialogService: FC<Props> = props => {
                       justify='space-between'
                       style={{ boxShadow: '0px 4px 6px 0px rgba(0, 0, 0, 0.06)', padding: '8px', borderRadius: '8px' }}
                     >
-                      <label htmlFor={item.name_ru} style={{ fontSize: '14px', width: '95%' }}>
-                        {item.name_ru}
+                      <label htmlFor={getLng(locale, item, 'name')} style={{ fontSize: '14px', width: '95%' }}>
+                        {getLng(locale, item, 'name')}
                       </label>
                       <input
                         type='checkbox'
-                        id={item.name_ru}
-                        name={item.name_ru}
+                        id={getLng(locale, item, 'name')}
+                        name={getLng(locale, item, 'name')}
                         style={{ height: '20px', width: '20px', cursor: 'pointer' }}
                       />
                     </Flex>

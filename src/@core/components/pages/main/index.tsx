@@ -47,9 +47,8 @@ const Main: FC<IGlobalDataType> = ({ data }) => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [])
 
-
   return (
-    <main className={` main-page`}>
+    <main className='main-page fade-in'>
       <ParentStory data={data} />
       <CarouselComp data={data} />
       <Achievements data={data} />

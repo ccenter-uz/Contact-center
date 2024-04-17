@@ -1,11 +1,10 @@
 import { FC, useEffect, useState } from 'react'
-import './style.scss'
-import Banner from '../../modal/Banner'
-import Cards from '../../modal/Cards'
-import { GetContent } from '../../api'
+import { GetContent } from '../../api/serverAction'
 import { useSearchParams } from 'next/navigation'
 import { useDataContext } from '@/@core/service/hooks/useDataContext'
-import LoadingUI from '@/@core/components/LoadingUI'
+import { renderNode } from '../../utils'
+import './style.scss'
+import { useLang } from '@/@core/service/hooks/useLang'
 
 type Props = {}
 export type DataType = {
@@ -31,8 +30,9 @@ export type DataType = {
 }
 
 const TabContent: FC<Props> = () => {
+  const { t } = useLang()
   const [tabData, setTabData] = useDataContext()
-  const [loading, setLoading] = useState<boolean>()
+  const [loading, setLoading] = useState<boolean>(false)
   const searchParams = useSearchParams()
 
   useEffect(() => {
@@ -57,14 +57,8 @@ const TabContent: FC<Props> = () => {
   }, [searchParams])
 
   return (
-    <main id='tab-content' className='m-3'>
-      {tabData[0]?.type === 'banner' && tabData.map((item: DataType) => <Banner key={1} data={item} />)}
-      {tabData[0]?.type === 'card' && <Cards key={2} data={tabData} />}
-      {loading && (
-        <div className='d-flex justify-center align-center' style={{ height: '350px' }}>
-          <LoadingUI />
-        </div>
-      )}
+    <main id='tab-content' className='m-3' aria-label='tab-content'>
+      {renderNode(tabData, loading)}
     </main>
   )
 }

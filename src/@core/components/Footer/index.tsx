@@ -9,7 +9,7 @@ const Footer: FC = () => {
   const { t } = useLang()
 
   return (
-    <footer className={`footer d-flex flex-column justify-between`}>
+    <footer className={`footer fade-in d-flex flex-column justify-between`}>
       <div aria-label='upper-section' className='footer-pre w-100 d-flex align-start justify-between flex-wrap gap-4'>
         <ul className='footer-links h-100 d-flex flex-column justify-between align-start gap-y-4'>
           <li>
