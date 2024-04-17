@@ -30,5 +30,6 @@
   "callback": "Bog'lanish",
   "send-request": "So'rov yuborish",
   "Please select catagory": "Iltimos, katalogni tanlang",
-  "not-content": "(agar hech narsa ko'rsatilmasa, bu toifa bo'sh!)"
+  "not-content": "(agar hech narsa ko'rsatilmasa, bu toifa bo'sh!)",
+  "chatbot-headerText": "Savollaringiz bormi?"
 }

@@ -1,4 +1,4 @@
-import LoadingUI from '@/@core/components/LoadingUI'
+import LoadingUI from '@/@core/shared/ui/LoadingUI'
 import { CSSProperties, FC } from 'react'
 
 type ILoading = {

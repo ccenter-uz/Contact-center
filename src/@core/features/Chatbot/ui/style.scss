@@ -1,0 +1,47 @@
+.chatbot {
+    position: fixed;
+    bottom: 1em;
+    right: 4.5em;
+    z-index: 999;
+    box-shadow: var(--boxShadow);
+
+    .close-bot {
+        background: transparent;
+        border: 1px solid lightgrey;
+        border-radius: 50%;
+        padding: 5px;
+        outline: none;
+        position: absolute;
+        top: 0;
+        left: -3em;
+        cursor: pointer;
+    }
+
+    .react-chatbot-kit-chat-container {
+        width: 350px;
+    }
+
+    .react-chatbot-kit-chat-message-container {
+        overflow: hidden;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .react-chatbot-kit-chat-bot-message {
+            margin-left: 0;
+
+        }
+
+    }
+
+    .react-chatbot-kit-chat-input {
+        outline: none;
+    }
+}
+
+// CLOSE
+.chatbot-close {
+    display: none;
+}

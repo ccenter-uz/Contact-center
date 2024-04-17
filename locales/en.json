@@ -30,5 +30,6 @@
   "callback": "Contact",
   "send-request": "Send request",
   "Please select catagory": "Please select catagory",
-  "not-content": "(if nothing will be shown, then this category is empty!)"
+  "not-content": "(if nothing will be shown, then this category is empty!)",
+  "chatbot-headerText": "Have questions?"
 }

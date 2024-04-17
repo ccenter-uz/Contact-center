@@ -2,9 +2,9 @@ import { Suspense } from 'react'
 import Loading from './loading'
 import dynamic from 'next/dynamic'
 import { getLocale } from 'next-intl/server'
-import { getData } from '@/@core/components/pages/main/actions'
+import { getData } from '@/@core/pages/HomePage/api/getData'
 
-const Main = dynamic(() => import('@/@core/components/pages/main'), { ssr: false, loading: () => <Loading /> })
+const Main = dynamic(() => import('@/@core/pages/HomePage/ui'), { ssr: false, loading: () => <Loading /> })
 
 export default async function App() {
   const locale = await getLocale()

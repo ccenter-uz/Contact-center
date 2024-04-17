@@ -31,6 +31,6 @@
     "src/@core/service/context/main.jsx",
     "src/@core/service/hooks/useAuthContext.jsx",
     "src/@core/service/hooks/useAuth.jsx"
-, "src/@core/utils/webVitals.js"  ],
+, "src/@core/utils/webVitals.js", "src/@core/apps/hooks/useDataContext.jsx", "src/@core/features/Chatbot/model/config/index.js"  ],
   "exclude": ["node_modules"]
 }

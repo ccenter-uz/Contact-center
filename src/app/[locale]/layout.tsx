@@ -1,13 +1,13 @@
 import { NextIntlClientProvider, useMessages } from 'next-intl'
-import StyledComponentsRegistry from '@/lib/AntdRegistry'
+import StyledComponentsRegistry from '@/@core/apps/lib/AntdRegistry'
 import { Metadata } from 'next'
 import { ToastContainer } from 'react-toastify'
 import dynamic from 'next/dynamic'
 import Loading from './loading'
-import Header from '@/@core/components/Header'
-import ContextWrapper from '@/@core/service/context'
+import Header from '@/@core/widgets/Header'
+import ContextWrapper from '@/@core/apps/context'
 
-const Footer = dynamic(() => import('@/@core/components/Footer'), { loading: () => <Loading /> })
+const Footer = dynamic(() => import('@/@core/widgets/Footer'), { loading: () => <Loading /> })
 
 export const metadata: Metadata = {
   title: 'Contact center – UZTELECOM',
