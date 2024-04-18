@@ -31,5 +31,13 @@
   "send-request": "So'rov yuborish",
   "Please select catagory": "Iltimos, katalogni tanlang",
   "not-content": "(agar hech narsa ko'rsatilmasa, bu toifa bo'sh!)",
-  "chatbot-headerText": "Savollaringiz bormi?"
+  "chatbot-headerText": "Savollaringiz bormi?",
+  "phone": "Telefon",
+  "send": "Yuborish",
+  "full_name": "To'liq ism",
+  "example_name": "Azizov Aziz Azizovich",
+  "second-response-chatbot": "Endi siz ccenter.uz saytiga tegishli barcha savollaringizni berishingiz mumkin",
+  "enter-message": "Xabaringizni yuboring",
+  "error-name": "Iltimos, ismingizni to'g'ri kiriting",
+  "error-phone": "Telefonda minimal va maksimal 9 ta raqam bo'lishi kerak"
 }

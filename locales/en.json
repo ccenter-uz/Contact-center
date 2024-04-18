@@ -31,5 +31,14 @@
   "send-request": "Send request",
   "Please select catagory": "Please select catagory",
   "not-content": "(if nothing will be shown, then this category is empty!)",
-  "chatbot-headerText": "Have questions?"
+  "chatbot-headerText": "Have questions?",
+  "phone": "Telephone",
+  "send": "Send",
+  "full_name": "Full name",
+  "example_name": "John Doe",
+  "example_phone": "9989",
+  "second-response-chatbot": "Now, you can ask any questions related to ccenter.uz",
+  "enter-message": "Send your message",
+  "error-name": "Please insert your name correctly",
+  "error-phone": "Phone must contain minimum and maximum 9 digits"
 }

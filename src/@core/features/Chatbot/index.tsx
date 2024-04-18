@@ -1,3 +1,4 @@
 import Chatbot from './ui'
+import UserFormChat from './ui/UserFormChat'
 
-export { Chatbot }
+export { Chatbot, UserFormChat }

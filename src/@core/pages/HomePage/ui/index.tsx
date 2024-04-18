@@ -9,6 +9,7 @@ import { ArrowUp, MessageCircle } from 'react-feather'
 import CarouselComp from './Carousel'
 import { useDisclosure } from '@/@core/apps/hooks/useDisclosure'
 import { Chatbot } from '@/@core/features/Chatbot'
+import { useLang } from '@/@core/apps/hooks/useLang'
 
 const ParentStory = dynamic(() => import('@/@core/features/NavStories'), {
   ssr: false,
@@ -36,6 +37,7 @@ const Comment = dynamic(() => import('./Comment').then(res => res.Comment), {
 })
 
 const Main: FC<IGlobalDataType> = ({ data }) => {
+  const { t } = useLang()
   const [isVisible, setIsVisible] = useState<boolean>(false)
   const { isOpen, toggle, close } = useDisclosure()
 
@@ -84,7 +86,7 @@ const Main: FC<IGlobalDataType> = ({ data }) => {
       />
       {/* CHAT-BOT */}
 
-      <Chatbot open={isOpen} close={close} />
+      <Chatbot open={isOpen} close={close} headerTitle={t('chatbot-headerText')} />
     </main>
   )
 }
