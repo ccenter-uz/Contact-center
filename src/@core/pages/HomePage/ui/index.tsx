@@ -39,7 +39,7 @@ const Comment = dynamic(() => import('./Comment').then(res => res.Comment), {
 const Main: FC<IGlobalDataType> = ({ data }) => {
   const { t } = useLang()
   const [isVisible, setIsVisible] = useState<boolean>(false)
-  const { isOpen, toggle, close } = useDisclosure()
+  const { isOpen, open, close } = useDisclosure()
 
   useLayoutEffect(() => {
     const handleScroll = () => {
@@ -79,7 +79,7 @@ const Main: FC<IGlobalDataType> = ({ data }) => {
       </div>
       <FloatButton
         aria-label='button-float'
-        onClick={toggle}
+        onClick={open}
         style={{ width: '50px', height: '50px', bottom: '1em', right: '1em' }}
         className='d-flex align-center justify-center'
         icon={<MessageCircle style={{ color: '#252525', fontSize: '24px', textAlign: 'center' }} />}
