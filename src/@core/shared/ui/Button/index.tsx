@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react'
+import { FC, memo, ReactNode } from 'react'
 import './style.scss'
 
 type IButton = {
@@ -8,10 +8,10 @@ type IButton = {
   disabled?: boolean
 }
 
-export const Button: FC<IButton> = ({ children, onclick, form, disabled }) => {
+export const Button: FC<IButton> = memo(({ children, onclick, form, disabled }) => {
   return (
     <button disabled={disabled} form={form} onClick={onclick} className='btn-reusable'>
       {children}
     </button>
   )
-}
+})
