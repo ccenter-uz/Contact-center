@@ -21,7 +21,7 @@
   "footer-address": "Bizning manzil:",
   "footer-mail": "Pochta:",
   "footer-reserved": "© 2024. Barcha xizmatlar litsenziyalangan.",
-  "address": "100020, Toshkent sh., Bog‘ ko'cha, 20.",
+  "address": "100020, Toshkent sh., Bog‘ ko‘chasi, 20-uy.",
   "send-btn": "Yuborish",
   "swal-identificalNumber-text": "Iltimos, modalni yopishdan oldin ushbu raqamni saqlang. Bu raqam orqali arizangiz holatini bilib olishingiz mumkin",
   "not-virtualNumber-yet": "Virtual raqam yo'qmi? bu yerni bosing!",
@@ -30,5 +30,14 @@
   "callback": "Bog'lanish",
   "send-request": "So'rov yuborish",
   "Please select catagory": "Iltimos, katalogni tanlang",
-  "not-content": "(agar hech narsa ko'rsatilmasa, bu toifa bo'sh!)"
+  "not-content": "(agar hech narsa ko'rsatilmasa, bu toifa bo'sh!)",
+  "chatbot-headerText": "Savollaringiz bormi?",
+  "phone": "Telefon",
+  "send": "Yuborish",
+  "full_name": "To'liq ism",
+  "example_name": "Azizov Aziz Azizovich",
+  "second-response-chatbot": "Endi siz ccenter.uz saytiga tegishli barcha savollaringizni berishingiz mumkin",
+  "enter-message": "Xabaringizni yuboring",
+  "error-name": "Iltimos, ismingizni to'g'ri kiriting",
+  "error-phone": "Telefonda minimal va maksimal 9 ta raqam bo'lishi kerak"
 }

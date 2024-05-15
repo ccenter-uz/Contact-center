@@ -21,7 +21,7 @@
   "footer-address": "Our address:",
   "footer-mail": "Mail:",
   "footer-reserved": "© 2024. All services are licensed",
-  "address": "100020, Tashkent, Bog kucha street, 20.",
+  "address": "100020, Tashkent city, Bogkucha street, 20.",
   "send-btn": "Send",
   "swal-identificalNumber-text": "Please save this number, before closing modal. By this number you can get status of your application",
   "not-virtualNumber-yet": "Don't have a virtual number? Click here!",
@@ -30,5 +30,15 @@
   "callback": "Contact",
   "send-request": "Send request",
   "Please select catagory": "Please select catagory",
-  "not-content": "(if nothing will be shown, then this category is empty!)"
+  "not-content": "(if nothing will be shown, then this category is empty!)",
+  "chatbot-headerText": "Have questions?",
+  "phone": "Telephone",
+  "send": "Send",
+  "full_name": "Full name",
+  "example_name": "John Doe",
+  "example_phone": "9989",
+  "second-response-chatbot": "Now, you can ask any questions related to ccenter.uz",
+  "enter-message": "Send your message",
+  "error-name": "Please insert your name correctly",
+  "error-phone": "Phone must contain minimum and maximum 9 digits"
 }
