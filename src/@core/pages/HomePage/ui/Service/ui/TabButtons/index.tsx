@@ -4,6 +4,7 @@ import { GetLinks } from '../../api/serverAction'
 import TabButtonItem from '../../model/TabButtonItem'
 import { getLng } from '../../utils'
 import { useLang } from '@/@core/apps/hooks/useLang'
+import { useRouter } from 'next/navigation'
 
 type LinkType = {
   id: string
@@ -15,9 +16,12 @@ type LinkType = {
 export const TabButtons: FC = () => {
   const [links, setLinks] = useState<LinkType[]>([])
   const { locale } = useLang()
+  const router = useRouter()
 
   useEffect(() => {
-    GetLinks().then(res => setLinks(res.map((link: LinkType) => ({ key: link.id, ...link }))))
+    GetLinks().then(res => {
+      setLinks(res.map((link: LinkType) => ({ key: link.id, ...link }))), router.replace(`?service=${res[0].id}`)
+    })
   }, [])
 
   return (

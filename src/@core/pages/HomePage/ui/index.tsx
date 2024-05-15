@@ -57,6 +57,10 @@ const Main: FC<IGlobalDataType> = ({ data }) => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [])
 
+  const openChat = () => {
+    window.open('https://t.me/Elyor050', '_blank')
+  }
+
   return (
     <main className='main-page fade-in'>
       <ParentStory data={data} />
@@ -79,14 +83,14 @@ const Main: FC<IGlobalDataType> = ({ data }) => {
       </div>
       <FloatButton
         aria-label='button-float'
-        onClick={open}
+        onClick={openChat}
         style={{ width: '50px', height: '50px', bottom: '1em', right: '1em' }}
         className='d-flex align-center justify-center'
         icon={<MessageCircle style={{ color: '#252525', fontSize: '24px', textAlign: 'center' }} />}
       />
       {/* CHAT-BOT */}
 
-      <Chatbot open={isOpen} close={close} headerTitle={t('chatbot-headerText')} />
+      {/* <Chatbot open={isOpen} close={close} headerTitle={t('chatbot-headerText')} /> */}
     </main>
   )
 }

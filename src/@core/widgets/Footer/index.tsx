@@ -42,8 +42,8 @@ const Footer: FC = () => {
             </li>
             <li className='d-flex align-center gap-3'>
               <img src='/assets/footer/message.svg' alt='message' fetchPriority='low' loading='lazy' />
-              <a href='mailto:ucc.outsource@gmail.com' target='_top'>
-                {t('footer-mail')} <br /> ucc.outsource@gmail.com
+              <a href='mailto:ucc@uztelecom.uz' target='_top'>
+                {t('footer-mail')} <br /> ucc@uztelecom.uz
               </a>
             </li>
             <li className='d-flex align-center gap-3'>
