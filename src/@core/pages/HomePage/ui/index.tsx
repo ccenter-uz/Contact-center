@@ -58,7 +58,7 @@ const Main: FC<IGlobalDataType> = ({ data }) => {
   }, [])
 
   const openChat = () => {
-    window.open('https://t.me/Elyor050', '_blank')
+    window.open('https://t.me/ucc_outsource', '_blank')
   }
 
   return (
