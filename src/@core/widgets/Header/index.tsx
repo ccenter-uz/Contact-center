@@ -36,9 +36,11 @@ const Header: FC = () => {
             <img
               sizes='(min-width:768px) 768px,100vw'
               id='logo'
-              src={'/assets/logo.svg'}
+              src={'/assets/logo.png'}
               alt='logo'
               aria-label='logo'
+              height={'auto'}
+              style={{ maxHeight: '45px' }}
             />
           </Link>
         </div>

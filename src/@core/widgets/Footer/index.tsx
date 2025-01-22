@@ -14,12 +14,14 @@ const Footer: FC = () => {
         <ul className='footer-links h-100 d-flex flex-column justify-between align-start gap-y-4'>
           <li>
             <img
+              sizes='(min-width:768px) 768px,100vw'
               fetchPriority='low'
-              src='/assets/logo.svg'
+              src='/assets/logo.png'
               alt='logo'
               onClick={() => window.scrollTo(0, 0)}
-              style={{ cursor: 'pointer' }}
               loading='lazy'
+              height={'auto'}
+              style={{ maxHeight: '45px', maxWidth: '170px', cursor: 'pointer' }}
             />
           </li>
           <li>
