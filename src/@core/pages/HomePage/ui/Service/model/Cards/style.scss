@@ -1,7 +1,7 @@
 .cards-card-img-exists {
     width: 100%;
     max-width: 450px;
-    height: 448px;
+    height: auto;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -14,7 +14,7 @@
     .card-header {
         .card-header-title {
             p {
-
+                font-size: var(--font-size-m);
                 font-weight: 700;
             }
         }
@@ -27,7 +27,7 @@
     }
 
     .card-footer {
-        margin-top: auto;
+        // margin-top: auto;
 
         button {
             width: 100%;
@@ -67,7 +67,7 @@
 .cards-card-img-notExists {
     width: 100%;
     max-width: 450px;
-    height: 448px;
+    height: auto;
     position: relative;
     overflow: hidden;
     background-position: center;
@@ -85,6 +85,7 @@
 
         .card-header-title {
             p {
+                font-size: var(--font-size-m);
                 font-weight: 700;
             }
         }
@@ -99,7 +100,7 @@
     }
 
     .card-footer {
-        margin-top: auto;
+        // margin-top: auto;
 
         button {
             width: 100%;

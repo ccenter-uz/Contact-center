@@ -22,6 +22,7 @@ export const TabButtons: FC = () => {
     GetLinks().then(res => {
       setLinks(res.map((link: LinkType) => ({ key: link.id, ...link }))), router.replace(`?service=${res[0].id}`)
     })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (

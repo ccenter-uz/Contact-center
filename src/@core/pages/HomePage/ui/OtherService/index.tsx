@@ -29,10 +29,12 @@ export const OtherService: FC<IGlobalDataType> = ({ data }) => {
         }
       >
         <Card.Meta
-          title={card.title}
-          description={<h1 style={{ fontSize: '29px', color: 'rgb(37 37 88)' }}>От {card.price} UZS</h1>}
+          title={
+            <h1 style={{ fontSize: '25px', color: 'rgb(37 37 88)', overflow: 'hidden', whiteSpace: 'normal' }}>
+              {card?.title}
+            </h1>
+          }
         />
-        <p className='other-card-body'>{card.paragraph}</p>
       </Card>
     )
   })

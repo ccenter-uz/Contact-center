@@ -40,5 +40,6 @@
   "second-response-chatbot": "Now, you can ask any questions related to ccenter.uz",
   "enter-message": "Send your message",
   "error-name": "Please insert your name correctly",
-  "error-phone": "Phone must contain minimum and maximum 9 digits"
+  "error-phone": "Phone must contain minimum and maximum 9 digits",
+  "current-price": "Current price"
 }

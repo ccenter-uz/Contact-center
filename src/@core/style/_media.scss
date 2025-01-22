@@ -13,7 +13,7 @@
     // CARDS-PART
     .cards-card-img-exists,
     .cards-card-img-notExists {
-      max-width: 350px !important;
+      height: auto;
     }
 
     // BANNER-PART
@@ -36,6 +36,7 @@
       }
 
       .button-group {
+
         button {
           font-size: 16px;
           width: fit-content !important;
@@ -168,7 +169,7 @@
     // BANNER-PART
     #banner {
       padding: 24px;
-      height: 320px !important;
+      height: 380px !important;
 
       .title-block {
         width: 100%;
@@ -198,7 +199,6 @@
   .cards-card-img-exists,
   .cards-card-img-notExists {
     width: 95% !important;
-    height: fit-content !important;
 
     .card-title {
       font-size: 18px !important;
@@ -210,7 +210,7 @@
     }
 
     .ant-card-body {
-      min-height: 250px !important;
+      min-height: auto !important;
     }
 
     .card-footer {
@@ -448,7 +448,6 @@
     .cards-card-img-exists,
     .cards-card-img-notExists {
       width: 95% !important;
-      max-width: 400px !important;
     }
   }
 
@@ -589,7 +588,6 @@
     .cards-card-img-exists,
     .cards-card-img-notExists {
       max-width: 95% !important;
-      height: 400px !important;
     }
   }
 

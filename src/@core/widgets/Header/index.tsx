@@ -2,11 +2,12 @@
 import { FC } from 'react'
 import './style.scss'
 import Link from 'next/link'
-import { Globe } from 'react-feather'
-import { Popover, Space } from 'antd'
+import { ExternalLink, Globe } from 'react-feather'
+import { Popover, Space, Tooltip } from 'antd'
 import dynamic from 'next/dynamic'
 import LanguageSwitcher from '@/@core/entities/SwitchLng'
 import { useLang } from '@/@core/apps/hooks/useLang'
+import { PDFButton } from '@/@core/features/PDF-button'
 
 const SideBar = dynamic(() => import('../Sidebar').then(res => res.SideBar))
 
@@ -41,7 +42,11 @@ const Header: FC = () => {
             />
           </Link>
         </div>
+
         <div className='block d-flex align-center gap-x-1'>
+          <Tooltip title={t('current-price')}>
+            <ExternalLink />
+          </Tooltip>
           <Popover content={content}>
             <Globe size={20} />
           </Popover>
@@ -64,7 +69,8 @@ const Header: FC = () => {
             </Link>
           </li>
         </ul>
-        <div aria-label='select-wrapper' className='switcher'>
+        <div aria-label='select-wrapper' className='switcher d-flex align-center justify-end gap-x-4'>
+          <PDFButton />
           <LanguageSwitcher />
         </div>
       </div>
