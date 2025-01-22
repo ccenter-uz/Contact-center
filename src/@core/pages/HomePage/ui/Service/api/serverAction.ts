@@ -7,7 +7,7 @@ export async function GetLinks() {
   try {
     const res = await api('mainServiseCategory/all')
 
-    return (res.status = 200 && res.data)
+    return res.status == 200 && res.data
   } catch (err) {
     console.error(err, 'err')
   }
@@ -18,7 +18,7 @@ export async function GetContent(id: string) {
   try {
     const res = await api(`mainServiseCategory/one/${id}`)
 
-    return (res.status = 200 && res.data)
+    return res.status == 200 && res.data
   } catch (err) {
     console.error(err, 'err')
   }
