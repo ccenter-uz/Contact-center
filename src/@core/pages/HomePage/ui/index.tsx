@@ -7,8 +7,6 @@ import Loading from '@/app/[locale]/loading'
 import { FloatButton } from 'antd'
 import { ArrowUp, MessageCircle } from 'react-feather'
 import CarouselComp from './Carousel'
-import { useDisclosure } from '@/@core/apps/hooks/useDisclosure'
-import { Chatbot } from '@/@core/features/Chatbot'
 import { useLang } from '@/@core/apps/hooks/useLang'
 
 const ParentStory = dynamic(() => import('@/@core/features/NavStories'), {
@@ -32,14 +30,10 @@ const JoinOurTeam = dynamic(() => import('./JoinOutTeam').then(res => res.JoinOu
 const Partners = dynamic(() => import('./Partners').then(res => res.Partners), {
   loading: () => <Loading />
 })
-const Comment = dynamic(() => import('./Comment').then(res => res.Comment), {
-  loading: () => <Loading />
-})
 
 const Main: FC<IGlobalDataType> = ({ data }) => {
   const { t } = useLang()
   const [isVisible, setIsVisible] = useState<boolean>(false)
-  const { isOpen, open, close } = useDisclosure()
 
   useLayoutEffect(() => {
     const handleScroll = () => {
@@ -71,7 +65,6 @@ const Main: FC<IGlobalDataType> = ({ data }) => {
       <Community data={data} />
       <JoinOurTeam />
       <Partners data={data} />
-      <Comment data={data} />
       <div role='button' aria-label='to-top' className={`float-button ${isVisible ? 'visible' : 'hidden'}`}>
         <div className='floatBtnAnimate'></div>
         <FloatButton
@@ -88,9 +81,6 @@ const Main: FC<IGlobalDataType> = ({ data }) => {
         className='d-flex align-center justify-center'
         icon={<MessageCircle style={{ color: '#252525', fontSize: '24px', textAlign: 'center' }} />}
       />
-      {/* CHAT-BOT */}
-
-      {/* <Chatbot open={isOpen} close={close} headerTitle={t('chatbot-headerText')} /> */}
     </main>
   )
 }

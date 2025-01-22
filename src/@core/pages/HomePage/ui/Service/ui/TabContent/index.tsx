@@ -2,7 +2,6 @@ import { FC, useEffect, useState } from 'react'
 import { GetContent } from '../../api/serverAction'
 import { useSearchParams } from 'next/navigation'
 import { renderNode } from '../../utils'
-import './style.scss'
 import { useDataContext } from '@/@core/apps/hooks/useDataContext'
 
 type Props = {}

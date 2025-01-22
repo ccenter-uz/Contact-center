@@ -1,14 +1,8 @@
 import LoadingUI from '@/@core/shared/ui/LoadingUI'
 import { DataType } from '../ui/TabContent'
-import dynamic from 'next/dynamic'
 import { Suspense } from 'react'
-
-const Cards = dynamic(() => import('../model/Cards'), {
-  ssr: false
-})
-const Banner = dynamic(() => import('../model/Banner'), {
-  ssr: false
-})
+import Banner from '../model/Banner'
+import Cards from '../model/Cards'
 
 // getLanguage
 export const getLng = (locale: string, item: any, lng: string) => {

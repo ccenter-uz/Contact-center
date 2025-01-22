@@ -1,0 +1,11 @@
+.current-price {
+    background: linear-gradient(120deg, #008AEC, #0039A3);
+    padding: 8px 16px;
+    color: #fff;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
